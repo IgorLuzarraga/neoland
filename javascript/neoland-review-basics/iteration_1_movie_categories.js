@@ -20,3 +20,17 @@ const getMovieCategories = (movies) => {
 }
 
 console.log(getMovieCategories(movies))
+
+// ---------- Second method ---------------------
+
+const getMovieCategories2 = (movies) => 
+    movies.flatMap(movie => movie.categories)
+          .reduce(removeDuplicatesHelper, [])
+  
+const removeDuplicatesHelper = (acc, current) => {
+    if(acc.includes(current)) return acc
+    acc.push(current) 
+    return acc
+}
+
+console.log(getMovieCategories2(movies))
