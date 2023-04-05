@@ -34,11 +34,6 @@ const getFavoritesSoundsCounter = (user) =>
     users.map(user => user.favoritesSounds)
          .reduce((acc, curFavorites) => {
             for(key in curFavorites) {
-                // if (key in acc) {
-                //     acc[key]++
-                // } else {
-                //     acc[key] = 1
-                // }
                 key in acc ? acc[key]++ : acc[key] = 1
             }
             return acc
