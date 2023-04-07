@@ -1,6 +1,7 @@
 .container {
     display: grid;
-    /* justify-content: center;
+    /* Another way to center the div
+    justify-content: center;
     align-items: center; */
     background: dodgerblue;
     border: 4px solid midnightblue;
@@ -9,7 +10,7 @@
   }
   
   .box {
-    place-self: center;
+    place-self: center; /* Center the div */
     background: palevioletred;
     font-weight: bold;
     text-align: center;
