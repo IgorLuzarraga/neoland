@@ -48,4 +48,3 @@ const newAlien2 = {
 
 assert.deepStrictEqual(newAlien1, newAlien2) // Both are equal
 
-console.log(newAlien1)
