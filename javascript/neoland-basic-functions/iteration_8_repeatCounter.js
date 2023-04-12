@@ -12,6 +12,8 @@ const counterWords = [
     'code'
   ];
 
+  // --------------------- Version 1------------------------ //
+
   function repeatCounter(wordsArr) {
     let repeatCounterMap = {}
 
@@ -28,10 +30,26 @@ const counterWords = [
 
   console.log(repeatCounter(counterWords))
 
-  // --------------------------------------------- //
+  // --------------------- Version 2------------------------ //
 
 
-  const repeatCounter2 = (wordsArr) => 
+  function repeatCounter2(wordsArr) {
+    let repeatCounterMap = {}
+
+    wordsArr.forEach(word => {
+        word in repeatCounterMap 
+            ? repeatCounterMap[word] += 1
+            : repeatCounterMap[word] = 0
+    })
+
+    return repeatCounterMap
+  }
+
+  console.log(repeatCounter2(counterWords))
+
+  // --------------------- Version 3------------------------ //
+
+  const repeatCounter3 = (wordsArr) => 
     wordsArr.reduce((acc, current) => {
         if(current in acc) {
             acc[current] = acc[current] + 1
@@ -43,5 +61,6 @@ const counterWords = [
     }, {})
   
 
-  console.log(repeatCounter2(counterWords))
+  console.log(repeatCounter3(counterWords))
+
 
