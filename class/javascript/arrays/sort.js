@@ -19,6 +19,8 @@ const sort_ver1 = (arr) => {
 }
 
 // ------------------------ Ver 2 ----------------
+
+// Note: ver2 dosen't work -> TODO
 const sort_ver2 = (arr) => {
     const arrCopy = [...arr]
 
