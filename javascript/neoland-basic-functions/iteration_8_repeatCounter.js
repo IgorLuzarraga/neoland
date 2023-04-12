@@ -21,7 +21,7 @@ const counterWords = [
         if(wordsArr[i] in repeatCounterMap) {
             repeatCounterMap[wordsArr[i]] = repeatCounterMap[wordsArr[i]]+1
         } else {
-            repeatCounterMap[wordsArr[i]] = 0
+            repeatCounterMap[wordsArr[i]] = 1
         }
     }
 
@@ -39,7 +39,7 @@ const counterWords = [
     wordsArr.forEach(word => {
         word in repeatCounterMap 
             ? repeatCounterMap[word] += 1
-            : repeatCounterMap[word] = 0
+            : repeatCounterMap[word] = 1
     })
 
     return repeatCounterMap
@@ -54,7 +54,7 @@ const counterWords = [
         if(current in acc) {
             acc[current] = acc[current] + 1
         } else {
-            acc[current] = 0
+            acc[current] = 1
         }
 
         return acc
