@@ -1,5 +1,7 @@
 const unorderArr = [23, 4, 55, 7]
 
+// ------------------------ Ver 1 ----------------
+
 const sort_ver1 = (arr) => {
     const arrCopy = [...arr]
 
@@ -16,13 +18,38 @@ const sort_ver1 = (arr) => {
    return arrCopy
 }
 
+// ------------------------ Ver 2 ----------------
+const sort_ver2 = (arr) => {
+    const arrCopy = [...arr]
+
+   arrCopy.forEach((numA, indexA) => {
+        //console.log(arr2)
+        arrCopy.forEach((numB, indexB) => {
+            if(numB < numA) {
+                // console.log(`arr[${indexA}]: ${arrCopy[indexA]}`)
+                // console.log(`arr[${indexB}]: ${arrCopy[indexB]}`)
+                //const temp = numA
+                arrCopy[indexA] = numB //arrCopy[indexB] // numB
+                arrCopy[indexB] = numA // temp
+            }
+        }, indexA++)
+   })
+
+   return arrCopy
+}
+
+console.log("Original array: ", unorderArr)
+console.log(sort_ver2(unorderArr))
+console.log("Original array: ", unorderArr)
+
+// ------------------------ Ver 3 ----------------
 const ascendOrder = (a, b) => 
     b < a ? {higher: a, smaller: b} : {higher: b, smaller: a}
 
 const descendOrder = (a, b) => 
     a > b ? {higher: b, smaller: a} : {higher: a, smaller: b}
 
-const sort_ver2 = (arr, sortFunc) => {
+const sort_ver3 = (arr, sortFunc) => {
     const arrCopy = [...arr]
 
    for(let i=0; i<arrCopy.length; i++) {
@@ -36,7 +63,7 @@ const sort_ver2 = (arr, sortFunc) => {
    return arrCopy
 }
 
-console.log("Original array: ", unorderArr)
-console.log("Acended ordered array: ", sort_ver2(unorderArr, ascendOrder))
-console.log("Descended ordered array: ", sort_ver2(unorderArr, descendOrder))
-console.log("Original array: ", unorderArr)
+// console.log("Original array: ", unorderArr)
+// console.log("Acended ordered array: ", sort_ver3(unorderArr, ascendOrder))
+// console.log("Descended ordered array: ", sort_ver3(unorderArr, descendOrder))
+// console.log("Original array: ", unorderArr)
