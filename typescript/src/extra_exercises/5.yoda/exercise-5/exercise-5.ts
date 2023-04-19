@@ -16,7 +16,7 @@ import { Question, Questions, Response } from "./types"
 export const showGame = () => {
     document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
         <div style="margin-left:20px">
-            <input data-function="questions-number" value="10" type="text" placeholder="how many questions do you want?">
+            <input data-function="questions-number" value="1" type="text" placeholder="how many questions do you want?">
             <button data-function="start-game">Start game!</button>
         
             <div data-function="gameboard">
@@ -52,6 +52,7 @@ const showQuestions = async () => {
 
     await fetchData()
         .then(response => {
+            questions = []
             // this code will run after the fetchData function has completed and returned the data
             questions = response.results
 
@@ -190,9 +191,9 @@ const checkAnswers = (questions: Questions) => {
         // If I reload the page, the function recives the correct questions.
         // This is an incorrect fix!!
         // TODO: find a better solution!
-        setTimeout(function() {
-                location.reload();
-            }, 5000);
+        // setTimeout(function() {
+        //         location.reload();
+        //     }, 5000);
         })
 
 }
