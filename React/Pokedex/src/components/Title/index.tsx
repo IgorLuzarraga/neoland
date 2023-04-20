@@ -10,7 +10,7 @@ const Title = () => {
       (res) => {
         console.log(res.data);
       }
-    )
+    )clearInterval
   }
 
   return (
