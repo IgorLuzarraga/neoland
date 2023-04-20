@@ -10,7 +10,7 @@ body {
     font-size: 24px;
   }
   
-  .TitleSection {
+  /* .TitleSection {
     background-color: #6ea4bb;
     width: 100%;
     height: 300px;
@@ -27,9 +27,10 @@ body {
     border: 1px solid #5e98b1;
     font-size: 18px;
     padding-left: 10px;
-  }
+  } */
   
-  .TitleSection button {
+  
+  /* .TitleSection button {
     width: 180px;
     height: 40px;
     margin: 20px;
@@ -39,8 +40,8 @@ body {
     border: none;
     color: #e7e7e6;
     background-color: #006cbf
-  }
-  
-  .TitleSection button:hover {
+  } */
+   
+  /* .TitleSection button:hover {
     cursor: pointer;
-  }
+  } */

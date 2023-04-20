@@ -1,18 +1,14 @@
 
-import "./App.css";
+import Title from "./components/Title";
 
 const App = () => {
-
   return (
-    <div className="App">
-      <div className="TitleSection">
-        <h1>Pokédex</h1>
-        <input type="text" />
-        <button>Search Pokémon</button>
-      </div>
+    <div>
+      <Title />
     </div>
   );
 }
+
 
 export default App;
 
