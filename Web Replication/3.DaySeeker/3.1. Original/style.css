@@ -1,0 +1,154 @@
+/* PALETTE */
+:root {
+  --background-color: #131313;
+  --primary-color: #ffffff;
+  --secondary-color: #bebebe;
+  --typography-h1: 30px;
+  --typography-h2: 32px;
+  --typography-h3-a: 14px;
+  --typography-p: 13.6px;
+}
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Helvetica", sans-serif;
+}
+
+/* GLOBAL STYLES */
+body {
+  background-color: var(--background-color);
+  color: var(--primary-color);
+  font-size: var(--typography-p);
+  letter-spacing: 1.5px;
+}
+
+h1 {
+  font-size: var(--typography-h1);
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: var(--typography-h2);
+  text-transform: uppercase;
+}
+
+h3,
+a {
+  font-size: var(--typography-h3-a);
+  text-transform: uppercase;
+}
+
+p {
+  color: var(--secondary-color);
+}
+
+/* HEADER */
+header {
+  height: 14vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+header ul {
+  display: flex;
+  gap: 1rem;
+  list-style-type: none;
+}
+
+header a {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+}
+
+header a::after {
+  content: "";
+  background-color: var(--primary-color);
+  width: 0;
+  height: 2px;
+  transition: all 0.3s ease-in-out;
+}
+
+header a:hover::after {
+  width: 100%;
+}
+
+/* HERO */
+.hero {
+  height: 60vh;
+  overflow: hidden;
+}
+
+.hero img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  animation: banner 6s;
+}
+
+@keyframes banner {
+  0% {
+    transform: scale(1.5);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* FEATURED ITEMS */
+.featured-items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 2rem;
+}
+
+.featured-items ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  width: 100%;
+  list-style-type: none;
+  text-align: center;
+}
+
+.featured-items img {
+  width: 100%;
+}
+
+.featured-items ul p {
+  margin-top: 1rem;
+}
+
+/* VIDEOCLIP */
+.videoclip {
+  height: 40vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.videoclip div {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  text-align: center;
+}
+
+.videoclip button {
+  background-color: transparent;
+  color: var(--primary-color);
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 0.5rem 0.8rem;
+  border: 2px solid var(--primary-color);
+}
