@@ -1,0 +1,171 @@
+:root {
+    /* --background-color: #131313; */
+    --background-color: white;
+    /* --primary-color: #ffffff; */
+    --primary-color: black;
+    /* --secondary-color: #bebebe; */
+    --secondary-color: blue;
+    --typography-h1: 30px;
+    --typography-h2: 32px;
+    --typography-h3-a: 14px;
+    --typography-p: 13.6px;
+}
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Helvetica, sans-serif;
+}
+
+/* GLOBAL STYLES */
+body {
+    background-color: var(--background-color);
+    color: var(--primary-color);
+    font-size: var(--typography-p);
+    letter-spacing: 1.5px;
+}
+
+h1 {
+    font-size: var(--typography-h1);
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: var(--typography-h2);
+    text-transform: uppercase;
+}
+
+h3,
+a {
+    font-size: var(--typography-3-a);
+    text-transform: uppercase;
+}
+
+p {
+    color: var(--secondary-color);
+}
+
+/* HEADER */
+header {
+    height: 14vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+header ul {
+    display: flex;
+    gap: 2.5rem;
+    list-style-type: none;
+}
+
+header a {
+    text-decoration: none;
+    font-size: 1.0rem;
+    color: inherit;
+    display: flex;
+}
+
+header a:hover {
+    animation: zoomOut 2s;
+}
+
+@keyframes zoomOut {
+    0% {
+        transform: scale(1)
+    }
+    50% {
+        transform: scale(1.5);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* HERO */
+.hero {
+    height: 60vh;
+    overflow: hidden;
+}
+
+.hero img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    animation: banner 9s;
+}
+
+@keyframes banner {
+    0% {
+        transform: scale(1.0);
+    }
+    50% {
+        transform: scale(1.5);
+    }
+    100% {
+        transform: scale(1.0);
+    }
+}
+
+/* FEATURES ITEMS */
+.featured-items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    width: 100%;
+}
+
+.featured-items ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.featured-items li {
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.featured-items img {
+    border: 1px solid black;
+    width: 100%;
+}
+
+.featured-items ul p {
+    margin-top: 1rem;
+}
+
+/* VIDEOCLIP */
+
+.videoclip {
+    position: relative;
+    height: 60vh;
+    overflow: hidden;
+}
+
+.videoclip video {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.videoclip div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border: 1px solid black;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 1;
+}
