@@ -1,8 +1,8 @@
 :root {
-    /* --background-color: #131313; */
-    --background-color: white;
-    /* --primary-color: #ffffff; */
-    --primary-color: black;
+    --background-color: #131313;
+    /* --background-color: white; */
+    --primary-color: #ffffff;
+    /* --primary-color: black; */
     /* --secondary-color: #bebebe; */
     --secondary-color: blue;
     --typography-h1: 30px;
@@ -127,7 +127,7 @@ header a:hover {
 }
 
 .featured-items li {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -135,7 +135,7 @@ header a:hover {
 }
 
 .featured-items img {
-    border: 1px solid black;
+    /* border: 1px solid black; */
     width: 100%;
 }
 
@@ -168,4 +168,8 @@ header a:hover {
     transform: translate(-50%, -50%);
     text-align: center;
     z-index: 1;
+}
+
+.videoclip button {
+    cursor: pointer;
 }
