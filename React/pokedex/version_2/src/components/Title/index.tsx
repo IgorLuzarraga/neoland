@@ -1,5 +1,5 @@
 /* eslint-disable prettier/prettier */
-import { Pokemon, PokemonFromServer } from '../../types/pokemonTypes';
+//import { Pokemon, PokemonFromServer } from '../../types/pokemonTypes';
 import Card from '../Card';
 import Error from '../Error';
 
@@ -7,34 +7,7 @@ import { useGetPokemonByNameQuery } from '../../services/pokeApi'
 import { useState } from 'react';
 import { ServerResponse } from '../../types/serverTypes';
 import Loading from '../Loading';
-
-const initialPokemon: Pokemon = {
-  name: "",
-  number: -1,
-  species: "",
-  image: "",
-  hp: -1,
-  attack: -1,
-  defense: -1,
-  speed: -1,
-  type: "",
-}
-
-const createPokemon = (pokemonData: PokemonFromServer | undefined): Pokemon => {
-  if (!pokemonData) return initialPokemon
-
-  return {
-      name: pokemonData.name,
-      number: pokemonData.id,
-      species: pokemonData.species.name,
-      image: pokemonData.sprites.front_default,
-      hp: pokemonData.stats[0].base_stat,
-      attack: pokemonData.stats[1].base_stat,
-      defense: pokemonData.stats[2].base_stat,
-      speed: pokemonData.stats[5].base_stat,
-      type: pokemonData.types[0].type.name,
-  }
-}
+import { createPokemon } from '../../utils/utils';
 
 const ShowPokemon = ({data, isError, isLoading}: ServerResponse) => {
   if (isLoading) {

@@ -1,15 +1,17 @@
 import {Pokemon} from '../../types/pokemonTypes';
+import './card.css'
 
 type Props = {
-    pokemon: Pokemon,
+  pokemon: Pokemon
 };
 
-const Card = ({pokemon}: Props) => {
+const Card = ({ pokemon }: Props) => {
   return (
     <div className='w-3/5 mx-auto h-fit'>
-    <div className='flex flex-col justify-center items-center rounded-xl
-                    text-2xl text-white bg-gray-600 py-2'
-    >
+      <div className='flex flex-col justify-center items-center rounded-xl
+                      text-2xl text-white bg-gray-600 py-2
+                      holo-effect'
+      >
         <h1>{pokemon.name}</h1>
         <img src={pokemon.image} alt={pokemon.name} />
         <h3>Number: #{pokemon.number}</h3>
