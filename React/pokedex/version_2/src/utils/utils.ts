@@ -28,3 +28,9 @@ export const createPokemon = (pokemonData: PokemonFromServer | undefined): Pokem
         type: pokemonData.types[0].type.name,
     }
 }
+
+export const capitalize = (str: string) => 
+    str
+        .split('')
+        .map((el, index) => index === 0 ? el.toUpperCase() : el)
+        .join('')

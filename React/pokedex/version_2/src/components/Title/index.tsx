@@ -34,24 +34,26 @@ const Title = () => {
   
   return (
     <div className='bg-cyan-500 w-full h-fit'>
-      <div className="flex flex-col items-center text-gray-200"> 
-          <h1 className='my-2 text-3xl'>Pokédex</h1>
-          <input 
-              className="w-[200px] h-8 rounded-lg border-1 border-solid 
-                        border-cyan-600 text-[16px] pl-[10px]
-                        text-black"
-              type="text" 
-              onChange={(event) => {
-                setUserInput(event.target.value.toLowerCase())
-              }}
-          />
-          <button
-              className='w-44 h-10 m-5 rounded-xl text-xl pl-3
-                        text-gray-200  bg-blue-700'
-              onClick={searchPokemon}
-          >
-              Search Pokémon
-          </button>
+      <div className="flex flex-col items-center text-gray-200 gap-2 mb-2"> 
+          <h1 className='text-3xl'>Pokédex</h1>
+          <div className='flex justify-center items-center gap-2'>
+            <input 
+                className="w-[200px] h-8 rounded-lg border-1 border-solid 
+                          border-cyan-600 text-[16px] pl-[10px]
+                          text-black"
+                type="text" 
+                onChange={(event) => {
+                  setUserInput(event.target.value.toLowerCase())
+                }}
+            />
+            <button
+                className='w-44 h-10 rounded-xl text-lg
+                          text-gray-200 bg-blue-700'
+                onClick={searchPokemon}
+            >
+                Search Pokémon
+            </button>
+          </div>
       </div>
       <>
         {!pokemonChosen ? 
