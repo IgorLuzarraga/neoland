@@ -1,0 +1,13 @@
+header {
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  header > img {
+    height: 100%;
+    width: 90%;
+    object-fit:fill;
+  }
+  
