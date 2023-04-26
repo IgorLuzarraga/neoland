@@ -1,0 +1,37 @@
+main {
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-around;
+  padding: 1rem;
+}
+
+li {
+  width: 200px;
+  height: auto;
+  list-style-type: none;
+  text-align: center;
+}
+
+#prev-next-btns {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+#nextBtn {
+  padding: 0 1rem;
+  border-radius: 1rem;
+}
+
+#prevBtn {
+  padding: 0 0.3rem;
+  border-radius: 1rem;
+}
