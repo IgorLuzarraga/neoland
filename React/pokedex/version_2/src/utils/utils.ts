@@ -26,6 +26,8 @@ export const createPokemon = (pokemonData: PokemonFromServer | undefined): Pokem
         defense: pokemonData.stats[2].base_stat,
         speed: pokemonData.stats[5].base_stat,
         type: pokemonData.types[0].type.name,
+        weight: pokemonData.weight,
+        height: pokemonData.height,
     }
 }
 

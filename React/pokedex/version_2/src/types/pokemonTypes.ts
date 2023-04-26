@@ -9,6 +9,8 @@ export type Pokemon = {
     defense: number,
     speed: number,
     type: string,
+    weight: number,
+    height: number,
 }
 
 export type PokemonFromServer = {

@@ -34,9 +34,9 @@ const Title = () => {
   
   return (
     <div className='bg-cyan-500 w-full h-fit'>
-      <div className="flex flex-col items-center text-gray-200 gap-2 mb-2"> 
+      <div className="flex flex-col items-center text-gray-200 gap-4"> 
           <h1 className='text-3xl'>Pokédex</h1>
-          <div className='flex justify-center items-center gap-2'>
+          <div className='w-3/5 flex flex-col md:flex-row justify-around items-center gap-4'>
             <input 
                 className="w-[200px] h-8 rounded-lg border-1 border-solid 
                           border-cyan-600 text-[16px] pl-[10px]
@@ -57,7 +57,7 @@ const Title = () => {
       </div>
       <>
         {!pokemonChosen ? 
-          <div className='w-full flex justify-center bg-cyan-500'>
+          <div className='w-full flex justify-center bg-cyan-500 my-4'>
             <div className='w-3/5 h-20 flex justify-center items-center
                           text-2xl text-white bg-gray-600
                           border border-solid border-black rounded-xl'>

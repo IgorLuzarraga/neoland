@@ -1,9 +1,10 @@
 .holo-effect {
-    background: linear-gradient(135deg, #00c6ff, #ff00b8, #d800ff, #ff6a00);
+    background: linear-gradient(135deg, #e6e60ad2, #F6CF57, #ff6a00, #00c6ff); 
+    /* background: linear-gradient(135deg, #ff00b8, #d800ff, #ff6a00, #F6CF57); */
     background-size: 600% 600%;
     animation: holo-gradient 10s ease infinite;
   }
-  
+   
   @keyframes holo-gradient {
     0% {
       background-position: 0% 50%;
@@ -18,7 +19,7 @@
   
 
   .holo-effect2 {
-    background: linear-gradient(135deg, #ff00b8, #00c6ff, #d800ff, #ff6a00);
+    background: linear-gradient(135deg, #F6CF57, #d4ee41, #dac210, #ff6a00);
     background-size: 600% 600%;
     animation: holo-gradient 10s ease infinite;
   }
