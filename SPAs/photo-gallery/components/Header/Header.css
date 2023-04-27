@@ -1,0 +1,23 @@
+header {
+    height: 12vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+header > div,
+header > ul {
+    display: flex;
+    gap: 1rem;
+}
+
+header > div > img {
+    filter:invert(90%);
+    height: 2.5rem;
+    width: 2.5rem;
+}
+
+header a:hover {
+    color: var(--secondary);
+}

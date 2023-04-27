@@ -1,0 +1,13 @@
+.about {
+    height: 78vh;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    /* text-align: center; */
+}
+
+.about > p {
+    color: var(--primary);
+}
