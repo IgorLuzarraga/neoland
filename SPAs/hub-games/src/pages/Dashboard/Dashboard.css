@@ -1,0 +1,48 @@
+#containerDashboard {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#containerDashboard ul {
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    padding-top: 10vh;
+  }
+
+.figureDashboard {
+    width: 400px;
+    height: 350px;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.figureDashboard img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 10%;
+    -webkit-box-shadow: 7px 8px 27px 0px rgba(0, 0, 0, 0.42);
+    -moz-box-shadow: 7px 8px 27px 0px rgba(0, 0, 0, 0.42);
+    box-shadow: 7px 8px 27px 0px rgba(0, 0, 0, 0.42);
+  }
+
+  
+.figureDashboard img:hover {
+    -webkit-box-shadow: 1px -1px 27px 0px rgba(8,239,3,0.9);
+    -moz-box-shadow: 1px -1px 27px 0px rgba(8,239,3,0.9);
+    box-shadow: 1px -1px 27px 0px rgba(8,239,3,0.9);
+}
+
+.figureDashboard h2 {
+  font-size: 35px;
+  padding: 10px;
+}

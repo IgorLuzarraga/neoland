@@ -1,3 +1,6 @@
+import { FAKE_USER } from '../utils/constants'
+import { printTemplate as Dashboard} from '../pages/Dashboard/Dashboard'
+
 export const Routes = {
     NotLogged: 'NotLogged',
     Pokemon: 'Pokemon',
@@ -11,7 +14,7 @@ export const goToPage = (route) => {
     console.log(route)
     switch (route) {
         case Routes.NotLogged:
-            localStorage.getItem('user') ? Dashboard() : Login()
+            localStorage.getItem(FAKE_USER) ? Dashboard() : Login()
             break
         case Routes.Pokemon:
             PoKemon()
