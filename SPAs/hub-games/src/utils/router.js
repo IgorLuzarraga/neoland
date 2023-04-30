@@ -12,7 +12,6 @@ export const Routes = {
 }
 
 export const goToPage = (route) => {
-    console.log(route)
     switch (route) {
         case Routes.NotLogged:
             localStorage.getItem(FAKE_USER) ? Dashboard() : Login()
