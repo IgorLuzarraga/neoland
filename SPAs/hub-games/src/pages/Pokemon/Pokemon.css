@@ -25,3 +25,24 @@
     justify-content: center;
     align-items: center;
 }
+
+#containerPokemonSearcher {
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#pokemonSearcher {
+    border: 2px solid black;
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+#pokemonSearcher > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+} 
+
