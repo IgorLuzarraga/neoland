@@ -1,0 +1,21 @@
+.galleryPokemon {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.galleryPokemon > .figurePokemon > img {
+    height: 20vh;
+    width: 20vw;
+}
+
+.galleryPokemon > .figurePokemon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 1rem;
+}
