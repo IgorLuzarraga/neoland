@@ -1,0 +1,13 @@
+#main-container {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#login-container {
+    border: 0.2rem solid black;
+    padding: 2rem;
+    margin-top: 2rem;
+}

@@ -4,8 +4,12 @@ import "./Login.css";
 // 1. Template
 
 const template = () => `
-  <input type="text" name="" id="" />
-  <button id="buttonLogin">LOGIN</button>
+  <div id='main-container'>
+    <div id='login-container'>
+      <input type="text" name="" id="" />
+      <button id="buttonLogin">LOGIN</button>
+    </div>
+  </div>
 `;
 
 // Listeners to receive users events
