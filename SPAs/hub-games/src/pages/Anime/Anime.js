@@ -1,14 +1,20 @@
 import "./Anime.css";
 
-// -----> 1) Funcion de template
+// -1. Template
 
-const template = () => `Welcome to my Anime page! It's still under constriction!`;
-
-// ----> 2) Eventos de nuestros elementos html
+const template = () => `
+    <div id='main-container'>
+      <div id='anime-container'>
+        <p>Welcome to my Anime page! It's still under constriction!</p>
+      </div>
+    </div>
+  `
+  
+// Events
 
 const addListeners = () => {};
 
-// ----> 3) Pintar
+// Render
 export const printTemplate = () => {
   document.querySelector("main").innerHTML = template();
 };
