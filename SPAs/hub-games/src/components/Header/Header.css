@@ -19,8 +19,8 @@ header {
 }
 
 #navMain > img {
-    width: 15vw;
-    height: 15vh;
+    width: 5rem;
+    height: 5rem;
     object-fit: fill;
     margin: 1rem;
     cursor: pointer;

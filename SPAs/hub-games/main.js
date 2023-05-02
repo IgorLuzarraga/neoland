@@ -6,4 +6,4 @@ import { App } from './src/components/App/App'
 App()
 
 // No one is logged in yet, so render the login in page
-//goToPage(Routes.NotLogged)
+goToPage(Routes.NotLogged)
