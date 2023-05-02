@@ -1,14 +1,18 @@
 import "./Manga.css";
 
-// -----> 1) Funcion de template
+// Template
+const template = () => `
+    <div id='main-container'>
+      <div id='manga-container'>
+        <p>Welcome to my Manga page! It's still under constriction!</p>
+      </div>
+    </div>
+  `
 
-const template = () => `Manga website under contruction! Be patient!`;
-
-// ----> 2) Eventos de nuestros elementos html
-
+// Events
 const addListeners = () => {};
 
-// ----> 3) Pintar
+// Render
 export const printTemplate = () => {
   document.querySelector("main").innerHTML = template();
 };

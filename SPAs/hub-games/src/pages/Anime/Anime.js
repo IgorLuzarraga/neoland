@@ -1,7 +1,6 @@
 import "./Anime.css";
 
-// -1. Template
-
+// Template
 const template = () => `
     <div id='main-container'>
       <div id='anime-container'>
@@ -11,7 +10,6 @@ const template = () => `
   `
   
 // Events
-
 const addListeners = () => {};
 
 // Render
