@@ -10,7 +10,7 @@ const template = () => `
     `
 const templateFigure = (pokemon) => `
     <figure class='figurePokemon'>
-        <img src=${pokemon.image} alt=${pokemon.name} />
+        <img src=${pokemon.image} alt=${pokemon.name} class="imgPokemon"/>
         <h2>${pokemon.name}</h2>
     </figure>
 `
@@ -87,7 +87,7 @@ export const printTemplate = () => {
     // Render a spinner before fetch
     addSpinner()
 
-    // Delay of 2 seconds to check if the spinner is shown
+    // Delay of 2 seconds to let us a litle bit of time to see the spinner shown
     // Remove it to go faster
     setTimeout(() => {
         addPokemonSearcher()
