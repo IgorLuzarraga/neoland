@@ -63,22 +63,43 @@ const getPokemons2 =  () => {
         })
 }
 
-const handleSearchPokemon = async (name) => {
+const byName = name => pokemon =>
+    pokemon
+        .name
+        .toLowerCase()
+        .includes(name.toLowerCase())
+
+const filterPokemonByName = async (name) => {
     document.querySelector('.galleryPokemon').innerHTML = ""
     const pokemons = await service_getPokemons()
     pokemons
-        .filter(pokemon => pokemon.name.includes(name))
+        .filter(byName(name))
         .forEach(addPokemonToGalley)
-
 }
 
-const addListeners = () => {
+const addListeners = (pokemonTypes) => {
     document
         .querySelector('#btnSearcher')
         .addEventListener('click', () => {
-            handleSearchPokemon(document.querySelector('#inputSearcher').value)
+            filterPokemonByName(document.querySelector('#inputSearcher').value)
         })
+
+    pokemonTypes.forEach((type) => {
+        const buttonType = document.querySelector(`.${type}`)
+    
+        buttonType.addEventListener("click", (e) => {
+            filterPokemonByType(type, "type")
+        })
+    })
 }
+
+const printPokemonTypesBtns = (pokemonTypes) => 
+    pokemonTypes.forEach((type) => {
+      const idCustom = `button${type[0].toUpperCase() + type.slice(1)}`;
+      const buttonType = `<button class="buttonFilter ${type}" id=>${type}</button>`;
+      const filterButton = document.getElementById("filterButton");
+      filterButton.innerHTML += buttonType;
+    })
 
 export const printTemplate = () => {
     // insert the page's Html
