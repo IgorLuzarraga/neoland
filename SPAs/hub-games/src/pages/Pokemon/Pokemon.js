@@ -19,10 +19,9 @@ const templateFigure = (pokemon) => `
 
 const templatePokemonSearcher = () => `
     <div id='pokemonSearcher'>
-        <span>Pokemon by name:</span>
+        <span>Search Pokemon by name:</span>
         <div id="input-btn">
             <input id="inputSearcher"></input>
-            <button id="btnSearcher">Search</button>
         </div>
     </div>
     `
@@ -103,10 +102,10 @@ const filterPokemonByType = (type) => {
 //const addListeners = (pokemonTypes) => {
 const addListeners = () => {
     document
-        .querySelector('#btnSearcher')
-        .addEventListener('click', () => {
+        .querySelector('#inputSearcher')
+        .addEventListener('input', () => {
             filterPokemonByName(document.querySelector('#inputSearcher').value)
-        })
+    })
 
     // pokemonTypes.forEach((type) => {
     //     const buttonType = document.querySelector(`.${type}`)
