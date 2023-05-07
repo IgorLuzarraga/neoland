@@ -1,4 +1,4 @@
-button {
+#tic-tac-toe-container-main > #restartBtn {
     padding: 7px 20px;
     border-radius: 10px;
     background-color: burlywood;
@@ -9,7 +9,7 @@ button {
     font-weight: 900;
 }
 
-button:hover {
+#tic-tac-toe-container-main > #restartBtn:hover {
     cursor: pointer;
     transform: translateY(-3px);
 }
