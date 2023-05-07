@@ -11,4 +11,4 @@ export const gameBoardWinnerSquares = [
 
 export const Player_O = "O"
 export const Player_X = "X"
-export const WinnerSquaresColor = '#2d414b'
+export const WinnerSquaresColor = '#1A00FF'
