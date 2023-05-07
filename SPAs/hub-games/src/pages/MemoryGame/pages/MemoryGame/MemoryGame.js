@@ -20,8 +20,8 @@ let chosenCardsId = []
 let chosenCards = []
 let matchedCards = []
 
-const flipCard = (card, cardId) =>
-    card.setAttribute('src', cards[cardId].img)
+const flipCard = (card, cardId) => 
+   card.setAttribute('src', cards[cardId].img)
 
 const handleCardClicked = (e) => {
     const card = e.target

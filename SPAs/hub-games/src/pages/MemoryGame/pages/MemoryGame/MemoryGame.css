@@ -1,6 +1,6 @@
 #memory-game-container-main {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -10,7 +10,7 @@
 
 #memory-game-gameboard-container {
     width: 90%;
-    height: 90vh;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
