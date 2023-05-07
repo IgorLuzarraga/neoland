@@ -12,15 +12,17 @@ let gameBoardSquaresClickEvents
 let gameBoardSquaresClickedByPlayers = Array(9).fill(null)
 
 const template = () => `
-    <div class="square" id="0"></div>
-    <div class="square" id="1"></div>
-    <div class="square" id="2"></div>
-    <div class="square" id="3"></div>
-    <div class="square" id="4"></div>
-    <div class="square" id="5"></div>
-    <div class="square" id="6"></div>
-    <div class="square" id="7"></div>
-    <div class="square" id="8"></div>
+    <div id='tic-tac-toe-gameboard'>
+        <div class="square" id="0"></div>
+        <div class="square" id="1"></div>
+        <div class="square" id="2"></div>
+        <div class="square" id="3"></div>
+        <div class="square" id="4"></div>
+        <div class="square" id="5"></div>
+        <div class="square" id="6"></div>
+        <div class="square" id="7"></div>
+        <div class="square" id="8"></div>
+    </div>
 `
 
 const flipCurrentPlayer = currentPlayer => 
@@ -72,6 +74,6 @@ const listeners = () => {
 }
 
 export const Gameboard = () => {
-    document.querySelector("#gameboard").innerHTML = template()
+    document.querySelector("#tic-tac-toe-gameboard-container").innerHTML = template()
     listeners()
 }

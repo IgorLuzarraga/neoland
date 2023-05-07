@@ -2,13 +2,10 @@ import './TicTacToe.css'
 import { Gameboard } from '../../components/Gameboard/Gameboard'
 
 const template = () => `
-    <div id='container-main'>
-        <div id="container">
-            <h1 id="jumbotron">Tic Tac Toe</h1>
-            <div id="gameboard">
-            </div>
-            <button id="restartBtn">Restart</button>
-        </div>
+    <div id='tic-tac-toe-container-main'>
+        <div id="tic-tac-toe-jumbotron">Tic Tac Toe</div>
+        <div id="tic-tac-toe-gameboard-container"></div>
+        <button id="restartBtn">Restart</button>
     </div>
 `
 

@@ -1,4 +1,4 @@
 export const Jumbotron = (textToShow) => 
     document
-        .getElementById('jumbotron')
+        .getElementById('tic-tac-toe-jumbotron')
         .innerHTML = textToShow
