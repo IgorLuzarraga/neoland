@@ -3,19 +3,27 @@ import { service_getPokemons } from '../../services/pokemon.service'
 //import { service_getPokemons } from '../../services/pokemon.service2'
 import {Loading} from "../../components/Loading/Loading"
 
-let pokemonDataFromService = []
+let pokemonDataFromService = {
+    pokemons: [],
+    pokemonTypes: []
+}
 
 const template = () => `
     <div class="spinner"></div>
+    <div id="pokemonTypesBtns"></div>
     <div id="containerPokemonSearcher"></div>
     <div class="galleryPokemon"></div>
     `
-const templateFigure = (pokemon) => `
-    <figure class='figurePokemon'>
-        <img src=${pokemon.image} alt=${pokemon.name} class="imgPokemon"/>
-        <h2>${pokemon.name}</h2>
-    </figure>
-`
+const templateFigure = (pokemon) => {
+    const figureClassName = `"figurePokemon ${pokemon.type[0].type.name}"`;
+
+    return( `
+        <figure class=${figureClassName}>
+            <img src=${pokemon.image} alt=${pokemon.name} class="imgPokemon"/>
+            <h2>${pokemon.name}</h2>
+        </figure>
+    `)
+} 
 
 const templatePokemonSearcher = () => `
     <div id='pokemonSearcher'>
@@ -24,7 +32,7 @@ const templatePokemonSearcher = () => `
             <input id="inputSearcher"></input>
         </div>
     </div>
-    `
+`
 
 const addSpinner = () => {
     // Render a spinner
@@ -43,15 +51,25 @@ const addPokemonSearcher = () =>
         .innerHTML = templatePokemonSearcher()
 
 
+const cleanGallery = () => 
+    document
+        .querySelector('.galleryPokemon')
+        .innerHTML = ''
+
 const addPokemonToGallery = (pokemon) => 
     document
         .querySelector('.galleryPokemon')
         .innerHTML +=  templateFigure(pokemon)
 
+const addPokemonsToGallery = (pokemons) => {
+    cleanGallery()
+    pokemons.forEach(addPokemonToGallery)
+}
+
 // Version 1 -- uses --> services/pokemon.service
 const getPokemons = async () => {
     pokemonDataFromService = await service_getPokemons()
-    pokemonDataFromService.forEach(addPokemonToGallery)
+    addPokemonsToGallery(pokemonDataFromService.pokemons)
 }
 
 // Version 2 -- uses --> services/pokemon.service2
@@ -59,9 +77,10 @@ const getPokemons2 =  () => {
     const pokemonsPromise = service_getPokemons()
         pokemonsPromise.forEach(promise => {
             promise
-                .then((pokemon) => {
-                    pokemonDataFromService.push(pokemon) 
-                    addPokemonToGallery(pokemon)
+                .then((pokemonData) => {
+                    pokemonDataFromService.pokemons.push(pokemonData.pokemons) 
+                    pokemonDataFromService.pokemonTypes.push(pokemonData.pokemonTypes) 
+                    addPokemonToGallery(pokemonData.pokemon)
                 })
                 .catch(error => console.log(error))
         })
@@ -76,53 +95,62 @@ const byName = name => pokemon =>
 
 const filterPokemonByName = async (name) => {
     document.querySelector('.galleryPokemon').innerHTML = ""
-    pokemonDataFromService
+    pokemonDataFromService.pokemons
         .filter(byName(name))
         .forEach(addPokemonToGallery)
 }
 
+// Note: There are (in each pokemon) two kind of types
+// called type 0 and type 1
 const filterPokemonByType = (type) => {
-    const filterData = dataServicePokemon.filter((pokemon) =>
-        pokemon.type[0].type.name.toLowerCase().includes(filtro.toLowerCase())
-      );
+    const pokemonsFilterdByType_0 = 
+        pokemonDataFromService.pokemons.filter((pokemon) => 
+            pokemon.type[0].type.name
+                .toLowerCase()
+                .includes(type.toLowerCase())
+    )
 
-      if (filterData.length === 0) {
-        const filterData = dataServicePokemon.filter((pokemon) =>
-          pokemon.type[1]?.type.name
-            .toLowerCase()
-            .includes(filtro.toLowerCase())
-        );
-        createAndPrintFigure(filterData);
-      } else {
-        createAndPrintFigure(filterData);
-      }
+    if (pokemonsFilterdByType_0.length === 0) {
+    // We didn't find any pokemon type 0, so we filter
+    // again, this time for type 1
+    const pokemonsFilterdByType_1 = 
+        pokemonDataFromService.pokemons.filter((pokemon) =>
+            pokemon.type[1]?.type.name
+                .toLowerCase()
+                .includes(type.toLowerCase())
+    )
+    addPokemonsToGallery(pokemonsFilterdByType_1);
+    } else {
+    addPokemonsToGallery(pokemonsFilterdByType_0);
+    }
 }
+
 // ----------------------------- Filters (End) ----------------------
 
-//const addListeners = (pokemonTypes) => {
-const addListeners = () => {
+const addListeners = (pokemonTypes) => {
     document
         .querySelector('#inputSearcher')
         .addEventListener('input', () => {
             filterPokemonByName(document.querySelector('#inputSearcher').value)
     })
 
-    // pokemonTypes.forEach((type) => {
-    //     const buttonType = document.querySelector(`.${type}`)
+    pokemonTypes.forEach((type) => {
+        const pokemonTypeBtn = document.querySelector(`#${type}`)
     
-    //     buttonType.addEventListener("click", (e) => {
-    //         filterPokemonByType(type)
-    //     })
-    // })
+        pokemonTypeBtn.addEventListener("click", (e) => {
+            filterPokemonByType(type)
+        })
+    })
 }
 
-// const printPokemonTypesBtns = (pokemonTypes) => 
-//     pokemonTypes.forEach((type) => {
-//       const idCustom = `button${type[0].toUpperCase() + type.slice(1)}`;
-//       const buttonType = `<button class="buttonFilter ${type}" id=>${type}</button>`;
-//       const filterButton = document.getElementById("filterButton");
-//       filterButton.innerHTML += buttonType;
-//     })
+const printPokemonTypesBtns = (pokemonTypes) =>
+    pokemonTypes.forEach((type) => {
+      const btnClassName = `"pokemonTypeBtn ${type}"`
+      
+      const pokemonTypeBtn = `<button class=${btnClassName} id=${type}>${type}</button>`
+      const pokemonTypesBtns = document.querySelector("#pokemonTypesBtns")
+      pokemonTypesBtns.innerHTML += pokemonTypeBtn
+    })
 
 export const printTemplate = () => {
     // insert the page's Html
@@ -131,20 +159,23 @@ export const printTemplate = () => {
     // Render a spinner before fetch
     addSpinner()
 
+    // fetch the pokemons
+    getPokemons()
+
     // Delay of 2 seconds to let us a litle bit of time to see the spinner shown
     // Remove it to go faster
     setTimeout(() => {
         addPokemonSearcher()
 
         // fetch the pokemons
-        getPokemons()
+        //getPokemons()
 
         // remove spinner after fetch
         removeSpinner()
 
-        //printPokemonTypesBtns()
+        printPokemonTypesBtns(pokemonDataFromService.pokemonTypes)
 
-        addListeners()
+        addListeners(pokemonDataFromService.pokemonTypes)
     }, 2000)
     
 

@@ -1,5 +1,6 @@
 import { axiosRequest } from "../utils/axios"
 import { range } from "../utils/array"
+import { pokemonTypes } from "../utils/pokemonsTypes"
 
 // We get from the API 150 pokemons
 export const service_getPokemons = () => 
@@ -7,7 +8,15 @@ export const service_getPokemons = () =>
         .map((num) => getPokemonFromAPI(num))
         .map((pokemonPromes) => 
                 pokemonPromes
-                    .then(prokemon => formatPokemon(prokemon))
+                    .then(pokemon => {
+                            const pokemonFormated = formatPokemon(pokemon)
+                            const type = pokemonTypes(pokemonFormated)
+
+                            return {
+                                pokemonTypes: type,
+                                pokemons: pokemonFormated,
+                            }
+                        })
         )
 
 const getPokemonFromAPI = async (id) => {
@@ -22,5 +31,6 @@ const formatPokemon = pokemon =>
     ({
         name: pokemon.name,
         image: pokemon.sprites.other.dream_world.front_default,
+        type: pokemon.types,
     })
 
