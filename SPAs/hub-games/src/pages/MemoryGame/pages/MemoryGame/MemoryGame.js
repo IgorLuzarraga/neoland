@@ -5,10 +5,10 @@ import { CardBackSide } from '../../components/CardBackSide/CardBackSide'
 import { Jumbotron } from '../../components/Jumbotron/Jumbotron'
 
 const template = () => `
-    <div id='container-main'>
-        <div id='gameboard-container'>
+    <div id='memory-game-container-main'>
+        <div id='memory-game-gameboard-container'>
         </div>
-        <div id="jumbotron">
+        <div id="memory-game-jumbotron">
         </div>
     </div>
 `

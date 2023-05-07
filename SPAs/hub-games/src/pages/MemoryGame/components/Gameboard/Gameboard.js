@@ -4,11 +4,11 @@ import { cards } from "../../types/gameTypes"
 import { CardBackSide } from '../CardBackSide/CardBackSide'
 
 const template = () =>
-    `<div id='gameboard'>
+    `<div id='memory-game-gameboard'>
     </div>`
 
 const createGameboard = (handleCardClicked) => {
-    const gameboardHtmlEl = document.querySelector('#gameboard')
+    const gameboardHtmlEl = document.querySelector('#memory-game-gameboard')
 
     cards.forEach((element, index) => {
         const card = Card(index)
@@ -24,6 +24,6 @@ const createGameboard = (handleCardClicked) => {
 }
 
 export const Gameboard = (handleCardClicked) => {
-    document.querySelector("#gameboard-container").innerHTML = template()
+    document.querySelector("#memory-game-gameboard-container").innerHTML = template()
     createGameboard(handleCardClicked)
 }

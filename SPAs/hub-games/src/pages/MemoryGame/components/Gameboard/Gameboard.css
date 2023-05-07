@@ -1,4 +1,4 @@
-#gameboard {
+#memory-game-gameboard {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;

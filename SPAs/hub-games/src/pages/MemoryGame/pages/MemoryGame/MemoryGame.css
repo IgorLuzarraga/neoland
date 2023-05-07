@@ -1,4 +1,4 @@
-#container-main {
+#memory-game-container-main {
     width: 100%;
     height: 100vh;
     display: flex;
@@ -8,7 +8,7 @@
     border: 0px solid black;
 }
 
-#gameboard-container {
+#memory-game-gameboard-container {
     width: 90%;
     height: 90vh;
     display: flex;

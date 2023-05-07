@@ -31,7 +31,7 @@ const template = () => `
                         alt="navigate to page anime"
                         id="imgAnime"
                     />
-                    <h2>Anime</h2>
+                    <h2>Tic Tac Toe</h2>
                 </figure>
             </li>
             </li>
@@ -55,7 +55,7 @@ const addListeners = () => {
     document
         .getElementById('imgAnime')
         .addEventListener('click', () => {
-            goToPage(Routes.Anime)
+            goToPage(Routes.TicTacToe)
         })
 }
 

@@ -5,11 +5,13 @@ import { printTemplate as Anime } from '../pages/Anime/Anime'
 import { printTemplate as Manga } from '../pages/Manga/Manga'
 import { printTemplate as Login } from '../pages/Login/Login'
 import { MemoryGame } from '../pages/MemoryGame/pages/MemoryGame/MemoryGame'
+import { TicTacToe } from '../pages/Tic-Tac-Toe/pages/TicTacToe/ticTacToe'
 
 export const Routes = {
     NotLogged: 'NotLogged',
     Pokemon: 'Pokemon',
     MemoryGame: 'MemoryGame',
+    TicTacToe: 'TicTacToe',
     Manga: 'Manga',
     Anime: 'Anime',
     Login: 'Login',
@@ -26,6 +28,9 @@ export const goToPage = (route) => {
             break
         case Routes.MemoryGame:
             MemoryGame()
+            break
+        case Routes.TicTacToe:
+            TicTacToe()
             break
         case Routes.Manga:
             Manga()
