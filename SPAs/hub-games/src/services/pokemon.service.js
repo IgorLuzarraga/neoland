@@ -30,6 +30,8 @@ const formatPokemon = pokemon =>
         name: pokemon.name,
         image: pokemon.sprites.other.dream_world.front_default,
         type: pokemon.types,
+        height: pokemon.height,
+        weight: pokemon.weight
     })
 
 const formatPokemons = (pokemons) => pokemons.map(formatPokemon)
