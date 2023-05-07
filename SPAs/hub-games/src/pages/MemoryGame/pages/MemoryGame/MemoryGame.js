@@ -13,11 +13,12 @@ const template = () => `
     </div>
 `
 const printTemplate = (template) =>
-    document.querySelector("#app").innerHTML = template()
+    //document.querySelector("#app").innerHTML = template()
+    document.querySelector("main").innerHTML = template()
 
-let cardsChosen = []
-let cardsChosenId = []
-let cardsWon = []
+let chosenCardsId = []
+let chosenCards = []
+let matchedCards = []
 
 const flipCard = (card, cardId) =>
     card.setAttribute('src', cards[cardId].img)
@@ -26,13 +27,13 @@ const handleCardClicked = (e) => {
     const card = e.target
     const cardId = card.id
 
-    cardsChosen.push(cards[cardId].name)
-    cardsChosenId.push(cardId)
+    chosenCards.push(cards[cardId].name)
+    chosenCardsId.push(cardId)
 
     flipCard(card, cardId)
 
-    if (cardsChosen.length === 2) {
-        setTimeout(checkForMatch, 500)
+    if (chosenCards.length === 2) {
+        setTimeout(checkIfCardsMatch, 800)
     }
 }
 
@@ -45,18 +46,18 @@ const clickedSameCard = (cardId1, cardId2) =>
     cardId1 === cardId2 ? true : false
 
 const chosenCardsMatch = (cardOne, cardTwo) => 
-    cardsChosen[0] === cardsChosen[1] ? true : false
+    chosenCards[0] === chosenCards[1] ? true : false
 
 const checkIfAllCardsMatch = (cards) => {
-    if  (cardsWon.length === cards.length/2) {
+    if  (matchedCards.length === cards.length/2) {
         Jumbotron('Good Job! You Win!')
     }
 }
 
-const checkForMatch = () => {
-    const cards = document.querySelectorAll('img')
-    const cardChosenOneId = cardsChosenId[0]
-    const cardChosenTwoId = cardsChosenId[1]
+const checkIfCardsMatch = () => {
+    const cards = document.querySelectorAll(`.memoryGame-card`)
+    const cardChosenOneId = chosenCardsId[0]
+    const cardChosenTwoId = chosenCardsId[1]
     
     if(clickedSameCard(cardChosenOneId, cardChosenTwoId)) {
         CardBackSide(cards[cardChosenOneId])
@@ -64,14 +65,14 @@ const checkForMatch = () => {
     else if (chosenCardsMatch()) {
         stopFlipingCard(cards, cardChosenOneId)
         stopFlipingCard(cards, cardChosenTwoId)
-        cardsWon.push(cardsChosen)
+        matchedCards.push(chosenCards)
     } else { // Chosen cards don't match
         CardBackSide(cards[cardChosenOneId])
         CardBackSide(cards[cardChosenTwoId])
     }
 
-    cardsChosen = []
-    cardsChosenId = []
+    chosenCards = []
+    chosenCardsId = []
     
     checkIfAllCardsMatch(cards)
 }
