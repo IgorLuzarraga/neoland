@@ -21,7 +21,7 @@ const template = () => `
                         alt="navigate to page manga"
                         id="imgManga"
                     />
-                    <h2>Manga</h2>
+                    <h2>Memory Game</h2>
             </li>
             <li>
                 </figure>
@@ -49,7 +49,7 @@ const addListeners = () => {
     document
         .getElementById('imgManga')
         .addEventListener('click', () => {
-            goToPage(Routes.Manga)
+            goToPage(Routes.MemoryGame)
         })
 
     document

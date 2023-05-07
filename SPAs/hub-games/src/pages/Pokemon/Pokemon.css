@@ -11,7 +11,8 @@
     height: 20vh;
     width: 20vw; 
     animation: bounce 1s alternate infinite ease-in;
-    transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out; 
+    border: none;
 }
 
 .galleryPokemon > .figurePokemon {
@@ -32,7 +33,7 @@
     align-items: center;
     gap: 0.6rem;
     padding: 1rem 0.2rem;
-    border: 2px solid black;
+    border: 4px solid black;
     border-radius: 1rem;
 }
 
