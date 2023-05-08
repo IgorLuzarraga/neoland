@@ -9,7 +9,7 @@ const template = () => `
          class='logo'
     >
     <nav id='navMain'>
-        <img src="https://res.cloudinary.com/dtkuzehsp/image/upload/v1683583555/Hub%20Games/dark-light-mode_syuo8b.png"
+        <img src="https://res.cloudinary.com/dtkuzehsp/image/upload/v1683587474/Hub%20Games/mode_ixlnep.png"
             alt="change randomly the page's background color"
             id='btnChangeColor'
         >

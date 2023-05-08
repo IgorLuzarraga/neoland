@@ -30,7 +30,7 @@ header {
 #navMain > #btnChangeColor {
     color: red; 
     font-size: 3rem;
-    background-color: white;
+    background-color: transparent;
     padding: 0rem;
 }
 
