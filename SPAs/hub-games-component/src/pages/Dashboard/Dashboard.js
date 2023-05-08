@@ -15,21 +15,21 @@ const template = () => `
             </li>
             <li>
                 </figure>
-                <figure id="figureManga" class="figureDashboard">
+                <figure id="figureMemoryGame" class="figureDashboard">
                     <img 
-                        src="https://res.cloudinary.com/dtkuzehsp/image/upload/v1682787158/Hub%20Games/kbdy4jd6a5yqbasnhlmk.jpg" 
-                        alt="navigate to page manga"
-                        id="imgManga"
+                        src = 'https://res.cloudinary.com/dtkuzehsp/image/upload/v1683562501/Hub%20Games/memory-game-fruits/fruits-memory-game_hmjioe.jpg',
+                        alt="navigate to page memory game"
+                        id="imgMemoryGame"
                     />
                     <h2>Memory Game</h2>
             </li>
             <li>
                 </figure>
-                <figure id="figureAnime" class="figureDashboard">
+                <figure id="figureTicTacToe" class="figureDashboard">
                     <img 
-                        src="https://res.cloudinary.com/dtkuzehsp/image/upload/v1682787158/Hub%20Games/rhvudsrv5ptagprpxzhk.webp" 
-                        alt="navigate to page anime"
-                        id="imgAnime"
+                        src="https://res.cloudinary.com/dtkuzehsp/image/upload/v1683562742/Hub%20Games/memory-game-fruits/tic-tac-toe_uchhvs.png" 
+                        alt="navigate to page tic tac toe"
+                        id="imgTicTacToe"
                     />
                     <h2>Tic Tac Toe</h2>
                 </figure>
@@ -47,13 +47,13 @@ const addListeners = () => {
         })
 
     document
-        .getElementById('imgManga')
+        .getElementById('imgMemoryGame')
         .addEventListener('click', () => {
             goToPage(Routes.MemoryGame)
         })
 
     document
-        .getElementById('imgAnime')
+        .getElementById('imgTicTacToe')
         .addEventListener('click', () => {
             goToPage(Routes.TicTacToe)
         })

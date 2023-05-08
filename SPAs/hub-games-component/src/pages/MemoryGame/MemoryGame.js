@@ -1,10 +1,11 @@
 import './MemoryGame.css'
-//import { cards } from './types/gameTypes'
+import JSConfetti from 'js-confetti'
 import { cards } from '../../types/MemoryGame/gameTypes'
-//import { Gameboard } from '../../components/Gameboard/Gameboard'
 import { Gameboard } from '../../components/MemoryGame/Gameboard/Gameboard'
 import { CardBackSide } from '../../components/MemoryGame/CardBackSide/CardBackSide'
 import { Jumbotron } from '../../components/MemoryGame/Jumbotron/Jumbotron'
+
+const jsConfetti = new JSConfetti() // Create JSConfetty just ones!
 
 const template = () => `
     <div id='memory-game-container-main'>
@@ -25,6 +26,13 @@ let matchedCards = []
 const flipCard = (card, cardId) => 
    card.setAttribute('src', cards[cardId].img)
 
+const throwConfetty = () => {
+    jsConfetti.addConfetti({
+     confettiRadius: 6,
+     confettiNumber: 1500,
+   })
+ }
+
 const handleCardClicked = (e) => {
     const card = e.target
     const cardId = card.id
@@ -35,7 +43,7 @@ const handleCardClicked = (e) => {
     flipCard(card, cardId)
 
     if (chosenCards.length === 2) {
-        setTimeout(checkIfCardsMatch, 800)
+        setTimeout(checkIfCardsMatch, 400)
     }
 }
 
@@ -53,6 +61,8 @@ const chosenCardsMatch = (cardOne, cardTwo) =>
 const checkIfAllCardsMatch = (cards) => {
     if  (matchedCards.length === cards.length/2) {
         Jumbotron('Good Job! You Win!')
+
+        throwConfetty()
     }
 }
 
