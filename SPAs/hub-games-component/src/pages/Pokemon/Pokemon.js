@@ -4,6 +4,7 @@ import {Loading} from "../../components/Loading/Loading"
 import { PokemonTypesBtns } from '../../components/Pokemon/PokemonTypesBtns/PokemonTypesBtns'
 import { filterPokemonByName } from '../../utils/Pokemon/pokemonFilters'
 import { AddPokemonsToGallery } from '../../components/Pokemon/PokemonsGallery/PokemonsGallery'
+import { changePageColor } from '../../utils/Pokemon/changePageColor'
 
 let pokemonDataFromService = {
     pokemons: [],
@@ -48,19 +49,20 @@ const getPokemons = async () => {
     AddPokemonsToGallery(pokemonDataFromService.pokemons)
 }
 
-const addListeners = (pokemonDataFromService) => {
+const addListeners = (pokemonDataFromService) =>
     document
         .querySelector('#inputSearcher')
         .addEventListener('input', () => {
             const nameToFilter = document.querySelector('#inputSearcher').value 
             filterPokemonByName(nameToFilter, pokemonDataFromService)
     })
-}
 
 export const printTemplate = () => {
     // insert the page's Html
     document.querySelector('main').innerHTML = template()
 
+    changePageColor()
+    
     // Render a spinner before fetch
     addSpinner()
 

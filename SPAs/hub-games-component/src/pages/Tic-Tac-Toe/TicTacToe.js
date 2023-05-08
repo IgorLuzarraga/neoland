@@ -1,5 +1,6 @@
 import './TicTacToe.css'
 import { Gameboard } from '../../components/Tic-Tac-Toe/Gameboard/Gameboard'
+import { changePageColor } from '../../utils/Tic-Tac-Toe/changePageColor'
 
 const template = () => `
     <div id='tic-tac-toe-container-main'>
@@ -20,5 +21,6 @@ const createBoard = () => Gameboard()
 
 export const TicTacToe = () => {
     printTemplate(template)
+    changePageColor()
     createBoard()
 }

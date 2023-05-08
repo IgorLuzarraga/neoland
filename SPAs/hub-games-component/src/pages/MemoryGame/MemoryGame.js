@@ -4,6 +4,7 @@ import { cards } from '../../types/MemoryGame/gameTypes'
 import { Gameboard } from '../../components/MemoryGame/Gameboard/Gameboard'
 import { CardBackSide } from '../../components/MemoryGame/CardBackSide/CardBackSide'
 import { Jumbotron } from '../../components/MemoryGame/Jumbotron/Jumbotron'
+import { changePageColor } from '../../utils/MemoryGame/changePageColor'
 
 const jsConfetti = new JSConfetti() // Create JSConfetty just ones!
 
@@ -93,6 +94,7 @@ const shuffleCards = () =>
     cards.sort(() => 0.5 - Math.random())
 
 export const MemoryGame = () => {
+    changePageColor()
     printTemplate(template)
     createBoard()
     shuffleCards()
