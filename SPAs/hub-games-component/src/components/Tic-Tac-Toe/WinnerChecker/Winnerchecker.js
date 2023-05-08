@@ -1,4 +1,5 @@
-import { gameBoardWinnerSquares } from "../../types/gameTypes"
+//import { gameBoardWinnerSquares } from "../../types/gameTypes"
+import { gameBoardWinnerSquares } from "../../../types/Tic-Tac-Toe/gameTypes"
 
 export const WinnerChecker = (gameBoardSquaresClickedByPlayers) => {
     for (const squares of gameBoardWinnerSquares) {

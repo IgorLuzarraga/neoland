@@ -1,6 +1,6 @@
 import './Gameboard.css'
 import { Card } from "../Card/Card"
-import { cards } from "../../types/gameTypes"
+import { cards } from '../../../types/MemoryGame/gameTypes'
 import { CardBackSide } from '../CardBackSide/CardBackSide'
 
 const template = () =>

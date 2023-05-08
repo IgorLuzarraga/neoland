@@ -1,8 +1,10 @@
 import './MemoryGame.css'
-import { cards } from '../../types/gameTypes'
-import { Gameboard } from '../../components/Gameboard/Gameboard'
-import { CardBackSide } from '../../components/CardBackSide/CardBackSide'
-import { Jumbotron } from '../../components/Jumbotron/Jumbotron'
+//import { cards } from './types/gameTypes'
+import { cards } from '../../types/MemoryGame/gameTypes'
+//import { Gameboard } from '../../components/Gameboard/Gameboard'
+import { Gameboard } from '../../components/MemoryGame/Gameboard/Gameboard'
+import { CardBackSide } from '../../components/MemoryGame/CardBackSide/CardBackSide'
+import { Jumbotron } from '../../components/MemoryGame/Jumbotron/Jumbotron'
 
 const template = () => `
     <div id='memory-game-container-main'>

@@ -4,8 +4,9 @@ import { printTemplate as Pokemon } from '../pages/Pokemon/Pokemon'
 import { printTemplate as Anime } from '../pages/Anime/Anime'
 import { printTemplate as Manga } from '../pages/Manga/Manga'
 import { printTemplate as Login } from '../pages/Login/Login'
-import { MemoryGame } from '../pages/MemoryGame/pages/MemoryGame/MemoryGame'
-import { TicTacToe } from '../pages/Tic-Tac-Toe/pages/TicTacToe/ticTacToe'
+import { MemoryGame } from '../pages/MemoryGame/MemoryGame'
+//import { TicTacToe } from '../pages/Tic-Tac-Toe/pages/TicTacToe/ticTacToe'
+import { TicTacToe } from '../pages/Tic-Tac-Toe/TicTacToe'
 
 export const Routes = {
     NotLogged: 'NotLogged',

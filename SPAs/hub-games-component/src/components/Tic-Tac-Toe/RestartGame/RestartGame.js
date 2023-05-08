@@ -1,4 +1,5 @@
 import './RestartGame.css'
+//import { Jumbotron } from '../../../../components/Tic-Tac-Toe/Jumbotron/Jumbotron'
 import { Jumbotron } from '../Jumbotron/Jumbotron'
 
 export const RestartGame = (gameBoard, gameBoardSquares, currentPlayer, player) => {

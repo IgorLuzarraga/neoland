@@ -1,5 +1,6 @@
 import './TicTacToe.css'
-import { Gameboard } from '../../components/Gameboard/Gameboard'
+//import { Gameboard } from './components/Gameboard/Gameboard'
+import { Gameboard } from '../../components/Tic-Tac-Toe/Gameboard/Gameboard'
 
 const template = () => `
     <div id='tic-tac-toe-container-main'>
