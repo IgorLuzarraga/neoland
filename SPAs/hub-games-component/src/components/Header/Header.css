@@ -28,7 +28,10 @@ header {
 }
 
 #navMain > #btnChangeColor {
-    background-color: greenyellow;
+    color: red; 
+    font-size: 3rem;
+    background-color: white;
+    padding: 0rem;
 }
 
 .logo {
