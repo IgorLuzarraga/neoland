@@ -2,23 +2,38 @@
     width: 100%;
     height: 100%;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-around;
     align-items: center;
-    border: 0px solid black;
+    border: 4px solid black;
 }
 
 #tic-tac-toe-gameboard-container {
-    width: 90%;
-    height: 60vh;
+    /* width: 90%;
+    height: 60vh; */
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 0px solid black;
+    border: 1px solid black;
     margin: 2rem;
 }
 
-#tic-tac-toe-jumbotron {
+#tic-tac-toe-display {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 500px;
+    border: 1px solid black;
+    margin: 2rem 0rem;
+    padding: 2rem;
+}
+
+#tic-tac-toe-display > #tic-tac-toe-jumbotron {
     font-size: 1.8rem;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+#tic-tac-toe-display > #tic-tac-toe-counter {
+    font-size: 1.8rem;
+    font-family: 'Finger Paint', Impact, Haettenschweiler;
 }

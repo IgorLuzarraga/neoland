@@ -11,6 +11,9 @@ let restartBtn
 let currentPlayer = Player_X
 let gameBoardSquaresClickEvents
 let gameBoardSquaresClickedByPlayers = Array(9).fill(null)
+let playerXMovesCounter = 0
+let playerOMovesCounter = 0
+const jsConfetti = new JSConfetti() // Create JSConfetty just ones!
 
 const template = () => `
     <div id='tic-tac-toe-gameboard'>
@@ -43,12 +46,25 @@ const squareWasClickedBefore = square =>
         (square !== null)  ? true : false
 
 const throwConfetty = () => {
-   const jsConfetti = new JSConfetti()
-
    jsConfetti.addConfetti({
     confettiRadius: 6,
     confettiNumber: 1500,
   })
+}
+
+const updateCounters = (currentPlayer) => {
+    switch (currentPlayer) {
+        case Player_X:
+            const showMovesPlayerX = `Playex X moves: ${++playerXMovesCounter}`
+            const counterPlayerX = document.querySelector('#tic-tac-toe-counter-playerX')
+            counterPlayerX.innerHTML = showMovesPlayerX
+            break
+        case Player_O:
+            const showMovesPlayerO = `Playex O moves: ${++playerOMovesCounter}`
+            const counterPlayerO = document.querySelector('#tic-tac-toe-counter-playerO')
+            counterPlayerO.innerHTML = showMovesPlayerO
+            break
+    }
 }
 
 const gameBoardSqureClicked = (e) => {
@@ -61,6 +77,8 @@ const gameBoardSqureClicked = (e) => {
 
     markCurrentPlayerInSelectedSquare(e, currentPlayer)
     
+    updateCounters(currentPlayer)
+
     if(WinnerChecker(gameBoardSquaresClickedByPlayers)){
         // Show the winner and Throw confetty
         
