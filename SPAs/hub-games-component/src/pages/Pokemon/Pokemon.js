@@ -1,8 +1,9 @@
 import './Pokemon.css'
-import { CardPokemon } from '../../components/Pokemon/CardPokemon/CardPokemon'
 import { service_getPokemons } from '../../services/pokemon.service'
-//import { service_getPokemons } from '../../services/pokemon.service2'
 import {Loading} from "../../components/Loading/Loading"
+import { PokemonTypesBtns } from '../../components/Pokemon/PokemonTypesBtns/PokemonTypesBtns'
+import { filterPokemonByName } from '../../utils/Pokemon/pokemonFilters'
+import { AddPokemonsToGallery } from '../../components/Pokemon/PokemonsGallery/PokemonsGallery'
 
 let pokemonDataFromService = {
     pokemons: [],
@@ -15,22 +16,6 @@ const template = () => `
     <div id="containerPokemonSearcher"></div>
     <div class="galleryPokemon"></div>
     `
-
-// const templateFigure = (pokemon) => {
-//     const figureClassName = `"figurePokemon ${pokemon.type[0].type.name}"`
-//     const pokemonTypeName = `${pokemon.type[0].type.name}`
-//     const pokemonWeight = `${pokemon.weight/10} kg`
-//     const pokemonHeight = `${pokemon.height/10} m`
-//     return( `
-//         <figure class=${figureClassName}>
-//             <img src=${pokemon.image} alt=${pokemon.name} class="imgPokemon"/>
-//             <h3>${pokemon.name}</h3>
-//             <h3>${pokemonTypeName}</h3>
-//             <h3>${pokemonWeight}</h3>
-//             <h3>${pokemonHeight}</h3>
-//         </figure>
-//     `)
-// } 
 
 const templatePokemonSearcher = () => `
     <div id='pokemonSearcher'>
@@ -57,113 +42,21 @@ const addPokemonSearcher = () =>
         .querySelector("#containerPokemonSearcher")
         .innerHTML = templatePokemonSearcher()
 
-
-const cleanGallery = () => 
-    document
-        .querySelector('.galleryPokemon')
-        .innerHTML = ''
-
-// const addPokemonToGallery = (pokemon) => 
-//     document
-//         .querySelector('.galleryPokemon')
-//         .innerHTML +=  templateFigure(pokemon)
-
-const addPokemonToGallery = (pokemon) => 
-    document
-        .querySelector('.galleryPokemon')
-        .innerHTML +=  CardPokemon(pokemon)
-
-
-const addPokemonsToGallery = (pokemons) => {
-    cleanGallery()
-    pokemons.forEach(addPokemonToGallery)
-}
-
 // Version 1 -- uses --> services/pokemon.service
 const getPokemons = async () => {
     pokemonDataFromService = await service_getPokemons()
-    addPokemonsToGallery(pokemonDataFromService.pokemons)
+    AddPokemonsToGallery(pokemonDataFromService.pokemons)
 }
 
-// Version 2 -- uses --> services/pokemon.service2
-const getPokemons2 =  () => {
-    const pokemonsPromise = service_getPokemons()
-        pokemonsPromise.forEach(promise => {
-            promise
-                .then((pokemonData) => {
-                    pokemonDataFromService.pokemons.push(pokemonData.pokemons) 
-                    pokemonDataFromService.pokemonTypes.push(pokemonData.pokemonTypes) 
-                    addPokemonToGallery(pokemonData.pokemon)
-                })
-                .catch(error => console.log(error))
-        })
-}
-
-// ----------------------------- Filters (Start) ----------------------
-const byName = name => pokemon =>
-    pokemon
-        .name
-        .toLowerCase()
-        .includes(name.toLowerCase())
-
-const filterPokemonByName = async (name) => {
-    document.querySelector('.galleryPokemon').innerHTML = ""
-    pokemonDataFromService.pokemons
-        .filter(byName(name))
-        .forEach(addPokemonToGallery)
-}
-
-// Note: There are (in each pokemon) two kind of types
-// called type 0 and type 1
-const filterPokemonByType = (type) => {
-    const pokemonsFilterdByType_0 = 
-        pokemonDataFromService.pokemons.filter((pokemon) => 
-            pokemon.type[0].type.name
-                .toLowerCase()
-                .includes(type.toLowerCase())
-    )
-
-    if (pokemonsFilterdByType_0.length === 0) {
-    // We didn't find any pokemon type 0, so we filter
-    // again, this time for type 1
-    const pokemonsFilterdByType_1 = 
-        pokemonDataFromService.pokemons.filter((pokemon) =>
-            pokemon.type[1]?.type.name
-                .toLowerCase()
-                .includes(type.toLowerCase())
-    )
-    addPokemonsToGallery(pokemonsFilterdByType_1);
-    } else {
-    addPokemonsToGallery(pokemonsFilterdByType_0);
-    }
-}
-
-// ----------------------------- Filters (End) ----------------------
-
-const addListeners = (pokemonTypes) => {
+//const addListeners = (pokemonTypes) => {
+const addListeners = (pokemonDataFromService) => {
     document
         .querySelector('#inputSearcher')
         .addEventListener('input', () => {
-            filterPokemonByName(document.querySelector('#inputSearcher').value)
-    })
-
-    pokemonTypes.forEach((type) => {
-        const pokemonTypeBtn = document.querySelector(`#${type}`)
-    
-        pokemonTypeBtn.addEventListener("click", (e) => {
-            filterPokemonByType(type)
-        })
+            const nameToFilter = document.querySelector('#inputSearcher').value 
+            filterPokemonByName(nameToFilter, pokemonDataFromService)
     })
 }
-
-const printPokemonTypesBtns = (pokemonTypes) =>
-    pokemonTypes.forEach((type) => {
-      const btnClassName = `"pokemonTypeBtn ${type}"`
-      
-      const pokemonTypeBtn = `<button class=${btnClassName} id=${type}>${type}</button>`
-      const pokemonTypesBtns = document.querySelector("#pokemonTypesBtns")
-      pokemonTypesBtns.innerHTML += pokemonTypeBtn
-    })
 
 export const printTemplate = () => {
     // insert the page's Html
@@ -186,9 +79,9 @@ export const printTemplate = () => {
         // remove spinner after fetch
         removeSpinner()
 
-        printPokemonTypesBtns(pokemonDataFromService.pokemonTypes)
+        PokemonTypesBtns(pokemonDataFromService)
 
-        addListeners(pokemonDataFromService.pokemonTypes)
+        addListeners(pokemonDataFromService)
     }, 2000)
     
 

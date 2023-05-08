@@ -1,12 +1,8 @@
 import './Gameboard.css'
-//import { RestartGame } from '../../../pages/Tic-Tac-Toe/components/RestartGame/RestartGame'
 import { RestartGame } from '../RestartGame/RestartGame'
 import { Jumbotron } from '../Jumbotron/Jumbotron'
-//import { WinnerChecker } from '../../../pages/Tic-Tac-Toe/components/WinnerChecker/Winnerchecker'
 import { WinnerChecker } from '../WinnerChecker/Winnerchecker'
-//import { WinnerSquares } from '../../../pages/Tic-Tac-Toe/components/WinnerSquares/WinnerSquares'
 import { WinnerSquares } from '../WinnerSquares/WinnerSquares'
-//import { Player_O, Player_X, WinnerSquaresColor } from '../../../pages/Tic-Tac-Toe/types/gameTypes'
 import { Player_O, Player_X, WinnerSquaresColor } from '../../../types/Tic-Tac-Toe/gameTypes'
 
 let restartBtn
