@@ -1,4 +1,5 @@
 import './Gameboard.css'
+import JSConfetti from 'js-confetti'
 import { RestartGame } from '../RestartGame/RestartGame'
 import { Jumbotron } from '../Jumbotron/Jumbotron'
 import { WinnerChecker } from '../WinnerChecker/Winnerchecker'
@@ -41,6 +42,15 @@ const markCurrentPlayerInSelectedSquare = (e, currentPlayer) =>
 const squareWasClickedBefore = square =>
         (square !== null)  ? true : false
 
+const throwConfetty = () => {
+   const jsConfetti = new JSConfetti()
+
+   jsConfetti.addConfetti({
+    confettiRadius: 6,
+    confettiNumber: 1500,
+  })
+}
+
 const gameBoardSqureClicked = (e) => {
     const id = e.target.id
     const squareClicked = gameBoardSquaresClickedByPlayers[id]
@@ -52,9 +62,14 @@ const gameBoardSqureClicked = (e) => {
     markCurrentPlayerInSelectedSquare(e, currentPlayer)
     
     if(WinnerChecker(gameBoardSquaresClickedByPlayers)){
+        // Show the winner and Throw confetty
+        
         Jumbotron(`Player ${currentPlayer} Wins!`)
 
         markWinnergSquares()
+
+        throwConfetty()
+
     } else {
         currentPlayer = flipCurrentPlayer(currentPlayer)
     }

@@ -48,7 +48,6 @@ const getPokemons = async () => {
     AddPokemonsToGallery(pokemonDataFromService.pokemons)
 }
 
-//const addListeners = (pokemonTypes) => {
 const addListeners = (pokemonDataFromService) => {
     document
         .querySelector('#inputSearcher')

@@ -1,5 +1,4 @@
 import './TicTacToe.css'
-//import { Gameboard } from './components/Gameboard/Gameboard'
 import { Gameboard } from '../../components/Tic-Tac-Toe/Gameboard/Gameboard'
 
 const template = () => `
