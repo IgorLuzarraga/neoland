@@ -9,15 +9,15 @@ const template = () => `
          class='logo'
     >
     <nav id='navMain'>
-        <img src="https://res.cloudinary.com/dtkuzehsp/image/upload/v1682758998/Hub%20Games/mlpnvc6otxwingvhqc8x.png"
+        <img src="https://res.cloudinary.com/dtkuzehsp/image/upload/v1683565206/Hub%20Games/brightness-and-contrast_xh94dw.png"
             alt="change randomly the page's background color"
             id='btnChangeColor'
         >
-        <img src="https://res.cloudinary.com/dtkuzehsp/image/upload/v1682757402/Hub%20Games/sqgyj9gbxvlxdvnaqxsd.png"
+        <img src="https://res.cloudinary.com/dtkuzehsp/image/upload/v1683564783/Hub%20Games/board-game_jtrd9l.png"
             alt="navigate to Dashboard"
             id='btnDashboard'
         >
-        <img src="https://res.cloudinary.com/dtkuzehsp/image/upload/v1682757402/Hub%20Games/wjkkzvbuqydfmrbiurz4.png"
+        <img src="https://res.cloudinary.com/dtkuzehsp/image/upload/v1683565105/Hub%20Games/switch_bjsjzz.png"
             alt="log out"
             id='btnLogout'
         >

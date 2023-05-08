@@ -27,6 +27,10 @@ header {
     cursor: pointer;
 }
 
+#navMain > #btnChangeColor {
+    background-color: greenyellow;
+}
+
 .logo {
     width: 20vw;
     height: 100%;
