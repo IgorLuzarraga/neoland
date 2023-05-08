@@ -2,18 +2,17 @@
     width: 100%;
     height: 100%;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border: 4px solid black;
-}
-
-#memory-game-gameboard-container {
-    width: 90%;
-    height: 100%;
-    display: flex;
     justify-content: center;
     align-items: center;
     border: 0px solid black;
+}
+
+#memory-game-gameboard-container {
+    height: 100%;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 4px solid black;
 }
 

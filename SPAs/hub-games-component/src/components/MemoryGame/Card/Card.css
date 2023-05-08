@@ -1,7 +1,14 @@
 .memoryGame-card {
-    width: 7rem;
-    height: 10rem;
+    height: 200px;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border: 8px solid black;
     border-radius: 1rem;
-    object-fit:fill;
+    object-fit: fill;
+} 
+
+.memoryGame-card:hover {
+    cursor: pointer;
 }

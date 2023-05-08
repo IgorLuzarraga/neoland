@@ -10,10 +10,8 @@ const jsConfetti = new JSConfetti() // Create JSConfetty just ones!
 
 const template = () => `
     <div id='memory-game-container-main'>
-        <div id='memory-game-gameboard-container'>
-        </div>
-        <div id="memory-game-jumbotron">
-        </div>
+        <div id='memory-game-gameboard-container'></div>
+        <div id="memory-game-jumbotron"></div>
     </div>
 `
 const printTemplate = (template) =>
