@@ -1,4 +1,5 @@
 import './Pokemon.css'
+import { CardPokemon } from '../../components/Pokemon/CardPokemon/CardPokemon'
 import { service_getPokemons } from '../../services/pokemon.service'
 //import { service_getPokemons } from '../../services/pokemon.service2'
 import {Loading} from "../../components/Loading/Loading"
@@ -14,21 +15,22 @@ const template = () => `
     <div id="containerPokemonSearcher"></div>
     <div class="galleryPokemon"></div>
     `
-const templateFigure = (pokemon) => {
-    const figureClassName = `"figurePokemon ${pokemon.type[0].type.name}"`
-    const pokemonTypeName = `${pokemon.type[0].type.name}`
-    const pokemonWeight = `${pokemon.weight/10} kg`
-    const pokemonHeight = `${pokemon.height/10} m`
-    return( `
-        <figure class=${figureClassName}>
-            <img src=${pokemon.image} alt=${pokemon.name} class="imgPokemon"/>
-            <h3>${pokemon.name}</h3>
-            <h3>${pokemonTypeName}</h3>
-            <h3>${pokemonWeight}</h3>
-            <h3>${pokemonHeight}</h3>
-        </figure>
-    `)
-} 
+
+// const templateFigure = (pokemon) => {
+//     const figureClassName = `"figurePokemon ${pokemon.type[0].type.name}"`
+//     const pokemonTypeName = `${pokemon.type[0].type.name}`
+//     const pokemonWeight = `${pokemon.weight/10} kg`
+//     const pokemonHeight = `${pokemon.height/10} m`
+//     return( `
+//         <figure class=${figureClassName}>
+//             <img src=${pokemon.image} alt=${pokemon.name} class="imgPokemon"/>
+//             <h3>${pokemon.name}</h3>
+//             <h3>${pokemonTypeName}</h3>
+//             <h3>${pokemonWeight}</h3>
+//             <h3>${pokemonHeight}</h3>
+//         </figure>
+//     `)
+// } 
 
 const templatePokemonSearcher = () => `
     <div id='pokemonSearcher'>
@@ -61,10 +63,16 @@ const cleanGallery = () =>
         .querySelector('.galleryPokemon')
         .innerHTML = ''
 
+// const addPokemonToGallery = (pokemon) => 
+//     document
+//         .querySelector('.galleryPokemon')
+//         .innerHTML +=  templateFigure(pokemon)
+
 const addPokemonToGallery = (pokemon) => 
     document
         .querySelector('.galleryPokemon')
-        .innerHTML +=  templateFigure(pokemon)
+        .innerHTML +=  CardPokemon(pokemon)
+
 
 const addPokemonsToGallery = (pokemons) => {
     cleanGallery()

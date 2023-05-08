@@ -6,26 +6,6 @@
     gap: 1rem;
 }
 
-.galleryPokemon > .figurePokemon> .imgPokemon {
-    /* height: 200px; */
-    height: 20vh;
-    width: 20vw; 
-    animation: bounce 1s alternate infinite ease-in;
-    transition: all 1s ease-in-out; 
-    border: none;
-}
-
-.galleryPokemon > .figurePokemon {
-    height: 50vh;
-    width: 20vw; 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    /* border: 10px solid black; */
-    border-radius: 1rem;
-}
-
 #pokemonTypesBtns {
     display: flex;
     flex-wrap: wrap;
