@@ -17,4 +17,5 @@ const randomNumFP = (min, max) =>
     )
 
 export const changeColor = () => 
-    `rgb(${randomNumFP(0, 255)}, ${randomNumFP(0, 255)}, ${randomNum(0, 255)})`
+    //`rgb(${randomNumFP(0, 255)}, ${randomNumFP(0, 255)}, ${randomNum(0, 255)})`
+    document.body.classList.toggle('dark-mode');

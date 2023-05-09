@@ -5,14 +5,33 @@
     justify-content: center;
     align-items: center;
     border: 0px solid black;
+    gap: 1rem;
 }
 
-#memory-game-gameboard-container {
+/* #memory-game-gameboard-container {
     height: 100%;
     width: 90%;
     display: flex;
     justify-content: center;
     align-items: center;
     border: 4px solid black;
+} */
+
+#memory-game-display {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 600px;
+    border: 1px solid black;
+    margin: 2rem 0rem;
+    padding: 2rem;
 }
 
+@media only screen and (max-width: 600px) {
+    #memory-game-container-main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}

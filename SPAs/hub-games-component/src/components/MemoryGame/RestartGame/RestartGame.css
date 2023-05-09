@@ -1,0 +1,15 @@
+#memory-game-restartBtn {
+    padding: 7px 20px;
+    border-radius: 0px;
+    background-color: burlywood;
+    color: #333;
+    border-color: goldenrod;
+    font-size: 2.0rem;
+    transition: 200ms transform;
+    font-weight: 900;
+}
+
+#memory-game-restartBtn:hover {
+    cursor: pointer;
+    transform: translateY(-3px);
+}

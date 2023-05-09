@@ -5,13 +5,18 @@ import { Gameboard } from '../../components/MemoryGame/Gameboard/Gameboard'
 import { CardBackSide } from '../../components/MemoryGame/CardBackSide/CardBackSide'
 import { Jumbotron } from '../../components/MemoryGame/Jumbotron/Jumbotron'
 import { changePageColor } from '../../utils/MemoryGame/changePageColor'
+import { RestartGame } from '../../components/MemoryGame/RestartGame/RestartGame'
 
 const jsConfetti = new JSConfetti() // Create JSConfetty just ones!
 
 const template = () => `
     <div id='memory-game-container-main'>
         <div id='memory-game-gameboard-container'></div>
-        <div id="memory-game-jumbotron"></div>
+        <div id='memory-game-display'>
+            <div id="memory-game-jumbotron"></div>
+            <div id="memory-game-player-moves-counter"></div>
+            <button id="memory-game-restartBtn">Restart</button>
+        </div>
     </div>
 `
 const printTemplate = (template) =>
@@ -21,6 +26,7 @@ const printTemplate = (template) =>
 let chosenCardsId = []
 let chosenCards = []
 let matchedCards = []
+let playerMovesCounter = 0
 
 const flipCard = (card, cardId) => 
    card.setAttribute('src', cards[cardId].img)
@@ -32,12 +38,20 @@ const throwConfetty = () => {
    })
  }
 
+ const updateCounter = () => {
+    const showMovesPlayer = `Player moves: ${++playerMovesCounter}`
+    const counterMovesPlayer = document.querySelector('#memory-game-player-moves-counter')
+    counterMovesPlayer.innerHTML = showMovesPlayer
+}
+
 const handleCardClicked = (e) => {
     const card = e.target
     const cardId = card.id
 
     chosenCards.push(cards[cardId].name)
     chosenCardsId.push(cardId)
+
+    updateCounter()
 
     flipCard(card, cardId)
 
@@ -91,9 +105,18 @@ const checkIfCardsMatch = () => {
 const shuffleCards = () =>
     cards.sort(() => 0.5 - Math.random())
 
+const addListener = () => {
+    const restartBtn = document.getElementById('memory-game-restartBtn')
+
+    restartBtn.addEventListener('click', function(event) {
+        RestartGame(createBoard)
+    });
+}
+
 export const MemoryGame = () => {
     changePageColor()
     printTemplate(template)
     createBoard()
     shuffleCards()
+    addListener()
 }
