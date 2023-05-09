@@ -4,7 +4,7 @@ import { FAKE_USER } from "../../utils/constants"
 import { Routes, goToPage } from "../../utils/router"
 
 const template = () => `
-    <img src="https://res.cloudinary.com/dtkuzehsp/image/upload/v1682755295/Hub%20Games/km2dwnap4pragrco6aqg.jpg"
+    <img src="https://res.cloudinary.com/dtkuzehsp/image/upload/v1683640225/eag0cyi74oh9snedaic6.png"
          alt="Hub Games App Logo"
          class='logo'
     >

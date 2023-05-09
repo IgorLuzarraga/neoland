@@ -5,16 +5,17 @@ import { printTemplate as Pokemon } from '../pages/Pokemon/Pokemon'
 // import { printTemplate as Manga } from '../pages/Manga/Manga'
 import { printTemplate as Login } from '../pages/Login/Login'
 import { MemoryGame } from '../pages/MemoryGame/MemoryGame'
-//import { TicTacToe } from '../pages/Tic-Tac-Toe/pages/TicTacToe/ticTacToe'
 import { TicTacToe } from '../pages/Tic-Tac-Toe/TicTacToe'
+import { Wacka } from '../pages/Wacka/Wacka'
 
 export const Routes = {
     NotLogged: 'NotLogged',
     Pokemon: 'Pokemon',
     MemoryGame: 'MemoryGame',
     TicTacToe: 'TicTacToe',
-    Manga: 'Manga',
-    Anime: 'Anime',
+    Wacka: 'Wacka',
+    // Manga: 'Manga',
+    // Anime: 'Anime',
     Login: 'Login',
     Dashboard: 'Dashboard'
 }
@@ -32,6 +33,9 @@ export const goToPage = (route) => {
             break
         case Routes.TicTacToe:
             TicTacToe()
+            break
+        case Routes.Wacka:
+            Wacka()
             break
         // case Routes.Manga:
         //     Manga()

@@ -34,6 +34,15 @@ const template = () => `
                     <h2>Tic Tac Toe</h2>
                 </figure>
             </li>
+            <li>
+                <figure id="figureWacka" class="figureDashboard">
+                <img
+                    src="https://res.cloudinary.com/dtkuzehsp/image/upload/v1683639582/xij9pflnsmx85flststm.jpg"
+                    alt="navigate to page Wacka"
+                    id="imgWacka"
+                />
+                <h2>Wacka</h2>
+                </figure>
             </li>
         </ul>
     </div>
@@ -56,6 +65,12 @@ const addListeners = () => {
         .getElementById('imgTicTacToe')
         .addEventListener('click', () => {
             goToPage(Routes.TicTacToe)
+        })
+
+    document
+        .getElementById('imgWacka')
+        .addEventListener('click', () => {
+            goToPage(Routes.Wacka)
         })
 }
 
