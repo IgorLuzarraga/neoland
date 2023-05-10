@@ -8,10 +8,10 @@ export const CardPokemon = (pokemon) => {
     return( `
         <figure class=${figureClassName}>
             <img src=${pokemon.image} alt=${pokemon.name} class="imgPokemon"/>
-            <h3>${pokemon.name}</h3>
-            <h3>${pokemonTypeName}</h3>
-            <h3>${pokemonWeight}</h3>
-            <h3>${pokemonHeight}</h3>
+            <h4>${pokemon.name}</h4>
+            <h4>${pokemonTypeName}</h4>
+            <h4>${pokemonWeight}</h4>
+            <h4>${pokemonHeight}</h4>
         </figure>
     `)
 } 

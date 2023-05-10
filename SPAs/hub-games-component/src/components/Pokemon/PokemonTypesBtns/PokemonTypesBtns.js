@@ -12,13 +12,16 @@ const addListeners = (pokemonDataFromService) => {
     })
 }
 
-const printTemplate = (pokemonTypes) =>
+const printTemplate = (pokemonTypes) => 
     pokemonTypes.forEach((type) => {
         const btnClassName = `"pokemonTypeBtn ${type}"`
         
         const pokemonTypeBtn = `<button class=${btnClassName} id=${type}>${type}</button>`
         const pokemonTypesBtns = document.querySelector("#pokemonTypesBtns")
         pokemonTypesBtns.innerHTML += pokemonTypeBtn
+        
+        // Now we show the buttons
+        pokemonTypesBtns.style.display = 'flex'
     })
 
 export const PokemonTypesBtns = (pokemonDataFromService) => {

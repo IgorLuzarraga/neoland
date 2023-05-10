@@ -57,33 +57,33 @@ const addListeners = (pokemonDataFromService) =>
             filterPokemonByName(nameToFilter, pokemonDataFromService)
     })
 
-export const printTemplate = () => {
+export const Pokemon = () => {
     // insert the page's Html
     document.querySelector('main').innerHTML = template()
 
-    changePageColor()
+    //changePageColor()
     
     // Render a spinner before fetch
-    addSpinner()
+    //addSpinner()
 
     // fetch the pokemons
     getPokemons()
 
-    // Delay of 2 seconds to let us a litle bit of time to see the spinner shown
+    // Delay of 1 seconds to let us a litle bit of time to see the spinner shown
     // Remove it to go faster
-    setTimeout(() => {
+   setTimeout(() => {
         addPokemonSearcher()
 
         // fetch the pokemons
         //getPokemons()
 
         // remove spinner after fetch
-        removeSpinner()
+        //removeSpinner()
 
         PokemonTypesBtns(pokemonDataFromService)
 
         addListeners(pokemonDataFromService)
-    }, 2000)
+    }, 1000)
     
 
     
