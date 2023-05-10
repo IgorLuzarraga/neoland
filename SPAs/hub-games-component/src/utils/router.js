@@ -7,6 +7,7 @@ import { printTemplate as Login } from '../pages/Login/Login'
 import { MemoryGame } from '../pages/MemoryGame/MemoryGame'
 import { TicTacToe } from '../pages/Tic-Tac-Toe/TicTacToe'
 import { Wacka } from '../pages/Wacka/Wacka'
+import { HangMan } from '../pages/HangMan/HangMan'
 
 export const Routes = {
     NotLogged: 'NotLogged',
@@ -14,6 +15,7 @@ export const Routes = {
     MemoryGame: 'MemoryGame',
     TicTacToe: 'TicTacToe',
     Wacka: 'Wacka',
+    HangMan: 'HangMan',
     // Manga: 'Manga',
     // Anime: 'Anime',
     Login: 'Login',
@@ -36,6 +38,9 @@ export const goToPage = (route) => {
             break
         case Routes.Wacka:
             Wacka()
+            break
+        case Routes.HangMan:
+            HangMan()
             break
         // case Routes.Manga:
         //     Manga()

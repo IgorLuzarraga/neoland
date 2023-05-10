@@ -7,6 +7,7 @@
     font-size: 2.0rem;
     transition: 200ms transform;
     font-weight: 900;
+    font-family: 'Finger Paint', Impact, Haettenschweiler;
 }
 
 #tic-tac-toe-container-main > #restartBtn:hover {

@@ -6,7 +6,6 @@
     grid-template: repeat(3, 1fr) / repeat(3, 1fr);
 }
 
-
 .square {
     height: 200px;
     width: 200px;
@@ -47,3 +46,17 @@
 /* .square:nth-child(6) ~ .square {
     border-bottom: none;
 }    */
+
+
+@media only screen and (max-width: 600px) {
+    #tic-tac-toe-gameboard {
+        width: 300px;
+        height: 300px;
+        border: 0px solid black;
+    }
+
+    .square {
+        width: 100px;
+        height: 100px;
+    }
+}

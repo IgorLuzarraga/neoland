@@ -9,7 +9,7 @@ const template = () => `
             <div id="tic-tac-toe-jumbotron">Tic Tac Toe</div>
             <div id="tic-tac-toe-counter-playerX">Playex X moves: 0</div>
             <div id="tic-tac-toe-counter-playerO">Playex O moves: 0</div>
-            <button id="restartBtn">Restart</button>
+            <button id="tic-tac-toe-restartBtn">Restart</button>
         </div>
     </div>
 `
@@ -21,6 +21,6 @@ const createBoard = () => Gameboard()
 
 export const TicTacToe = () => {
     printTemplate(template)
-    changePageColor()
+    //changePageColor()
     createBoard()
 }

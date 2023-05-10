@@ -4,20 +4,14 @@
     margin: 0 auto;
     display: grid;
     grid-template: repeat(3, 1fr) / repeat(4, 1fr);
-    border: 1px solid black;
+    border: 0px solid black;
+    grid-gap: 0.5rem;
 }
 
 @media only screen and (max-width: 600px) {
     #memory-game-gameboard {
         width: 400px;
         height: 600px;
-        border: 8px solid black;
+        border: 0px solid black;
     }
 }
-
-/* @media only screen and (max-width: 600px) {
-    #memory-game-gameboard {
-      width: 100%;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    }
-  } */

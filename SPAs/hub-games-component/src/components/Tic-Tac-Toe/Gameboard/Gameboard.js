@@ -93,15 +93,31 @@ const gameBoardSqureClicked = (e) => {
     }
 }
 
+const restarVariables = () => {
+    playerXMovesCounter = 0
+    playerOMovesCounter = 0
+    currentPlayer = Player_X
+}
+
 const listeners = () => {
     gameBoardSquaresClickEvents = Array.from(document.querySelectorAll('.square'))
     gameBoardSquaresClickEvents.forEach(square => 
         square.addEventListener('click', gameBoardSqureClicked))
     
-    restartBtn = document.getElementById('restartBtn')
+    restartBtn = document.getElementById('tic-tac-toe-restartBtn')
 
     restartBtn.addEventListener('click', function(event) {
-        RestartGame(gameBoardSquaresClickedByPlayers, gameBoardSquaresClickEvents, currentPlayer, Player_X);
+        
+        restarVariables()
+
+        RestartGame(
+            gameBoardSquaresClickedByPlayers, 
+            gameBoardSquaresClickEvents, 
+            currentPlayer, 
+            Player_X,
+            playerXMovesCounter,
+            playerOMovesCounter
+            )
     });
 
 }

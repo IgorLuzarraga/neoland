@@ -13,3 +13,11 @@
     cursor: pointer;
     transform: translateY(-3px);
 }
+
+@media only screen and (max-width: 600px) {
+    #memory-game-restartBtn {
+        height: 50px;
+        color: white;
+        border: 1px solid black;
+    }
+}

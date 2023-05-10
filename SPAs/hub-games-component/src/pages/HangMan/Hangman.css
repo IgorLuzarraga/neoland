@@ -1,0 +1,85 @@
+#hangman-container-main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#hangman-container {
+    min-width: 50vw;
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 1rem;
+    border: 0px solid black;
+    /* border-radius: 10px; */
+}
+
+#hangman-title {
+    color: #4facfe;
+    font-size: 3rem;
+    font-weight: 500;
+    font-family: 'Press Start 2P', cursive;
+    margin: 1rem;
+}
+
+#hangman-image {
+    width: 300px;
+    height: 300px;
+    object-fit: contain;
+}
+
+/* word to be guessed by the user */
+#handman-word {
+    display: flex;
+    justify-content: center;
+    align-items: first baseline;
+    text-align: center;
+}
+
+/* underline of the letter of the word to be guessed */
+.hangman-word-letter{
+    width: 20px;
+    margin-right: 0.6rem;
+    /* padding-bottom: 20px; */
+    border-bottom: 4px solid #4facfe;
+}
+
+/* underline of the letter of the word to be guessed */
+/* once is guessed */
+.hangman-guessed-letter {
+    width: 20px;
+    margin-right: 0.6rem;
+    border-bottom: 4px solid #4facfe;
+}
+
+/* Div for the Try btn and the user input */
+#handman-display {
+    margin: 1rem;
+    padding: 0.5rem;
+    border: 4px solid #4facfe;
+    border-radius: 8px;
+}
+
+#hangman-try-btn {
+    font-size: 1rem;
+    padding: 0.2rem 1rem;
+    background-color: #00f2fe;
+    color: whitesmoke;
+}
+
+#hangman-input-letter {
+    border: 2px solid #4facfe;
+    border-radius: 5px;
+    padding: 0.3rem 1rem;
+}
+
+#hangman-reset-game-btn {
+    font-size: 1rem;
+    background-color: #00f2fe;
+    color: whitesmoke;
+}

@@ -10,7 +10,7 @@ const template = () => `
     >
     <nav id='navMain'>
         <img src="https://res.cloudinary.com/dtkuzehsp/image/upload/v1683587474/Hub%20Games/mode_ixlnep.png"
-            alt="change randomly the page's background color"
+            alt="Dark ligth mode"
             id='btnChangeColor'
         >
         <img src="https://res.cloudinary.com/dtkuzehsp/image/upload/v1683564783/Hub%20Games/board-game_jtrd9l.png"

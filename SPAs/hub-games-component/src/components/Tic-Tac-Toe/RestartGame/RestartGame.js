@@ -1,5 +1,4 @@
 import './RestartGame.css'
-//import { Jumbotron } from '../../../../components/Tic-Tac-Toe/Jumbotron/Jumbotron'
 import { Jumbotron } from '../Jumbotron/Jumbotron'
 import { RestartCounters } from '../RestartCounters/RestartCounters'
 
