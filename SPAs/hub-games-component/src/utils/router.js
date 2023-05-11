@@ -3,6 +3,7 @@ import { printTemplate as Dashboard} from '../pages/Dashboard/Dashboard'
 import { Pokemon } from '../pages/Pokemon/Pokemon' 
 import { printTemplate as Login } from '../pages/Login/Login'
 import { MemoryGame } from '../pages/MemoryGame/MemoryGame'
+import { MemoryGame2 } from '../pages/MemoryGame2/MemoryGame2'
 import { TicTacToe } from '../pages/Tic-Tac-Toe/TicTacToe'
 import { Wacka } from '../pages/Wacka/Wacka'
 import { HangMan } from '../pages/HangMan/HangMan'
@@ -11,6 +12,7 @@ export const Routes = {
     NotLogged: 'NotLogged',
     Pokemon: 'Pokemon',
     MemoryGame: 'MemoryGame',
+    MemoryGame2: 'MemoryGame2',
     TicTacToe: 'TicTacToe',
     Wacka: 'Wacka',
     HangMan: 'HangMan',
@@ -28,6 +30,9 @@ export const goToPage = (route) => {
             break
         case Routes.MemoryGame:
             MemoryGame()
+            break
+        case Routes.MemoryGame2:
+            MemoryGame2()
             break
         case Routes.TicTacToe:
             TicTacToe()
