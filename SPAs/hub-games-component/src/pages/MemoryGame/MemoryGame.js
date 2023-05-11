@@ -1,6 +1,7 @@
 import './MemoryGame.css'
 import { RestartGame } from '../../components/MemoryGame/RestartGame/RestartGame'
 import { GameLogic } from '../../components/MemoryGame/GameLogic/GameLogic'
+import { changePageColor } from '../../utils/MemoryGame/changePageColor'
 
 const template = () => `
     <div id='memory-game-container-main'>
@@ -25,6 +26,7 @@ const addListener = () => {
 
 export const MemoryGame = () => {
     printTemplate(template)
+    changePageColor()
     GameLogic()
     addListener()
 }

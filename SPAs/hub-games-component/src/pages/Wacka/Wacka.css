@@ -2,9 +2,10 @@
 
 .wacka-title{
     color: #4facfe;
-    font-size: 3rem;
+    font-size: 4rem;
     font-weight: 500;
     font-family: 'Press Start 2P', cursive;
+    margin: 0 auto;
 }
 
 .interface {
@@ -29,11 +30,21 @@
 }
 
 .score {
-    padding: 0 48px;
+    padding: 0 10px;
     line-height: 2;
+    font-size: 2rem;
     border-radius: 16px;
     color: black;
     border: 2px solid black;
+}
+
+#startGame {
+    background-color: #00f2fe;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 2rem;
 }
 
 .hole {
@@ -68,14 +79,6 @@
     top: 0;
 }
 
-#startGame {
-    background-color: #00f2fe;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-}
-
 .score {
     background-color: white;
     color: #4facfe;
@@ -88,5 +91,19 @@
     .game {
         width: 400px;
         height: 400px;
+    }
+
+    .wacka-title{
+        font-size: 1.0rem;
+        margin: 1rem;
+    }
+
+    .score {
+        padding: 0 8px;
+        font-size: 2rem;
+    }
+    
+    #startGame {
+        padding: 10px 10px;
     }
 }

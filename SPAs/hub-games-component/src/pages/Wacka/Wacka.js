@@ -3,9 +3,6 @@ import { randomTime } from "../../utils/Wacka/randomTime";
 import { Wack } from "../../components/Wacka/Wacka";
 import { changePageColor } from '../../utils/Wacka/changePageColor'
 
-//! ----------------------------------------------------------------
-//? ------------------ TEMPLATE GENERAL ---------------------------
-//! ----------------------------------------------------------------
 
 const template = () => `
     <div class="interface">
@@ -37,19 +34,15 @@ const template = () => `
     </div>
 `;
 
-//! ----------------------------------------------------------------
-//? ------------------ VARIABLES GLOBALES ---------------------------
-//! ----------------------------------------------------------------
+
 
 let lastHole; // --> Último hoyo
 let score = 0; // --> Puntuacion
 let timeUp = false; // --> Indica cuando se acaba el tiempo
 
-//! ----------------------------------------------------------------
-//? ------------------ LÓGICA DEL JUEGO ---------------------------
-//! ----------------------------------------------------------------
 
-//TODO --> Función para que el topo que se vaya a asomar sea aleatorio
+
+// Game logic
 const randomHole = () => {
   //Index aleatorio
   const index = Math.floor(
@@ -66,7 +59,6 @@ const randomHole = () => {
   return hole;
 };
 
-//TODO --> Función que decide que topo se asomará
 const showMole = () => {
   //Definimos el tiempo que el topo se mantiene asomado
   const time = randomTime(500, 5000);
@@ -87,7 +79,6 @@ const showMole = () => {
   }, time);
 };
 
-//TODO --> Función que arranca el juego
 const startGame = () => {
   timeUp = false;
   score = 0;
@@ -98,10 +89,7 @@ const startGame = () => {
   }, 15000);
 };
 
-//! ----------------------------------------------------------------
-//? ------------------ EVENTOS DE LOS ELEMENTOS HTML ---------------------------
-//! ----------------------------------------------------------------
-
+// Event listeners
 const addListeners = () => {
   //Añadimos a los topos el escuchador del click para saber cuando han clicado
   document
@@ -111,10 +99,7 @@ const addListeners = () => {
   document.querySelector("#startGame").addEventListener("click", startGame);
 };
 
-//! ----------------------------------------------------------------
-//?--------------- PINTAR EL CONTENEDOR GENERAL---------------------
-//! ----------------------------------------------------------------
-
+// Render
 export const Wacka = () => {
   document.querySelector("main").innerHTML = template();
   changePageColor()

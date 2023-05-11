@@ -1,5 +1,6 @@
 import { Routes, goToPage } from "../../utils/router"
 import './Dashboard.css'
+import { changePageColor } from "../../utils/Dashboard/changePageColor"
 
 const template = () => `
     <div id='containerDashboard'>
@@ -92,5 +93,6 @@ const addListeners = () => {
 
 export const printTemplate = () => {
     document.querySelector('main').innerHTML = template()
+    changePageColor()
     addListeners()
 }

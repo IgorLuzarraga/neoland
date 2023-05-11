@@ -20,10 +20,8 @@ const template = () => `
 
 const templatePokemonSearcher = () => `
     <div id='pokemonSearcher'>
-        <span>Search Pokemon by name:</span>
-        <div id="input-btn">
-            <input id="inputSearcher"></input>
-        </div>
+        <div id='pokemon-searcher-text'>Search Pokemon by name:</div>
+        <input id="inputSearcher"></input>
     </div>
 `
 
@@ -61,7 +59,7 @@ export const Pokemon = () => {
     // insert the page's Html
     document.querySelector('main').innerHTML = template()
 
-    //changePageColor()
+    changePageColor()
     
     // Render a spinner before fetch
     //addSpinner()

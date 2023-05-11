@@ -32,21 +32,44 @@ const throwConfetty = () => {
     counterMovesPlayer.innerHTML = showMovesPlayer
 }
 
-const handleCardClicked = (e) => {
-    const card = e.target
+
+const handleCardClicked = (e, card) => {
+    
+    //const card = e.target
     const cardId = card.id
 
-    chosenCards.push(cards[cardId].name)
-    chosenCardsId.push(cardId)
+    console.log('handleCardClicked -> card1 ', card)
+    console.log('handleCardClicked -> card2 ', e)
+    console.log('handleCardClicked -> cardId', cardId)
 
-    updateCounter()
+    // chosenCards.push(cards[cardId].name)
+    // chosenCardsId.push(cardId)
 
-    flipCard(card, cardId)
+    // updateCounter()
 
-    if (chosenCards.length === 2) {
-        setTimeout(checkIfCardsMatch, 400)
-    }
+    // flipCard(card, cardId)
+
+    // if (chosenCards.length === 2) {
+    //     setTimeout(checkIfCardsMatch, 400)
+    // }
 }
+
+// const handleCardClicked = (e) => {
+//     console.log('handleCardClicked: ', e.target)
+//     const card = e.target
+//     const cardId = card.id
+
+//     chosenCards.push(cards[cardId].name)
+//     chosenCardsId.push(cardId)
+
+//     updateCounter()
+
+//     flipCard(card, cardId)
+
+//     if (chosenCards.length === 2) {
+//         setTimeout(checkIfCardsMatch, 400)
+//     }
+// }
 
 const stopFlipingCard = (cards, cardId) =>
     cards[cardId].removeEventListener('click', handleCardClicked)
