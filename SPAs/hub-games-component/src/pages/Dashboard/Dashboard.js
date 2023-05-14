@@ -3,7 +3,7 @@ import './Dashboard.css'
 import { changePageColor } from "../../utils/Dashboard/changePageColor"
 
 const template = () => `
-    <div id='containerDashboard'>
+    <div id='dashboard-container'>
         <ul>
             <li>
                 <figure id="figurePokemon" class="figureDashboard">
@@ -13,9 +13,9 @@ const template = () => `
                         id="imgPokemon"
                     />
                     <h2>Pokemon</h2>
+                </figure>
             </li>
             <li>
-                </figure>
                 <figure id="figureMemoryGame" class="figureDashboard">
                     <img 
                         src = 'https://res.cloudinary.com/dtkuzehsp/image/upload/v1683562501/Hub%20Games/memory-game-fruits/fruits-memory-game_hmjioe.jpg',
@@ -23,9 +23,9 @@ const template = () => `
                         id="imgMemoryGame"
                     />
                     <h2>Memory Game</h2>
+                </figure>
             </li>
             <li>
-                </figure>
                 <figure id="figureMemoryGame2" class="figureDashboard">
                     <img 
                         src = 'https://res.cloudinary.com/dtkuzehsp/image/upload/v1683562501/Hub%20Games/memory-game-fruits/fruits-memory-game_hmjioe.jpg',
@@ -33,9 +33,9 @@ const template = () => `
                         id="imgMemoryGame2"
                     />
                     <h2>Memory Game 2</h2>
+                </figure
             </li>
             <li>
-                </figure>
                 <figure id="figureTicTacToe" class="figureDashboard">
                     <img 
                         src="https://res.cloudinary.com/dtkuzehsp/image/upload/v1683562742/Hub%20Games/memory-game-fruits/tic-tac-toe_uchhvs.png" 
@@ -47,22 +47,22 @@ const template = () => `
             </li>
             <li>
                 <figure id="figureWacka" class="figureDashboard">
-                <img
-                    src="https://res.cloudinary.com/dtkuzehsp/image/upload/v1683639582/xij9pflnsmx85flststm.jpg"
-                    alt="navigate to page Wacka"
-                    id="imgWacka"
-                />
-                <h2>Wacka</h2>
+                    <img
+                        src="https://res.cloudinary.com/dtkuzehsp/image/upload/v1683639582/xij9pflnsmx85flststm.jpg"
+                        alt="navigate to page Wacka"
+                        id="imgWacka"
+                    />
+                    <h2>Wacka Mole</h2>
                 </figure>
             </li>
             <li>
                 <figure id="figureWacka" class="figureDashboard">
-                <img
-                    src="https://res.cloudinary.com/dtkuzehsp/image/upload/v1683642574/zpieiovilsffledtmv92.png"
-                    alt="navigate to page HangMan"
-                    id="imgHangMan"
-                />
-                <h2>HangMan</h2>
+                    <img
+                        src="https://res.cloudinary.com/dtkuzehsp/image/upload/v1683642574/zpieiovilsffledtmv92.png"
+                        alt="navigate to page HangMan"
+                        id="imgHangMan"
+                    />
+                    <h2>HangMan</h2>
                 </figure>
             </li>
         </ul>

@@ -1,11 +1,11 @@
-#containerDashboard {
+#dashboard-container {
     width: 100vw;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-#containerDashboard ul {
+#dashboard-container ul {
     width: 100vw;
     display: flex;
     flex-wrap: wrap;
@@ -13,11 +13,12 @@
     align-items: center;
     list-style: none;
     padding-top: 10vh;
+    gap: 1rem;
   }
 
 .figureDashboard {
-    width: 400px;
-    height: 350px;
+    /* width: 200px;
+    height: 200px; */
     
     display: flex;
     flex-direction: column;
@@ -26,8 +27,8 @@
 }
 
 .figureDashboard img {
-    width: 100%;
-    height: 280px;
+    width: 150px;
+    height: 150px;
     object-fit:fill;
     border-radius: 10%;
     -webkit-box-shadow: 7px 8px 27px 0px rgba(0, 0, 0, 0.42);
