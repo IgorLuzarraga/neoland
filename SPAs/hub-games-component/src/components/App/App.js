@@ -8,6 +8,7 @@ export const App = () => {
     const footer = document.createElement(HtmlElements.FOOTER)
 
     app.append(header, main, footer)
+    //app.append(main)
     
     printHeader()
 }

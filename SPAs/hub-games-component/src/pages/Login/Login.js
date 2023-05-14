@@ -1,13 +1,16 @@
+import { changePageColor } from "../../utils/Login/changePageColor";
 import { Routes, goToPage } from "../../utils/router";
 import "./Login.css";
 
 // 1. Template
 
 const template = () => `
-  <div id='main-container'>
-    <div id='login-container'>
-      <input type="text" name="" id="" />
-      <button id="buttonLogin">LOGIN</button>
+  <div id='login-container-main'>
+    <div id="login-msg-welcome">Let's Start Gaming!</div>
+    <div id="login-msg-user-name">Before having fun, give us a name</div>
+    <div id='login-display-container'>
+      <input type="text" id="login-input" placeholder="Your name"/>
+      <button id="login-btn">LOGIN</button>
     </div>
   </div>
 `;
@@ -16,7 +19,7 @@ const template = () => `
 
 const addListeners = () => {
   document
-    .getElementById("buttonLogin")
+    .getElementById("login-btn")
     .addEventListener("click", () => {
       const inputLogin = document.querySelector("input");
       localStorage.setItem("user", inputLogin.value);
@@ -34,6 +37,6 @@ export const printTemplate = () => {
     document.querySelector("nav").style.display = "none";
 
   document.querySelector("main").innerHTML = template();
-  
+  changePageColor()
   addListeners();
 };
