@@ -1,64 +1,63 @@
 #tic-tac-toe-container-main {
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 80vh;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    border: 0px solid black;
-}
-
-#tic-tac-toe-gameboard-display-container {
-    display: flex;
-    justify-content: center;
-    gap: 0rem;
-    align-items: center;
-}
-
-#tic-tac-toe-gameboard-container {
-    /* width: 90%;
-    height: 60vh; */
-    width: 45vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 0px solid black;
-    margin: 2rem;
-}
-
-#tic-tac-toe-display {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 500px;
-    width: 40vw;
-    border: 4px solid black;
-    margin: 2rem 0rem;
-    padding: 2rem;
-    border: 4px solid black;
-    border-radius: 12px;
-    gap: 5rem;
+    /* border: 10px solid red; */
 }
 
 #tic-tac-toe-jumbotron {
+    display: none;
     width: 90%;
     font-size: 2.8rem;
-    /* font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
     font-family: 'Finger Paint', Impact, Haettenschweiler;
     padding: 1rem;
     text-align: center;
 }
 
+#tic-tac-toe-gameboard-display-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    /* border: 10px solid red; */
+}
+
+#tic-tac-toe-gameboard-container {
+    height: 35vw;
+    width: 35vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 10px solid red; */
+    margin: 0rem;
+}
+
+#tic-tac-toe-display {
+    height: 35vw;
+    width: 35vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* border: 4px solid black; */
+    box-shadow: -5px -5px 10px #08224c,  5px 5px 10px #08224c;
+    padding: 1rem;
+    border-radius: 12px;
+    gap: 2rem;
+}
+
 #tic-tac-toe-counter-playerX {
     width: 100%;
-    font-size: 1.5rem;
+    font-size: 2.5vw;
     font-family: 'Finger Paint', Impact, Haettenschweiler;
 }
 
 #tic-tac-toe-display > #tic-tac-toe-counter-playerO {
     width: 100%;
-    font-size: 1.5rem;
+    font-size: 2.5vw;
     font-family: 'Finger Paint', Impact, Haettenschweiler;
 }
 
@@ -80,32 +79,47 @@
 }
 
 @media only screen and (max-width: 600px) {
-    #tic-tac-toe-container-main {
+    #tic-tac-toe-gameboard-display-container {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        gap: 2rem;
     }
 
-    #tic-tac-toe-gameboard-display-container {
+    #tic-tac-toe-gameboard-container {
+        height: 70vw;
+        width: 70vw;
         display: flex;
-        flex-direction: column;
-        gap: 0rem;
+        justify-content: center;
+        align-items: center;
+        /* border: 10px solid red; */
+        margin: 0rem;
     }
-
+    
+    #tic-tac-toe-display {
+        height: 70vw;
+        width: 70vw;
+        display: flex;
+        /* display: none; */
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border: 4px solid black;
+        padding: 1rem;
+        border-radius: 12px;
+        gap: 2rem;
+    }
+    
     #tic-tac-toe-jumbotron {
         font-size: 1.7rem;
     }
 
-    #tic-tac-toe-display {
-        width: 350px;
-    }
-
     #tic-tac-toe-display > #tic-tac-toe-counter-playerX {
-        font-size: 1.0rem;
+        font-size: 5vw;
     }
 
     #tic-tac-toe-display > #tic-tac-toe-counter-playerO {
-        font-size: 1.0rem;
+        font-size: 5vw;
     }
 }

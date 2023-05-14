@@ -39,7 +39,7 @@ const markWinnergSquares = () =>
                             .backgroundColor = WinnerSquaresColor
     })
 
-const markCurrentPlayerInSelectedSquare = (e, currentPlayer) =>
+const markCurrentPlayerInSelectedSquare = (e, currentPlayer) => 
     e.target.innerText = currentPlayer
 
 const squareWasClickedBefore = square =>
@@ -55,12 +55,12 @@ const throwConfetty = () => {
 const updateCounters = (currentPlayer) => {
     switch (currentPlayer) {
         case Player_X:
-            const showMovesPlayerX = `Playex X moves: ${++playerXMovesCounter}`
+            const showMovesPlayerX = `Player X moves: ${++playerXMovesCounter}`
             const counterPlayerX = document.querySelector('#tic-tac-toe-counter-playerX')
             counterPlayerX.innerHTML = showMovesPlayerX
             break
         case Player_O:
-            const showMovesPlayerO = `Playex O moves: ${++playerOMovesCounter}`
+            const showMovesPlayerO = `Player O moves: ${++playerOMovesCounter}`
             const counterPlayerO = document.querySelector('#tic-tac-toe-counter-playerO')
             counterPlayerO.innerHTML = showMovesPlayerO
             break
@@ -118,8 +118,7 @@ const listeners = () => {
             playerXMovesCounter,
             playerOMovesCounter
             )
-    });
-
+    })
 }
 
 export const Gameboard = () => {
