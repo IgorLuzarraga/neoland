@@ -1,4 +1,4 @@
-export const StartGame = (word) => {
+export const StartGame = (word) => 
     word.split("")
         .forEach((letter) => {
       let pElement = document.createElement("p")
@@ -8,6 +8,6 @@ export const StartGame = (word) => {
       const section = document.querySelector("#handman-word")
       section.appendChild(pElement);
     })
-}
+
   
   
