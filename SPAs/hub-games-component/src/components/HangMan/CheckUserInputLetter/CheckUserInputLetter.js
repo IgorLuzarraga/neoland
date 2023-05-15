@@ -43,7 +43,7 @@ const markLettersThatMatchWithUserInputLetter = (
             p.setAttribute("class", "hangman-guessed-letter")
   
             const input = document.querySelector("#hangman-input-letter")
-            input.value = "";
+            input.value = ""
           }
       })
 }
@@ -53,43 +53,45 @@ const checkIfUserWin = (pElementsArr, lettersArr) =>
   
 const showMsgIfUserWins = () => {
     setTimeout(() => {
-      const divContainer = document.querySelector("#hangman-container");
-      divContainer.innerHTML = "";
+      const divContainer = document.querySelector("#hangman-container")
+      divContainer.innerHTML = ""
 
-      const h1 = document.createElement("h1");
-      h1.innerHTML = "Awesome! You Win!";
-
-      const newGameBtn = document.createElement("button");
-      newGameBtn.innerHTML = "Another one?";
-      newGameBtn.setAttribute("id", "hangman-reset-game-btn");
+      const divMsg = document.createElement("div")
+      divMsg.innerHTML = "Awesome! You Win!"
+      divMsg.setAttribute("id", "hangman-msg-user-win")
+      
+      const newGameBtn = document.createElement("button")
+      newGameBtn.innerHTML = "Another one?"
+      newGameBtn.setAttribute("id", "hangman-reset-game-btn")
 
       throwConfettyWin()
 
-      divContainer.append(h1, newGameBtn);
+      divContainer.append(divMsg, newGameBtn)
 
-      resetGame();
-    }, 300);
+      resetGame()
+    }, 300)
   }
 
 const showMsgIfUserLose = (counter) => {
   if(counter === 6) {
     setTimeout(() => {
-      const div = document.querySelector("#hangman-container");
-      div.innerHTML = "";
+      const div = document.querySelector("#hangman-container")
+      div.innerHTML = "" 
 
-      const h1 = document.createElement("h1");
-      h1.innerHTML = "Ohh, You lose!";
+      const divMsg = document.createElement("div")
+      divMsg.innerHTML = "Ohh, You lose!"
+      divMsg.setAttribute("id", "hangman-msg-user-lose")
 
-      const newGameBtn = document.createElement("button");
-      newGameBtn.innerHTML = "Another one?";
-      newGameBtn.setAttribute("id", "hangman-reset-game-btn");
+      const newGameBtn = document.createElement("button")
+      newGameBtn.innerHTML = "Another one?"
+      newGameBtn.setAttribute("id", "hangman-reset-game-btn")
 
-      div.append(h1, newGameBtn);
+      div.append(divMsg, newGameBtn)
 
       throwConfettyLose()
 
-      resetGame();
-    }, 300);
+      resetGame()
+    }, 300)
   }
 }
 

@@ -18,9 +18,7 @@
     align-items: center;
     text-align: center;
     margin: 0rem;
-    border: 10px solid red;
-    /* min-width: 50vw;
-    min-height: 50vh; */
+    /* border: 10px solid red; */
     gap: 0rem;
 }
 
@@ -31,7 +29,7 @@
     /* font-family: 'Press Start 2P', cursive; */
     /* font-family: 'Permanent Marker', cursive; */
     font-family: 'Creepster', cursive;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 #handman-word-and-display-container {
@@ -40,14 +38,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 6px solid red;
+    /* border: 6px solid red; */
 }
 
 #hangman-image {
     width: 50%;
     height: 80%;
     object-fit: contain;
-    border: 5px solid #ff6b6b;
+    /* border: 5px solid red; */
 }
 
 /* Div for the Try btn and the user input */
@@ -58,27 +56,24 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* margin: 1rem;
-    padding: 0.5rem; */
     gap: 2vw;
     border: 5px solid #4facfe;
-    border-radius: 8px;
+    box-shadow: -5px -5px 10px #08224c,  5px 5px 10px #08224c;
+    border-radius: 12px;
 }
 
 #hangman-input-letter {
-    width: 100%;
+    width: 80%;
     /* height: 50%; */
     font-size: 3vw;
     border: 2px solid #4facfe;
     border-radius: 5px;
-    /* padding: 0.3rem 1rem; */
 }
 
 #hangman-try-btn {
-    width: 100%;
+    width: 50%;
     /* height: 50%; */
     font-size: 3vw;
-    /* padding: 0.2rem 1rem; */
     background-color: #00f2fe;
     color: whitesmoke;
 }
@@ -106,11 +101,21 @@
     border-bottom: 4px solid #4facfe;
 } */
 
+#hangman-msg-user-win {
+    margin: 1rem;
+    font-size: 8vw;
+}
+
+#hangman-msg-user-lose {
+    margin: 1rem;
+    font-size: 8vw;
+}
 
 #hangman-reset-game-btn {
     font-size: 1rem;
     background-color: #00f2fe;
     color: whitesmoke;
+    padding: 1rem;
 }
 
 @media only screen and (max-width: 600px) {
@@ -127,6 +132,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        gap: 1rem;
     }
 
     #handman-display {
