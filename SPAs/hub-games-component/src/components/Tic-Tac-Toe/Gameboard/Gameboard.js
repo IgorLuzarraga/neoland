@@ -5,6 +5,7 @@ import { Jumbotron } from '../Jumbotron/Jumbotron'
 import { WinnerChecker } from '../WinnerChecker/Winnerchecker'
 import { WinnerSquares } from '../WinnerSquares/WinnerSquares'
 import { Player_O, Player_X, WinnerSquaresColor } from '../../../types/Tic-Tac-Toe/gameTypes'
+import { goToPage, Routes } from '../../../utils/router'
 
 let restartBtn
 
@@ -67,6 +68,40 @@ const updateCounters = (currentPlayer) => {
     }
 }
 
+const resetGame = () => {
+    const resetGame = document.querySelector("#tic-tac-toe-reset-game-btn")
+  
+    resetGame.addEventListener("click", () => goToPage(Routes.TicTacToe))
+}
+
+const showMsgPlayerWins = (currentPlayer) => {
+    setTimeout(() => {
+      const gameboardAndDisplayContainer = 
+        document.querySelector("#tic-tac-toe-gameboard-display-container")
+
+    gameboardAndDisplayContainer.innerHTML = ""
+
+      const divContainer = document.createElement('div')
+      divContainer.setAttribute("id", "tic-tac-toe-player-wins-container")
+
+      const divMsg = document.createElement("div")
+      divMsg.innerHTML = `${currentPlayer} Wins!!`
+      divMsg.setAttribute("id", "tic-tac-toe-msg-player-wins")
+      
+      const newGameBtn = document.createElement("button")
+      newGameBtn.innerHTML = "Another one?"
+      newGameBtn.setAttribute("id", "tic-tac-toe-reset-game-btn")
+
+      divContainer.append(divMsg, newGameBtn)
+
+      gameboardAndDisplayContainer.appendChild(divContainer)
+      
+      throwConfetty()
+
+      resetGame()
+    }, 300)
+  }
+
 const gameBoardSqureClicked = (e) => {
     const id = e.target.id
     const squareClicked = gameBoardSquaresClickedByPlayers[id]
@@ -80,14 +115,8 @@ const gameBoardSqureClicked = (e) => {
     updateCounters(currentPlayer)
 
     if(WinnerChecker(gameBoardSquaresClickedByPlayers)){
-        // Show the winner and Throw confetty
-        
-        Jumbotron(`Player ${currentPlayer} Wins!`)
-
         markWinnergSquares()
-
-        throwConfetty()
-
+        showMsgPlayerWins(currentPlayer)
     } else {
         currentPlayer = flipCurrentPlayer(currentPlayer)
     }
@@ -121,7 +150,14 @@ const listeners = () => {
     })
 }
 
+// Clean the game, just in case we come from a previous game.
+const cleanTheGame = () => {
+    const btnResetGame = document.getElementById("tic-tac-toe-restartBtn");
+    btnResetGame.click();
+}
+
 export const Gameboard = () => {
     document.querySelector("#tic-tac-toe-gameboard-container").innerHTML = template()
     listeners()
+    cleanTheGame()
 }

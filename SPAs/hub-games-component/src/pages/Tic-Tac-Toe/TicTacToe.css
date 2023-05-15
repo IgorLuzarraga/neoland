@@ -17,6 +17,28 @@
     text-align: center;
 }
 
+#tic-tac-toe-msg-player-wins {
+    margin: 1rem;
+    font-size: 8vw;
+}
+
+
+#tic-tac-toe-reset-game-btn {
+    font-size: 1rem;
+    background-color: #00f2fe;
+    color: whitesmoke;
+    padding: 2vw;
+}
+
+#tic-tac-toe-player-wins-container {
+    width: 50vw;
+    height: 50vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 #tic-tac-toe-gameboard-display-container {
     display: flex;
     justify-content: center;

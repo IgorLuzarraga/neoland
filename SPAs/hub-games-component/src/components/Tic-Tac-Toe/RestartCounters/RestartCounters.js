@@ -2,8 +2,8 @@ import './RestartCounters.css'
 
 export const RestartCounters = () => {
     const counterPlayerX = document.querySelector('#tic-tac-toe-counter-playerX')
-    counterPlayerX.innerHTML = 'Playex X moves: 0'
+    counterPlayerX.innerHTML = 'Player X moves: 0'
 
     const counterPlayerO = document.querySelector('#tic-tac-toe-counter-playerO')
-    counterPlayerO.innerHTML = 'Playex O moves: 0'
+    counterPlayerO.innerHTML = 'Player O moves: 0'
 }
