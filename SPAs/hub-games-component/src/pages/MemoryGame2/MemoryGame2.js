@@ -1,20 +1,20 @@
 import "./MemoryGame2.css";
-//import { cardMemory } from "../../components/cardMemory/cardMemory";
-import { cardMemory } from '../../components/MemoryGame2/cardMemory/cardMemory'
-// -----> 1) Funcion de template
+import { Gameboard } from '../../components/MemoryGame2/Gameboard/Gameboard'
+
+// -----> 1) Template
 
 const template = () => `
-<div class="gameMemory">/
-<section></section>
-</div>
-`;
+  <div class="gameMemory">
+    <div id='memory-game-gameboard'></div>
+  </div>
+`
 
-// ----> 2) Eventos de nuestros elementos html
+// ----> 2) Ehtml events
 
 const addListeners = () => {};
 
-// ----> 3) Pintar
+// ----> 3) Render
 export const MemoryGame2 = () => {
   document.querySelector("main").innerHTML = template();
-  cardMemory();
+  Gameboard();
 };
