@@ -1,0 +1,262 @@
+[
+  {
+    "title": "MSI mag Meta S 3SI-019XEU",
+    "description": "El MSI MAG META S 3SI-019XEU es un equipo gaming con una configuración equilibrada pensado para quienes quieren jugar a los últimos lanzamientos, pero tienen un presupuesto ajustado. Cuenta con un Ryzen 5 3600, 8 GB de RAM, una SSD de 512 GB y una gráfica GTX 1660 Super Aero ITX.",
+    "quote": "El MSI MAG META S 3SI-019XEU es un equipo gaming con una configuración equilibrada pensado para quienes quieren jugar a los últimos lanzamientos, pero tienen un presupuesto ajustado. Cuenta con un Ryzen 5 3600, 8 GB de RAM, una SSD de 512 GB y una gráfica GTX 1660 Super Aero ITX."
+  },
+  {
+    "title": "MSI Creator P100X 11TD-635EU",
+    "description": "El MSI Creator P100X 11TD-635EU ofrece toda la potencia que necesitan los creadores de contenido, jugadores de videojuegos, diseñadores gráficos, etc. Integra un procesador Intel Core i7-11700K, 64 GB de RAM, una unidad SSD de 1TB y un HDD de 2TB y una gráfica RTX 3070 VENTUS 2X.",
+    "quote": "El MSI Creator P100X 11TD-635EU ofrece toda la potencia que necesitan los creadores de contenido, jugadores de videojuegos, diseñadores gráficos, etc. Integra un procesador Intel Core i7-11700K, 64 GB de RAM, una unidad SSD de 1TB y un HDD de 2TB y una gráfica RTX 3070 VENTUS 2X."
+  },
+  {
+    "title": "MSI Creator P100X 11TE-632EU",
+    "description": "El MSI Creator P100X 11TE-632EU es una auténtica bestia. Una torre diseñada para satisfacer las necesidades de los usuarios más exigentes (jugadores, creadores de contenido, diseñadores gráficos, etc.). Sus especificaciones (y su precio) son realmente deslumbrantes.",
+    "quote": "El MSI Creator P100X 11TE-632EU es una auténtica bestia. Una torre diseñada para satisfacer las necesidades de los usuarios más exigentes (jugadores, creadores de contenido, diseñadores gráficos, etc.). Sus especificaciones (y su precio) son realmente deslumbrantes."
+  },
+  {
+    "title": "iMac (2021) con chip M1",
+    "description": "El Mac todo en uno es más todo en uno que nunca: un modelo pensado para que sea útil seas el tipo de usuario que seas, y con un futuro prometedor incluyendo el chip M1.",
+    "quote": "El Mac todo en uno es más todo en uno que nunca: un modelo pensado para que sea útil seas el tipo de usuario que seas, y con un futuro prometedor incluyendo el chip M1."
+  },
+  {
+    "title": "Apple Mac mini",
+    "description": "El Apple Mac mini de 2020 viene con un procesador Intel Core i5 de seis núcleos a 3 GHz de octava generación y con el sistema operativo OS X El Capitan. Además, cuenta con una memoria RAM de 8 GB DDR4 a 2.666 MHz y una capacidad de almacenamiento de 512 GB.",
+    "quote": "El Apple Mac mini de 2020 viene con un procesador Intel Core i5 de seis núcleos a 3 GHz de octava generación y con el sistema operativo OS X El Capitan. Además, cuenta con una memoria RAM de 8 GB DDR4 a 2.666 MHz y una capacidad de almacenamiento de 512 GB.",
+    "price": "1.279,00 €"
+  },
+  {
+    "title": "Apple Mac mini con Chip M1",
+    "description": "El Apple Mac mini con Chip M1 se presenta con el Chip M1 con una CPU de ocho núcleos y una GPU de ocho núcleos, con una memoria RAM de 8 GB y con una unidad almacenamiento SSD (de hasta 2 TB), todo para ofrecer el máximo rendimiento y una experiencia de uso realmente fluida.",
+    "quote": "El Apple Mac mini con Chip M1 se presenta con el Chip M1 con una CPU de ocho núcleos y una GPU de ocho núcleos, con una memoria RAM de 8 GB y con una unidad almacenamiento SSD (de hasta 2 TB), todo para ofrecer el máximo rendimiento y una experiencia de uso realmente fluida.",
+    "price": "1.029,00 €"
+  },
+  {
+    "title": "NITROPC - PC Gamer VX",
+    "description": "Un ordenador de sobremesa específicamente diseñado para ofrecer el mejor rendimiento en juegos. Para ello, integra una CPU Intel Core i3 10100 4/8 4.3GHz, una gráfica GeForce GTX 1050 Ti 4GB GDDR5, una unidad SSD 480 GB y 16 GB de memoria RAM. ¡Casi nada!",
+    "quote": "Un ordenador de sobremesa específicamente diseñado para ofrecer el mejor rendimiento en juegos. Para ello, integra una CPU Intel Core i3 10100 4/8 4.3GHz, una gráfica GeForce GTX 1050 Ti 4GB GDDR5, una unidad SSD 480 GB y 16 GB de memoria RAM. ¡Casi nada!"
+  },
+  {
+    "title": "ASUS Vivo AiO",
+    "description": "Un ordenador de sobremesa todo en uno para productividad que incorpora un procesador Intel Core i5 de undécima generación, una tarjeta gráfica integrada Intel Iris Xe, 16 GB de memoria RAM SO-DIMM DDR4, una unidad de almacenamiento SSD de 512 GB y mucho más.",
+    "quote": "Un ordenador de sobremesa todo en uno para productividad que incorpora un procesador Intel Core i5 de undécima generación, una tarjeta gráfica integrada Intel Iris Xe, 16 GB de memoria RAM SO-DIMM DDR4, una unidad de almacenamiento SSD de 512 GB y mucho más."
+  },
+  {
+    "title": "Acer Chromebook 314 CB314-2H",
+    "description": "El Acer Chromebook 314 CB314-2H es un portátil muy económico que destaca por su rápido arranque (8 segundos) y por su intuitiva interfaz, ya que viene con Chrome OS (no es un portátil Windows). Es un equipo pensado principalmente para navegar por Internet y para ofimática.",
+    "quote": "El Acer Chromebook 314 CB314-2H es un portátil muy económico que destaca por su rápido arranque (8 segundos) y por su intuitiva interfaz, ya que viene con Chrome OS (no es un portátil Windows). Es un equipo pensado principalmente para navegar por Internet y para ofimática."
+  },
+  {
+    "title": "2020 Apple MacBook Air con Chip M1 de Apple",
+    "description": "El ultrabook de Apple con su nuevo chip que combina una gran autonomía con un buen rendimiento en el software optimizado.",
+    "quote": "El ultrabook de Apple con su nuevo chip que combina una gran autonomía con un buen rendimiento en el software optimizado.",
+    "price": "1.129,00 €"
+  },
+  {
+    "title": "MacBook Pro de 13\" con chip M1",
+    "description": "El MacBook Pro con chip M1 se presenta con el Chip M1 con el que Apple busca elevar al máximo el rendimiento, con 8 GB de RAM, con una unidad SSD de 256 GB, una pantalla de 13 pulgadas y una impresionante autonomía de hasta 20 horas. Un portátil ideal para uso profesional.",
+    "quote": "El MacBook Pro con chip M1 se presenta con el Chip M1 con el que Apple busca elevar al máximo el rendimiento, con 8 GB de RAM, con una unidad SSD de 256 GB, una pantalla de 13 pulgadas y una impresionante autonomía de hasta 20 horas. Un portátil ideal para uso profesional."
+  },
+  {
+    "title": "MacBook Pro de 14\" (2021)",
+    "description": "El MacBook Pro de 14\" (2021) es un portátil para uso profesional. Para ofrecer el máximo rendimiento, cuenta con el potente Chip M1 Pro, 16 GB de RAM y una unidad SSD de 1 TB. Además, su batería asegura una autonomía de hasta 21 horas.",
+    "quote": "El MacBook Pro de 14\" (2021) es un portátil para uso profesional. Para ofrecer el máximo rendimiento, cuenta con el potente Chip M1 Pro, 16 GB de RAM y una unidad SSD de 1 TB. Además, su batería asegura una autonomía de hasta 21 horas."
+  },
+  {
+    "title": "Microsoft Surface Laptop 4",
+    "description": "El Microsoft Surface Laptop 4 es un portátil superligero. Está disponible con varias configuraciones de hardware y con varias tamaños de pantalla. En todas ellas, asegura potencia de sobra con un procesador de última generación, 8 GB de RAM y una unidad de almacenamiento SSD.",
+    "quote": "El Microsoft Surface Laptop 4 es un portátil superligero. Está disponible con varias configuraciones de hardware y con varias tamaños de pantalla. En todas ellas, asegura potencia de sobra con un procesador de última generación, 8 GB de RAM y una unidad de almacenamiento SSD."
+  },
+  {
+    "title": "Microsoft Surface Pro 7 - Ordenador portátil 2 en 1 de 12.3\"",
+    "description": "El Microsoft Surface Pro 7 se presenta con un diseño muy elegante y un hardware que asegura un excelente rendimiento. Además, gracias a su pantalla táctil, puede hacer las veces de una tableta. Eso sí, no viene con la funda con teclado.",
+    "quote": "El Microsoft Surface Pro 7 se presenta con un diseño muy elegante y un hardware que asegura un excelente rendimiento. Además, gracias a su pantalla táctil, puede hacer las veces de una tableta. Eso sí, no viene con la funda con teclado.",
+    "price": "1.299,00 €"
+  },
+  {
+    "title": "LG Gram 15Z90Q (2022)",
+    "description": "El LG Gram 15Z90Q (2022) es un portátil ultraligero con lo último en componentes. Viene con un procesador Intel Core i7 de 12ª generación, 16 GB de RAM y una unidad SSD de 512 GB. Y su pantalla es Full HD. Eso sí, no dispone de gráfica dedicada.",
+    "quote": "El LG Gram 15Z90Q (2022) es un portátil ultraligero con lo último en componentes. Viene con un procesador Intel Core i7 de 12ª generación, 16 GB de RAM y una unidad SSD de 512 GB. Y su pantalla es Full HD. Eso sí, no dispone de gráfica dedicada."
+  },
+  {
+    "title": "Apple iPad Air (2022)",
+    "description": "El nuevo iPad Air de Apple llega con únicamente dos novedades el procesador M1 de la propia Apple y la compatibilidad con conexiones 5G. En cualquier caso, es una tableta potente, con una pantalla de gran calidad y muy cómoda de usar.",
+    "quote": "El nuevo iPad Air de Apple llega con únicamente dos novedades el procesador M1 de la propia Apple y la compatibilidad con conexiones 5G. En cualquier caso, es una tableta potente, con una pantalla de gran calidad y muy cómoda de usar."
+  },
+  {
+    "title": "iPad Pro (2021)",
+    "description": "El iPad Pro de 5ª generación es un equipo completo, solvente y potente. La pantalla asegura una experiencia muy buena. Es una tableta ideal para aplicaciones multimedia, para uso educativo. para dibujar y, en general, para cualquier uso que se le quiera dar al Apple Pencil.",
+    "quote": "El iPad Pro de 5ª generación es un equipo completo, solvente y potente. La pantalla asegura una experiencia muy buena. Es una tableta ideal para aplicaciones multimedia, para uso educativo. para dibujar y, en general, para cualquier uso que se le quiera dar al Apple Pencil."
+  },
+  {
+    "title": "Apple iPad (2021)",
+    "description": "La Apple iPad (2021) es la tableta más económica de la marca de la manzana. Aun así, sus prestaciones son bastante interesantes. Viene con una pantalla Retina de 10,2 pulgadas, con el chip A13 Bionic con Neural Engine y con 64 GB o 256 GB de capacidad de almacenamiento.",
+    "quote": "La Apple iPad (2021) es la tableta más económica de la marca de la manzana. Aun así, sus prestaciones son bastante interesantes. Viene con una pantalla Retina de 10,2 pulgadas, con el chip A13 Bionic con Neural Engine y con 64 GB o 256 GB de capacidad de almacenamiento.",
+    "price": "379,00 €"
+  },
+  {
+    "title": "Samsung Galaxy Tab A7 Lite",
+    "description": "La Samsung Galaxy Tab A7 Lite es una tableta muy económica, con un diseño compacto y con unas prestaciones bastante modestas. Está pensada fundamental para el consumo de contenido multimedia. Para ello, cuenta con altavoces estéreo con sonido Dolby Atmos.",
+    "quote": "La Samsung Galaxy Tab A7 Lite es una tableta muy económica, con un diseño compacto y con unas prestaciones bastante modestas. Está pensada fundamental para el consumo de contenido multimedia. Para ello, cuenta con altavoces estéreo con sonido Dolby Atmos.",
+    "price": "169,00 €"
+  },
+  {
+    "title": "Xiaomi Pad 5",
+    "description": "La Xiaomi Pad 5 es una tableta Android potente, con una buena autonomía y con un diseño muy atractivo. Es ideal tanto para jugar como para ver contenido multimedia. Y, como siempre con Xiaomi, tiene una muy buena relación calidad-precio.",
+    "quote": "La Xiaomi Pad 5 es una tableta Android potente, con una buena autonomía y con un diseño muy atractivo. Es ideal tanto para jugar como para ver contenido multimedia. Y, como siempre con Xiaomi, tiene una muy buena relación calidad-precio."
+  },
+  {
+    "title": "Samsung Galaxy Tab S7",
+    "description": "La Samsung Galaxy Tab S7 es una tableta Android de gama alta ideal para productividad. Cuenta con una impresionante pantalla con resolución WQXGA, altavoces cuádruples con sonido por AKG, un procesador Snapdragon 865+ y 6 GB o 8 GB de RAM. Además, es compatible con el S Pen.",
+    "quote": "La Samsung Galaxy Tab S7 es una tableta Android de gama alta ideal para productividad. Cuenta con una impresionante pantalla con resolución WQXGA, altavoces cuádruples con sonido por AKG, un procesador Snapdragon 865+ y 6 GB o 8 GB de RAM. Además, es compatible con el S Pen."
+  },
+  {
+    "title": "HUAWEI MatePad 10.4 2022 New Edition",
+    "description": "La HUAWEI MatePad 10.4 2022 New Edition es una tableta económica ideal para ver contenido multimedia y entretenimiento. Para ello, cuenta con una pantalla de 10,4 pulgadas con resolución 2K y con altavoces con cancelación de Ruido sintonizada por Harman Kardon.",
+    "quote": "La HUAWEI MatePad 10.4 2022 New Edition es una tableta económica ideal para ver contenido multimedia y entretenimiento. Para ello, cuenta con una pantalla de 10,4 pulgadas con resolución 2K y con altavoces con cancelación de Ruido sintonizada por Harman Kardon.",
+    "price": "179,00 €"
+  },
+  {
+    "title": "Samsung Galaxy Tab S8 Ultra",
+    "description": "La Samsung Galaxy Tab S8 Ultra es la tableta más grande y potente de la marca coreana. Un equipo ideal para productividad que se presenta con un procesador Snapdragon 8 Gen 1, 8 GB, 12 GB o 16 GB de RAM y una impresionante pantalla Super AMOLED de 14,6\" (2.960 x 1.848) a 120 Hz.",
+    "quote": "La Samsung Galaxy Tab S8 Ultra es la tableta más grande y potente de la marca coreana. Un equipo ideal para productividad que se presenta con un procesador Snapdragon 8 Gen 1, 8 GB, 12 GB o 16 GB de RAM y una impresionante pantalla Super AMOLED de 14,6\" (2.960 x 1.848) a 120 Hz.",
+    "price": "1.149,00 €"
+  },
+  {
+    "title": "Samsung LS34J552WQRXEN",
+    "description": "Diseño elegante y minimalista en este monitor de 34\" con resolución UWQHD de 2021 con funciones PBP y PIP para visualizar contenido de dos fuentes al mismo tiempo. Ofrece múltiples conexiones.",
+    "quote": "Diseño elegante y minimalista en este monitor de 34\" con resolución UWQHD de 2021 con funciones PBP y PIP para visualizar contenido de dos fuentes al mismo tiempo. Ofrece múltiples conexiones."
+  },
+  {
+    "title": "LG 27UL650-W - Monitor 4K UHD de 68,6 cm (27\") con Panel IPS",
+    "description": "La propuesta de LG destaca por su diseño elegante, bordes reducidos y pantalla de 28\" IPS de alta calidad con resolución 4K.",
+    "quote": "La propuesta de LG destaca por su diseño elegante, bordes reducidos y pantalla de 28\" IPS de alta calidad con resolución 4K."
+  },
+  {
+    "title": "Lenovo D24-20",
+    "description": "Básico, para usuarios domésticos y de oficina que buscan un monitor económico. Es de 23,8\" con resolución Full HD y 75Hz de refresco.",
+    "quote": "Básico, para usuarios domésticos y de oficina que buscan un monitor económico. Es de 23,8\" con resolución Full HD y 75Hz de refresco."
+  },
+  {
+    "title": "Xiaomi Monitor 1C",
+    "description": "La propuesta básica de Xiaomi cuenta con un panel de 23,8\" con resolución Full HD y diseño sin bordes en tres laterales. Ideal para hogar y oficina.",
+    "quote": "La propuesta básica de Xiaomi cuenta con un panel de 23,8\" con resolución Full HD y diseño sin bordes en tres laterales. Ideal para hogar y oficina."
+  },
+  {
+    "title": "HUAWEI MateView",
+    "description": "Esta ambiciosa opción de Huawei destaca en diseño, calidad de imagen y funciones. Con un tamaño de 28,2\", tiene resolución 4K+ en formato 3:2, color DCI-P3 98%, smart bar y proyección inalámbrica.",
+    "quote": "Esta ambiciosa opción de Huawei destaca en diseño, calidad de imagen y funciones. Con un tamaño de 28,2\", tiene resolución 4K+ en formato 3:2, color DCI-P3 98%, smart bar y proyección inalámbrica.",
+    "price": "649,00 €"
+  },
+  {
+    "title": "Logitech MK470 Combo Teclado y Ratón Inalámbrico",
+    "description": "Teclado y ratón ultrasilenciosos con diseño compacto y moderno del popular fabricante Logitech cuyas baterías duran hasta 36 y 18 meses, respectivamente.",
+    "quote": "Teclado y ratón ultrasilenciosos con diseño compacto y moderno del popular fabricante Logitech cuyas baterías duran hasta 36 y 18 meses, respectivamente.",
+    "price": "51,99 €"
+  },
+  {
+    "title": "Microsoft – Sculpt Ergonomic",
+    "description": "Conjunto de teclado y ratón con los que no te volverán a doler las manos tras muchas horas de trabajo frente al ordenador. El teclado imita la forma curva de las yemas de los dedos, el reposamanos está acolchado y el teclado numérico está separado.",
+    "quote": "Conjunto de teclado y ratón con los que no te volverán a doler las manos tras muchas horas de trabajo frente al ordenador. El teclado imita la forma curva de las yemas de los dedos, el reposamanos está acolchado y el teclado numérico está separado."
+  },
+  {
+    "title": "Logitech MX Keys Advanced",
+    "description": "Diseño plano y con teclas cóncavas para pulsaciones óptimas. Dispone de iluminación \"inteligente\" que se activa al detectar que las manos se acercan. Es compatible tanto con Windows como con macOS.",
+    "quote": "Diseño plano y con teclas cóncavas para pulsaciones óptimas. Dispone de iluminación \"inteligente\" que se activa al detectar que las manos se acercan. Es compatible tanto con Windows como con macOS."
+  },
+  {
+    "title": "Logitech G213 Prodigy",
+    "description": "Teclado diseñado para gaming dotado de teclas G Mech-Dome ajustadas especialmente para ofrecer un perfil de rendimiento similar al de un teclado mecánico. Es resistente a salpicaduras, duradero y cuenta con controles multimedia.",
+    "quote": "Teclado diseñado para gaming dotado de teclas G Mech-Dome ajustadas especialmente para ofrecer un perfil de rendimiento similar al de un teclado mecánico. Es resistente a salpicaduras, duradero y cuenta con controles multimedia."
+  },
+  {
+    "title": "Logitech MX Master 3 Ratón Inalámbrico",
+    "description": "Desplazamiento Rápido, Seguimiento 4000 DPI en Cualquier Superficie, 7 Botones, Recargable,PC/Mac/Portátil/iPadOS",
+    "quote": "Desplazamiento Rápido, Seguimiento 4000 DPI en Cualquier Superficie, 7 Botones, Recargable,PC/Mac/Portátil/iPadOS",
+    "price": "114,00 €"
+  },
+  {
+    "title": "Satechi Ratón M1",
+    "description": "Un compacto ratón con diseño minimalista y elegante recargable por USB-C y que se conecta al ordenador mediante Bluetooth 4.0",
+    "quote": "Un compacto ratón con diseño minimalista y elegante recargable por USB-C y que se conecta al ordenador mediante Bluetooth 4.0"
+  },
+  {
+    "title": "Microsoft Modern Mobile - ratón (ambidextro, Bluetooth+USB, Negro)",
+    "description": "Diseño minimalista, limpio y portátil para usarlo en cualquier parte. Conéctalo por Bluetooth o a través del receptor USB incluido.",
+    "quote": "Diseño minimalista, limpio y portátil para usarlo en cualquier parte. Conéctalo por Bluetooth o a través del receptor USB incluido."
+  },
+  {
+    "title": "Router TP-Link Archer AX50 WiFi 6 Gigabit de Doble Banda AX3000",
+    "description": "Uno de los routers Wi-Fi 6 más económicos de TP-Link con antenas externas capaz de alcanzar hasta 3.000 Mbps. Su latencia es baja para proporcionar un buen rendimiento en videojuegos online.",
+    "quote": "Uno de los routers Wi-Fi 6 más económicos de TP-Link con antenas externas capaz de alcanzar hasta 3.000 Mbps. Su latencia es baja para proporcionar un buen rendimiento en videojuegos online."
+  },
+  {
+    "title": "Tenda RX3",
+    "description": "\"Económico\" router con tecnología inalámbrica Wi-Fi 6 que alcanza velocidades de hasta 1800 Mbps y compatible con WPA3.",
+    "quote": "\"Económico\" router con tecnología inalámbrica Wi-Fi 6 que alcanza velocidades de hasta 1800 Mbps y compatible con WPA3."
+  },
+  {
+    "title": "HUAWEI WiFi AX3",
+    "description": "Económico y potente. Este router de Huawei alcanza los 3000 Mbps y es capaz de gestionar hasta 128 dispositivos de manera simultánea.",
+    "quote": "Económico y potente. Este router de Huawei alcanza los 3000 Mbps y es capaz de gestionar hasta 128 dispositivos de manera simultánea."
+  },
+  {
+    "title": "ASUS ROG Rapture GT-AX11000 - Router Gaming Tri-Banda AX11000 Gigabit",
+    "description": "Uno de los mejores routers WiFi para gaming. ASUS nos ofrece un router compatible con WiFi 6 de tres bandas y con una velocidad de escándalo. Estamos ante un router con una velocidad de 11.000Mbps para rendir al máximo en redes cargadas.",
+    "quote": "Uno de los mejores routers WiFi para gaming. ASUS nos ofrece un router compatible con WiFi 6 de tres bandas y con una velocidad de escándalo. Estamos ante un router con una velocidad de 11.000Mbps para rendir al máximo en redes cargadas.",
+    "price": "459,00 €"
+  },
+  {
+    "title": "TP-Link RE330 - Repetidor WiFi, AC1200 mesh, Doble banda 5 GHz a 867 Mbps",
+    "description": "Mejora la cobertura Wi-Fi del hogar o pequeña oficina con este repetidor Wi-Fi de TP-Link, que incorpora una toma LAN Ethernet para conectar dispositivos por cable.",
+    "quote": "Mejora la cobertura Wi-Fi del hogar o pequeña oficina con este repetidor Wi-Fi de TP-Link, que incorpora una toma LAN Ethernet para conectar dispositivos por cable.",
+    "price": "44,99 €"
+  },
+  {
+    "title": "Xiaomi WiFi Amplifier Pro- 2 External Antennas, 300Mbps Data Transfer Rate, Supp",
+    "description": "Una propuesta muy económica para mejorar la cobertura Wi-Fi de casa con este repetidor de Xiaomi tan pequeño como útil.",
+    "quote": "Una propuesta muy económica para mejorar la cobertura Wi-Fi de casa con este repetidor de Xiaomi tan pequeño como útil."
+  },
+  {
+    "title": "Xiaomi Mi Router 4A",
+    "description": "Xiaomi Mi Router 4A Wireless AC Dual Band Original versión EU Punto de acceso Wi-Fi y repetidor Range",
+    "quote": "Xiaomi Mi Router 4A Wireless AC Dual Band Original versión EU Punto de acceso Wi-Fi y repetidor Range",
+    "price": "24,02 €"
+  },
+  {
+    "title": "Samsung - Unidad de Almacenamiento portátil Portable SSD 1 TB",
+    "description": "USB 3. 2 Gen. 2 hasta 9 veces más rápido que los discos duros externos con velocidades de lectura/escritura de hasta 1. 050 MB/s y 1. 000 MB/s.",
+    "quote": "USB 3. 2 Gen. 2 hasta 9 veces más rápido que los discos duros externos con velocidades de lectura/escritura de hasta 1. 050 MB/s y 1. 000 MB/s.",
+    "price": "233,80 €"
+  },
+  {
+    "title": "WD Elements - Disco duro externo portátil de 2 TB con USB 3.0, color negro",
+    "description": "2 TB de almacenamiento para copias de seguridad y archivos más importantes.",
+    "quote": "2 TB de almacenamiento para copias de seguridad y archivos más importantes.",
+    "price": "78,99 €"
+  },
+  {
+    "title": "WD My Passport disco duro portátil 5TB",
+    "description": "Disco duro externo compacto de 5 TB que permite protección mediante contraseña y cifrado por hardware AES de 256 bits.",
+    "quote": "Disco duro externo compacto de 5 TB que permite protección mediante contraseña y cifrado por hardware AES de 256 bits.",
+    "price": "119,00 €"
+  },
+  {
+    "title": "Seagate Backup Plus Hub, 6 TB, Disco duro externo HDD, USB 3.0",
+    "description": "Disco duro externo de sobremesa con USB 3.0 y hub USB, lo que permite conectar otras unidades de almacenamiento o la recarga de dispositivos.",
+    "quote": "Disco duro externo de sobremesa con USB 3.0 y hub USB, lo que permite conectar otras unidades de almacenamiento o la recarga de dispositivos.",
+    "price": "127,00 €"
+  },
+  {
+    "title": "SanDisk Extreme - Tarjeta de memoria microSDXC de 128 GB con adaptador SD",
+    "description": "Recomendado para smartphones, drones y cámaras de acción.",
+    "quote": "Recomendado para smartphones, drones y cámaras de acción.",
+    "price": "25,00 €"
+  },
+  {
+    "title": "Samsung 860 EVO",
+    "description": "Disco estado solido SSD 2 TB, 550 megabytes.",
+    "quote": "Disco estado solido SSD 2 TB, 550 megabytes.",
+    "price": "359,99 €"
+  }
+]
