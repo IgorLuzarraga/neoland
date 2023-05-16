@@ -37,7 +37,8 @@ const addListeners = () => {
     // Change page's background color
     document
         .querySelector('#btnChangeColor')
-        .addEventListener('click', () => document.body.style.background = changeColor())
+        //.addEventListener('click', () => document.body.style.background = changeColor())
+        .addEventListener('click', () => changeColor())
 
     // Go to Dashboard page event
     document

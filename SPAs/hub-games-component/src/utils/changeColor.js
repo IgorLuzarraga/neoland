@@ -16,6 +16,14 @@ const randomNumFP = (min, max) =>
           Math.floor
     )
 
-export const changeColor = () => 
-    //`rgb(${randomNumFP(0, 255)}, ${randomNumFP(0, 255)}, ${randomNum(0, 255)})`
-    document.body.classList.toggle('dark-mode');
+export const changeColor = () => {
+    //document.body.classList.toggle('dark-mode')
+    console.log(document.body.style.background)
+    if(document.body.style.backgroundColor === "rgb(189, 219, 255)") {
+        document.body.style.backgroundColor = "#000"
+        document.body.style.color = "#fff"
+    } else {
+        document.body.style.backgroundColor = "#BDDBFF"
+        document.body.style.color = "#000"
+    }
+}

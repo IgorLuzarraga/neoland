@@ -5,7 +5,8 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  /* background-color: #242424; */
+  background-color: black;
 
   --background-color: white;
   --text-color: black;
@@ -23,8 +24,8 @@
 } */
 
 .dark-mode {
-  --background-color: black;
-  --text-color: white;
+  background-color: black;
+  color: white;
 }
 
 body {
