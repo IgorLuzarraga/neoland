@@ -126,7 +126,7 @@ const updateCharacter = async (req, res, next) => {
       
       if (saveCharacter) {
         // character updated, we delete de old imf from Cloudinary
-        deleteImgCloudinary(oldImg);
+        deleteImgCloudinary(oldImgUrl);
         return res.status(200).json(await Character.findById(id));
       } else {
         // Something went wrong. Send a 404
