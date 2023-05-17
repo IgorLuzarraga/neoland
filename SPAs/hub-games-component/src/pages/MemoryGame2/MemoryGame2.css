@@ -10,13 +10,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 3vw;
     border: 5px solid red;
 }
   
 #memory-game-2-gameboard {
     width: 35vw;
     height: 35vw;
-    margin: 0 auto;
+    /* margin: 0 auto; */
     display: grid;
     grid-template: repeat(3, 1fr) / repeat(4, 1fr);
     grid-gap: 20px;
