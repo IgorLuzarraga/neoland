@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 // Types of our data model
-const Schema = mongoose.schema;
+const Schema = mongoose.Schema;
 
 // We create the data model
 // 1. type: data type ('string, number, ...)
@@ -15,6 +15,7 @@ const CharacterSchema = new Schema(
       required: true,
     },
     age: { type: Number, required: false },
+    image: { type: String },
   },
   {
     timestamps: true,
