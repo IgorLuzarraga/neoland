@@ -8,7 +8,7 @@ export const restart = () => {
   let faces = document.querySelectorAll(".face");
   let cards = document.querySelectorAll(".card");
   cardData.forEach((item, index) => {
-    cards[index].classList.remove("memory-game-card-toggled");
+    cards[index].classList.remove("memory-game-2-card-toggled");
   });
 };
 

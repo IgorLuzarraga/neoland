@@ -9,7 +9,7 @@ export const Gameboard = () => {
   moves = 0
   const cards = shuffleCards()
 
-  const gameboard = document.getElementById("memory-game-gameboard")
+  const gameboard = document.getElementById("memory-game-2-gameboard")
 
   // Hacemos un forEach para que me recorra el array y me cree una carta para cada objeto, 
   // con sus dos caras A y B y agregamos clases a cada tipo
@@ -20,8 +20,8 @@ export const Gameboard = () => {
     const backImg = document.createElement("img")
 
     cardDiv.classList = "card"
-    frontImg.classList = "memory-game-card-front-side"
-    backImg.classList = "memory-game-card-back-side"
+    frontImg.classList = "memory-game-2-card-front-side"
+    backImg.classList = "memory-game-2-card-back-side"
 
     // Add the images to the card's front and back sides
     frontImg.src = card.imgSrc
@@ -40,7 +40,7 @@ export const Gameboard = () => {
 const addEventClick = (card) => 
   card.addEventListener("click", (e) => {
     moves++
-    card.classList.toggle("memory-game-card-toggled")
+    card.classList.toggle("memory-game-2-card-toggled")
     checkCards(e)
     checkEndOfGame(moves)
   })

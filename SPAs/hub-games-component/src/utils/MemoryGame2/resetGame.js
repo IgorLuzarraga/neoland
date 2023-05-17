@@ -1,7 +1,7 @@
 import { Routes, goToPage } from "../router";
 
 export const resetGame = (movesNumber) => {
-    const remove = document.querySelector("#memory-game-gameboard")
+    const remove = document.querySelector("#memory-game-2-gameboard")
     remove.innerHTML = ""
     
     remove.innerHTML = `

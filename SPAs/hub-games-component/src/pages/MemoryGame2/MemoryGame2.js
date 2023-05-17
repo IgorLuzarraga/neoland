@@ -4,10 +4,16 @@ import { Gameboard } from '../../components/MemoryGame2/Gameboard/Gameboard'
 // -----> 1) Template
 
 const template = () => `
-  <div class="gameMemory">
-    <div id='memory-game-gameboard'></div>
+  <div id="memory-game-2-container">
+    <div id='memory-game-2-gameboard'></div>
+    <div id='memory-game-2-display'>
+        <div id="memory-game-2-counter-player-clicks">Clicks number: 0</div>
+        <div id="memory-game-2-counter-matched-cars">Matches cards number: 0</div>
+        <button id="memory-game-2-restartBtn">Restart</button>
+    </div>
   </div>
 `
+
 
 // ----> 2) Ehtml events
 

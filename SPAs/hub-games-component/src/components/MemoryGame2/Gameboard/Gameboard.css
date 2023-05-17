@@ -20,26 +20,26 @@
   background-color: transparent;
 } 
 
-.memory-game-card-front-side,
-.memory-game-card-back-side {
+.memory-game-2-card-front-side,
+.memory-game-2-card-back-side {
   width: 100%;
   height: 100%;
   position: absolute;
   pointer-events: none;
 }
 
-.memory-game-card-back-side {
+.memory-game-2-card-back-side {
   background: white;
   backface-visibility: hidden;
   object-fit:contain;
 }
 
-.memory-game-card-toggled {
+.memory-game-2-card-toggled {
   transform: translate(-7.2vw) rotateY(180deg);
 }
 
 @media only screen and (max-width: 600px) {
-  .memory-game-card-toggled {
+  .memory-game-2-card-toggled {
     transform: translate(-16vw) rotateY(180deg);
   }
 }

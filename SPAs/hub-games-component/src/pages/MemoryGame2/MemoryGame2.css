@@ -4,36 +4,42 @@
     box-sizing: border-box;
   }
   
-  .gameMemory {
+#memory-game-2-container {
     width: 100vw;
     min-height: 80vh;
     display: flex;
     justify-content: center;
     align-items: center;
-  }
+    border: 5px solid red;
+}
   
-  /* #memory-game-gameboard {
-    width: 500px;
-    height: 500px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    justify-content: center;
-    align-content: center;
-  } */
-  
-#memory-game-gameboard {
-    width: 40vw;
-    height: 40vw;
+#memory-game-2-gameboard {
+    width: 35vw;
+    height: 35vw;
     margin: 0 auto;
     display: grid;
     grid-template: repeat(3, 1fr) / repeat(4, 1fr);
     grid-gap: 20px;
+    border: 5px solid red;
 }
   
+#memory-game-2-display {
+  background-color: white;
+  height: 35vw;
+  width: 35vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 4px solid red;
+  box-shadow: -5px -5px 10px #08224c,  5px 5px 10px #08224c;
+  padding: 1rem;
+  border-radius: 12px;
+  gap: 2rem;
+}
 
 @media only screen and (max-width: 600px) {
-  #memory-game-gameboard {
+  #memory-game-2-gameboard {
     height: 70vw;
     width: 70vw;
   }
