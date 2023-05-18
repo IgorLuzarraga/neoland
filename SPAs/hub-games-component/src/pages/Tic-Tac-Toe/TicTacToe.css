@@ -117,15 +117,7 @@
     #tic-tac-toe-display {
         height: 70vw;
         width: 70vw;
-        display: flex;
-        /* display: none; */
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        border: 4px solid black;
-        padding: 1rem;
-        border-radius: 12px;
-        gap: 2rem;
     }
     
     #tic-tac-toe-jumbotron {

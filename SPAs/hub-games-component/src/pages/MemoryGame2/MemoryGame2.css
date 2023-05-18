@@ -10,7 +10,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 3vw;
+    gap: 6vw;
     border: 5px solid red;
 }
   
@@ -25,7 +25,6 @@
 }
   
 #memory-game-2-display {
-  background-color: white;
   height: 35vw;
   width: 35vw;
   display: flex;
@@ -39,9 +38,52 @@
   gap: 2rem;
 }
 
+#memory-game-2-counter-player-clicks {
+  width: 100%;
+  font-size: 2.5vw;
+  font-family: 'Finger Paint', Impact, Haettenschweiler;
+}
+
+#memory-game-2-counter-matched-cars {
+  width: 100%;
+  font-size: 2.5vw;
+  font-family: 'Finger Paint', Impact, Haettenschweiler;
+}
+
+#memory-game-2-restartBtn {
+  padding: 7px 20px;
+  border-radius: 10px;
+  background-color: burlywood;
+  color: #333;
+  border-color: goldenrod;
+  font-size: 1.0rem;
+  transition: 200ms transform;
+  font-weight: 900;
+  font-family: 'Finger Paint', Impact, Haettenschweiler;
+}
+
 @media only screen and (max-width: 600px) {
+  #memory-game-2-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
   #memory-game-2-gameboard {
     height: 70vw;
     width: 70vw;
+  }
+
+  #memory-game-2-display {
+    height: 70vw;
+    width: 70vw;
+    flex-direction: column;
+  }
+
+  #memory-game-2-counter-player-clicks {
+    font-size: 5vw;
+  }
+
+  #memory-game-2-counter-matched-cars {
+    font-size: 5vw;
   }
 }

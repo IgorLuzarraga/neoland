@@ -8,7 +8,7 @@ const template = () => `
     <div id='memory-game-2-gameboard'></div>
     <div id='memory-game-2-display'>
         <div id="memory-game-2-counter-player-clicks">Clicks number: 0</div>
-        <div id="memory-game-2-counter-matched-cars">Matches cards number: 0</div>
+        <div id="memory-game-2-counter-matched-cars">Matches number: 0</div>
         <button id="memory-game-2-restartBtn">Restart</button>
     </div>
   </div>

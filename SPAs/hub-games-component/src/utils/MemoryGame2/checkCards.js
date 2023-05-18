@@ -13,6 +13,11 @@ export const checkCards = (e) => {
     }
 }
 
+const updateMatchesCounter = (mmatchesNum) => {
+  const matchesCounter = document.getElementById('memory-game-2-counter-matched-cars')
+  matchesCounter.innerHTML = `Matches number: ${mmatchesNum}`
+}
+
 const checkIfCardsMatch = (flippedCards) => 
     flippedCards[0].getAttribute("name") === flippedCards[1].getAttribute("name")
 

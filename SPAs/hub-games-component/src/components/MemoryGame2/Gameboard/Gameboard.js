@@ -11,9 +11,7 @@ export const Gameboard = () => {
 
   const gameboard = document.getElementById("memory-game-2-gameboard")
 
-  // Hacemos un forEach para que me recorra el array y me cree una carta para cada objeto, 
-  // con sus dos caras A y B y agregamos clases a cada tipo
-
+  // Create a card Html element for each img that we have in cards
   cards.forEach((card) => {
     const cardDiv = document.createElement("div")
     const frontImg = document.createElement("img")
@@ -37,10 +35,16 @@ export const Gameboard = () => {
   })
 }
 
+const updateClickCounter = (moves) => {
+  const clicksCounter = document.getElementById('memory-game-2-counter-player-clicks')
+  clicksCounter.innerHTML = `Clicks number: ${moves}`
+}
+
 const addEventClick = (card) => 
   card.addEventListener("click", (e) => {
     moves++
     card.classList.toggle("memory-game-2-card-toggled")
+    updateClickCounter(moves)
     checkCards(e)
     checkEndOfGame(moves)
   })
