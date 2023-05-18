@@ -6,6 +6,7 @@ export const checkCards = (e) => {
   
     if (flippedCards.length === 2) {
       if (checkIfCardsMatch(flippedCards)) {
+        updateMatchesCounter()
         dontAllowToFlipAgain(flippedCards)
       } else {
         removeFlipAndToggleClasses(flippedCards)
@@ -13,9 +14,17 @@ export const checkCards = (e) => {
     }
 }
 
-const updateMatchesCounter = (mmatchesNum) => {
-  const matchesCounter = document.getElementById('memory-game-2-counter-matched-cars')
-  matchesCounter.innerHTML = `Matches number: ${mmatchesNum}`
+const getMatchesCounterFromHtmlEl = (matchesCounter) => 
+  matchesCounter
+    .innerHTML
+    .replace(/\D/g, "")
+
+const updateMatchesCounter = () => {
+  const matchesCounterHtml = document.getElementById('memory-game-2-counter-matched-cars')
+
+  let matchesCounterNum = getMatchesCounterFromHtmlEl(matchesCounterHtml)
+
+  matchesCounterHtml.innerHTML = `Matches number: ${++matchesCounterNum}`
 }
 
 const checkIfCardsMatch = (flippedCards) => 
