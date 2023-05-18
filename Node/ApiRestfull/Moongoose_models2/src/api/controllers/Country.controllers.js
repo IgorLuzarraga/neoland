@@ -180,7 +180,7 @@ const deleteCountry = async (req, res, next) => {
     const deleteCountry = await Country.findByIdAndDelete(id);
 
     // deleteCountry contains the removed element,
-    // but sometimes dosen't work, so watch ouu!
+    // but sometimes dosen't work, so watch out!
     if (deleteCountry) {
       // We check if the deleted element is in the DB,
       // if don't, we remove the image from Cloudinary
