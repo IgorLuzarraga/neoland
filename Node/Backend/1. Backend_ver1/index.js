@@ -12,6 +12,7 @@ connect();
 const app = express();
 configCloudinary();
 const PORT = process.env.PORT;
+
 //! configurar las cors
 const cors = require('cors');
 app.use(
@@ -27,8 +28,12 @@ app.use(express.urlencoded({ limit: '5mb', extended: true }));
 
 //! -----ROUTES-----------
 const UserRoutes = require('./src/api/routes/user.routes');
+const CharacterRoutes = require("./src/api/routes/Character.routes");
+const MovieRoutes = require("./src/api/routes/Movie.routes");
 
 app.use('/api/v1/users', UserRoutes);
+app.use("/api/v1/character/", CharacterRoutes);
+app.use("/api/v1/movies/", MovieRoutes);
 
 //! Cuando no se mete ninguna routa
 app.use('*', (req, res, next) => {
