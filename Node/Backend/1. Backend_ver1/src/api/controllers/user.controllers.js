@@ -456,6 +456,40 @@ const deleteUser = async (req, res, next) => {
   }
 };
 
+
+//! ---------------------------------------------------------------------
+//? ------------------------------GETALL --------------------------------
+//! ---------------------------------------------------------------------
+const getAll = async (req, res, next) => {
+  try {
+    const allUsers = await User.find() //.populate("characters");
+    if (allUsers) {
+      return res.status(200).json(allUsers);
+    } else {
+      return res.status(404).json("No users found");
+    }
+  } catch (error) {
+    return next(error);
+  }
+};
+
+//! ---------------------------------------------------------------------
+//? ------------------------------GETBYID -------------------------------
+//! ---------------------------------------------------------------------
+const getById = async (req, res, next) => {
+  try {
+    const { id } = req.params;
+    const userById = await User.findById(id) //.populate("characters");
+    if (userById) {
+      return res.status(200).json(userById);
+    } else {
+      return res.status(404).json("No user found");
+    }
+  } catch (error) {
+    return next(error);
+  }
+};
+
 module.exports = {
   register,
   registerSlow,
@@ -467,4 +501,6 @@ module.exports = {
   changePassword,
   update,
   deleteUser,
+  getAll,
+  getById
 };

@@ -11,11 +11,15 @@ const {
   changePassword,
   update,
   deleteUser,
+  getAll,
+  getById
 } = require('../controllers/user.controllers');
 
 const express = require('express');
 const UserRoutes = express.Router();
 
+UserRoutes.get("/", getAll)
+UserRoutes.get("/:id", getById)
 UserRoutes.get('/register', upload.single('image'), registerWithRedirect);
 UserRoutes.post('/register', upload.single('image'), registerSlow);
 UserRoutes.get('/forgotpassword', changeForgottenPassword);
