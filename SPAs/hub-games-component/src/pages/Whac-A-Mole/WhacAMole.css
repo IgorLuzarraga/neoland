@@ -1,5 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
+#whac-a-mole-container {
+    width: 100vw;
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6vw;
+    border: 0px solid red;
+}
+
 .wacka-title{
     color: #4facfe;
     font-size: 4rem;
@@ -8,7 +18,28 @@
     margin: 0 auto;
 }
 
-.interface {
+#whac-a-mole-display {
+    height: 35vw;
+    width: 35vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 0px solid red;
+    box-shadow: -5px -5px 10px #08224c,  5px 5px 10px #08224c;
+    padding: 1rem;
+    border-radius: 12px;
+    gap: 2rem;
+}
+
+/* .interface {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    gap: 24px;
+} */
+
+#whac-a-mole-display {
     display: flex;
     flex-direction: column;
     place-items: center;
@@ -20,16 +51,20 @@
     gap: 1rem;
 }
 
-.game {
-    width: 600px;
-    height: 400px;
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0 auto;
+#whac-a-mole-gameboard {
+    /* margin: 0 auto; */
+    width: 35vw;
+    height: 35vw;
+    display: grid;
+    grid-template: repeat(2, 1fr) / repeat(3, 1fr);
+    grid-gap: 20px;
     cursor: crosshair;
+    border: 0px solid red;
 }
 
-.score {
+
+
+#whac-a-mole-score {
     padding: 0 10px;
     line-height: 2;
     font-size: 2rem;
@@ -38,22 +73,32 @@
     border: 2px solid black;
 }
 
-#startGame {
+/* 
+.score {
+    padding: 0 10px;
+    line-height: 2;
+    font-size: 2rem;
+    border-radius: 16px;
+    color: black;
+    border: 2px solid black;
+} */
+
+#whac-a-mole-startGameBtn {
     background-color: #00f2fe;
     color: white;
-    border: none;
+    border: 1px solid red;
     padding: 10px 20px;
     border-radius: 5px;
     font-size: 2rem;
 }
 
-.hole {
+.whac-a-mole-hole {
     flex: 1 0 33.33%;
     overflow: hidden;
     position: relative;
 }
 
-.hole:after {
+.whac-a-mole-hole:after {
     display: block;
     background: url("https://res.cloudinary.com/dh9z8mk2j/image/upload/v1683572896/Bootcamp/B.Abril2023/piedra-removebg-preview_azxort.png") bottom center no-repeat;
     background-size: contain;
@@ -65,7 +110,7 @@
     bottom: -14px;
 }
 
-.mole {
+.whac-a-mole-mole {
     background: url("https://res.cloudinary.com/dh9z8mk2j/image/upload/v1683572616/Bootcamp/B.Abril2023/lindo-pequeno-topo-caricatura-sentado_188253-4210-removebg-preview_ur8crq.png") bottom center no-repeat;
     background-size: 100%;
     position: absolute;
@@ -75,22 +120,33 @@
     transition: all 0.4s;
 }
 
-.hole.up .mole{
+.whac-a-mole-hole.up .whac-a-mole-mole{
     top: 0;
 }
 
-.score {
+/* .score {
     background-color: white;
     color: #4facfe;
     border: 2px solid #4facfe;
     padding: 1rem;
     border-radius: 5px;
-  }
+  } */
 
 @media only screen and (max-width: 600px) {
-    .game {
-        width: 400px;
-        height: 400px;
+    #whac-a-mole-container {
+        flex-direction: column;
+        gap: 2rem;
+      }
+
+    #whac-a-mole-gameboard {
+        height: 70vw;
+        width: 70vw;
+    }
+
+    #whac-a-mole-display {
+        height: 70vw;
+        width: 70vw;
+        flex-direction: column;
     }
 
     .wacka-title{

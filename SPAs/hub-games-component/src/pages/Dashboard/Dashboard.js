@@ -46,17 +46,17 @@ const template = () => `
                 </figure>
             </li>
             <li>
-                <figure id="figureWacka" class="figureDashboard">
+                <figure id="figureWhacAMole" class="figureDashboard">
                     <img
                         src="https://res.cloudinary.com/dtkuzehsp/image/upload/v1683639582/xij9pflnsmx85flststm.jpg"
-                        alt="navigate to page Wacka"
-                        id="imgWacka"
+                        alt="navigate to page Whac A Mole"
+                        id="imgWhacAMole"
                     />
-                    <h2>Wacka Mole</h2>
+                    <h2>Whac A Mole</h2>
                 </figure>
             </li>
             <li>
-                <figure id="figureWacka" class="figureDashboard">
+                <figure id="figureWhacAMole" class="figureDashboard">
                     <img
                         src="https://res.cloudinary.com/dtkuzehsp/image/upload/v1683642574/zpieiovilsffledtmv92.png"
                         alt="navigate to page HangMan"
@@ -95,9 +95,9 @@ const addListeners = () => {
         })
 
     document
-        .getElementById('imgWacka')
+        .getElementById('imgWhacAMole')
         .addEventListener('click', () => {
-            goToPage(Routes.Wacka)
+            goToPage(Routes.WhacAMole)
         })
 
     document
