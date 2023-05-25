@@ -40,6 +40,11 @@ const UserSchema = new mongoose.Schema(
     image: {
       type: String,
     },
+    movies: {
+      type: [mongoose.Schema.Types.ObjectId],
+      ref: "Movie", 
+      required: true
+    },
   },
   {
     timestamps: true,

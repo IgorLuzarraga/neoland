@@ -86,7 +86,7 @@ const registerSlow = async (req, res, next) => {
 
     const userExist = await User.findOne(
       { email: userEmail },
-      { name: username }
+      { name: userName }
     );
 
     if (!userExist) {
@@ -146,6 +146,7 @@ const registerSlow = async (req, res, next) => {
 //! -----------------------------------------------------------------------------
 const registerWithRedirect = async (req, res, next) => {
   let catchImg = req.file?.path;
+
   try {
     let confirmationCode = randomCode();
     const { email, name } = req.body;
@@ -387,8 +388,11 @@ const update = async (req, res, next) => {
 
   try {
 
+    console.log("req.body: ", req.body)
     const patchUser = new User(req.body);
 
+    console.log("patchUser: ", patchUser)
+    
     if (req.file) {
       patchUser.image = req.file.path;
     }
@@ -462,7 +466,7 @@ const deleteUser = async (req, res, next) => {
 //! ---------------------------------------------------------------------
 const getAll = async (req, res, next) => {
   try {
-    const allUsers = await User.find() //.populate("characters");
+    const allUsers = await User.find().populate("movies");
     if (allUsers) {
       return res.status(200).json(allUsers);
     } else {
@@ -479,7 +483,7 @@ const getAll = async (req, res, next) => {
 const getById = async (req, res, next) => {
   try {
     const { id } = req.params;
-    const userById = await User.findById(id) //.populate("characters");
+    const userById = await User.findById(id).populate("movies");
     if (userById) {
       return res.status(200).json(userById);
     } else {
