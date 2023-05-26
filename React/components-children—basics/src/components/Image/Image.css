@@ -1,0 +1,15 @@
+.image-container {
+    border: 3px solid black;
+    border-radius: 1rem;
+    object-fit: contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-container>img {
+    width: 100%;
+    object-fit: fit;
+    border: 5px solid purple;
+    border-radius: 1rem;
+}
