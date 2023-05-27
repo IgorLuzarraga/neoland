@@ -11,15 +11,12 @@ const CharacterById = () =>
 
 const showCharacter = () =>
     pipe(
-        getId(),
+        getcharacterId(),
         getById,
         showCharacterById
     )
 
-const getId = () => {
-    const { id } = useParams();
-    return id
-}
+const getcharacterId = () => useParams().id
 
 const showCharacterById = (character) =>
     <CardById data={character} />
