@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home/Home.jsx";
 import Gallery from "./pages/Gallery/Gallery.jsx";
 import About from "./pages/About/About.jsx";
+import CharacterById from "./pages/CharacterById/CharacterById.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -20,6 +21,10 @@ ReactDOM.createRoot(document.getElementById("root")).render(
           <Route index element={<Home />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/about" element={<About />} />
+          <Route
+            path="/gallery/character/:id"
+            element={<CharacterById />}
+          />
         </Route>
       </Routes>
     </BrowserRouter>
