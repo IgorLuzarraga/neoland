@@ -8,6 +8,7 @@ import Gallery from "./pages/Gallery/Gallery.jsx";
 import About from "./pages/About/About.jsx";
 import CharacterById from "./pages/CharacterById/CharacterById.jsx";
 import CharacterByName from "./pages/CharacterByName/CharacterByName.jsx";
+import NotFound from "./components/NotFound/NotFound.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -30,6 +31,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
             path="/gallery/character/name/:name"
             element={<CharacterByName />}
           />
+          <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
     </BrowserRouter>
