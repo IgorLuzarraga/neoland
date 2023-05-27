@@ -4,9 +4,9 @@ img {
   object-fit: cover;
 }
 
-.containerImgLink {
+/* .imgLinkContainer {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
+} */
