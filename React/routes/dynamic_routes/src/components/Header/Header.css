@@ -1,0 +1,30 @@
+header {
+  height: 20vh;
+  border: solid 1px black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+/* 
+This is in case NavLink is the child of the button, but
+it's better the other way, the NavLink be the Button's father,
+so we don't use this code
+
+button:has(a.active) {
+  background-color: blueviolet;
+} */
+
+a.active button {
+  background-color: blueviolet;
+}
+
+a.active {
+  color: white;
+}
