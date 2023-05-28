@@ -16,23 +16,13 @@ const template = () => `
                 </figure>
             </li>
             <li>
-                <figure id="figureMemoryGame" class="figureDashboard">
-                    <img 
-                        src = 'https://res.cloudinary.com/dtkuzehsp/image/upload/v1683562501/Hub%20Games/memory-game-fruits/fruits-memory-game_hmjioe.jpg',
-                        alt="navigate to page memory game"
-                        id="imgMemoryGame"
-                    />
-                    <h2>Memory Game</h2>
-                </figure>
-            </li>
-            <li>
                 <figure id="figureMemoryGame2" class="figureDashboard">
                     <img 
                         src = 'https://res.cloudinary.com/dtkuzehsp/image/upload/v1683562501/Hub%20Games/memory-game-fruits/fruits-memory-game_hmjioe.jpg',
                         alt="navigate to page memory game 2"
                         id="imgMemoryGame2"
                     />
-                    <h2>Memory Game 2</h2>
+                    <h2>Memory Game</h2>
                 </figure
             </li>
             <li>
@@ -76,11 +66,11 @@ const addListeners = () => {
             goToPage(Routes.Pokemon)
         })
 
-    document
-        .getElementById('imgMemoryGame')
-        .addEventListener('click', () => {
-            goToPage(Routes.MemoryGame)
-        })
+    // document
+    //     .getElementById('imgMemoryGame')
+    //     .addEventListener('click', () => {
+    //         goToPage(Routes.MemoryGame)
+    //     })
 
     document
         .getElementById('imgMemoryGame2')

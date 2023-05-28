@@ -1,49 +1,58 @@
 #dashboard-container {
-    width: 100vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  width: 100vw;
+  min-height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #dashboard-container ul {
-    width: 100vw;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-    list-style: none;
-    padding-top: 10vh;
-    gap: 1rem;
-  }
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  /* padding-top: 10vh; */
+  gap: 1rem;
+}
 
 .figureDashboard {
-    /* width: 200px;
-    height: 200px; */
-    
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .figureDashboard img {
-    width: 150px;
-    height: 150px;
-    object-fit:fill;
-    border-radius: 10%;
-    -webkit-box-shadow: 7px 8px 27px 0px rgba(0, 0, 0, 0.42);
-    -moz-box-shadow: 7px 8px 27px 0px rgba(0, 0, 0, 0.42);
-    box-shadow: 7px 8px 27px 0px rgba(0, 0, 0, 0.42);
-  }
+  width: 12vw;
+  height: 12vw;
+  object-fit: fill;
+  border-radius: 10%;
+  -webkit-box-shadow: 7px 8px 27px 0px rgba(0, 0, 0, 0.42);
+  -moz-box-shadow: 7px 8px 27px 0px rgba(0, 0, 0, 0.42);
+  box-shadow: 7px 8px 27px 0px rgba(0, 0, 0, 0.42);
+  background-color: black;
+}
 
-  
 .figureDashboard img:hover {
-    -webkit-box-shadow: 1px -1px 27px 0px rgba(8,239,3,0.9);
-    -moz-box-shadow: 1px -1px 27px 0px rgba(8,239,3,0.9);
-    box-shadow: 1px -1px 27px 0px rgba(8,239,3,0.9);
+  -webkit-box-shadow: 1px -1px 27px 0px rgba(8, 239, 3, 0.9);
+  -moz-box-shadow: 1px -1px 27px 0px rgba(8, 239, 3, 0.9);
+  box-shadow: 1px -1px 27px 0px rgba(8, 239, 3, 0.9);
 }
 
 .figureDashboard h2 {
-  font-size: 35px;
+  font-size: 2.5vw;
   padding: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+  .figureDashboard img {
+    width: 50vw;
+    height: 50vw;
+  }
+
+  .figureDashboard h2 {
+    font-size: 5.5vw;
+  }
 }

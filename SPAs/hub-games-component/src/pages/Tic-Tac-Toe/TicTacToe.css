@@ -1,6 +1,6 @@
 #tic-tac-toe-container-main {
     width: 100vw;
-    height: 80vh;
+    min-height: 70vh;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -65,7 +65,7 @@
     justify-content: center;
     align-items: center;
     /* border: 4px solid red; */
-    box-shadow: -5px -5px 10px #08224c,  5px 5px 10px #08224c;
+    box-shadow: -5px -5px 10px #08224c, 5px 5px 10px #08224c;
     padding: 1rem;
     border-radius: 12px;
     gap: 2rem;
@@ -77,13 +77,13 @@
     font-family: 'Finger Paint', Impact, Haettenschweiler;
 }
 
-#tic-tac-toe-display > #tic-tac-toe-counter-playerO {
+#tic-tac-toe-display>#tic-tac-toe-counter-playerO {
     width: 100%;
     font-size: 2.5vw;
     font-family: 'Finger Paint', Impact, Haettenschweiler;
 }
 
-#tic-tac-toe-display > #tic-tac-toe-restartBtn {
+#tic-tac-toe-display>#tic-tac-toe-restartBtn {
     padding: 7px 20px;
     border-radius: 10px;
     background-color: burlywood;
@@ -95,7 +95,7 @@
     font-family: 'Finger Paint', Impact, Haettenschweiler;
 }
 
-#tic-tac-toe-display > #tic-tac-toe-restartBtn:hover {
+#tic-tac-toe-display>#tic-tac-toe-restartBtn:hover {
     cursor: pointer;
     transform: translateY(-3px);
 }
@@ -107,6 +107,7 @@
         justify-content: center;
         align-items: center;
         gap: 2rem;
+        margin-bottom: 2rem;
     }
 
     #tic-tac-toe-gameboard-container {
@@ -119,16 +120,16 @@
         width: 70vw;
         flex-direction: column;
     }
-    
+
     #tic-tac-toe-jumbotron {
         font-size: 1.7rem;
     }
 
-    #tic-tac-toe-display > #tic-tac-toe-counter-playerX {
+    #tic-tac-toe-display>#tic-tac-toe-counter-playerX {
         font-size: 5vw;
     }
 
-    #tic-tac-toe-display > #tic-tac-toe-counter-playerO {
+    #tic-tac-toe-display>#tic-tac-toe-counter-playerO {
         font-size: 5vw;
     }
 }

@@ -2,7 +2,7 @@
 
 #whac-a-mole-container {
     width: 100vw;
-    min-height: 80vh;
+    min-height: 70vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -10,7 +10,7 @@
     border: 0px solid red;
 }
 
-.wacka-title{
+.wacka-title {
     color: #4facfe;
     font-size: 4rem;
     font-weight: 500;
@@ -26,7 +26,7 @@
     justify-content: center;
     align-items: center;
     border: 0px solid red;
-    box-shadow: -5px -5px 10px #08224c,  5px 5px 10px #08224c;
+    box-shadow: -5px -5px 10px #08224c, 5px 5px 10px #08224c;
     padding: 1rem;
     border-radius: 12px;
     gap: 2rem;
@@ -120,7 +120,7 @@
     transition: all 0.4s;
 }
 
-.whac-a-mole-hole.up .whac-a-mole-mole{
+.whac-a-mole-hole.up .whac-a-mole-mole {
     top: 0;
 }
 
@@ -136,7 +136,7 @@
     #whac-a-mole-container {
         flex-direction: column;
         gap: 2rem;
-      }
+    }
 
     #whac-a-mole-gameboard {
         height: 70vw;
@@ -147,9 +147,10 @@
         height: 70vw;
         width: 70vw;
         flex-direction: column;
+        margin-bottom: 2rem;
     }
 
-    .wacka-title{
+    .wacka-title {
         font-size: 1.0rem;
         margin: 1rem;
     }
@@ -158,7 +159,7 @@
         padding: 0 8px;
         font-size: 2rem;
     }
-    
+
     #startGame {
         padding: 10px 10px;
     }

@@ -1,5 +1,6 @@
 import "./MemoryGame2.css";
 import { Gameboard } from '../../components/MemoryGame2/Gameboard/Gameboard'
+import { Routes, goToPage } from "../../utils/router";
 
 // -----> 1) Template
 
@@ -15,12 +16,22 @@ const template = () => `
 `
 
 
-// ----> 2) Ehtml events
+// ----> 2) Html events
 
-const addListeners = () => {};
+const addListeners = () => {
+  addClickEventToResetTheGame()
+};
+
+const addClickEventToResetTheGame = () => {
+  const buttonReset = document.querySelector("#memory-game-2-restartBtn")
+  buttonReset.addEventListener("click", () => {
+    goToPage(Routes.MemoryGame2)
+  })
+}
 
 // ----> 3) Render
 export const MemoryGame2 = () => {
   document.querySelector("main").innerHTML = template();
+  addListeners()
   Gameboard();
 };

@@ -1,5 +1,6 @@
 import { HtmlElements } from "../../utils/constants"
-import { printTemplate as printHeader } from "../Header/Header"
+import { printTemplate as Header } from "../Header/Header"
+import { printTemplate as Footer } from "../Footer/Footer"
 
 export const App = () => {
     const app = document.querySelector(HtmlElements.APP_ID)
@@ -9,6 +10,7 @@ export const App = () => {
 
     app.append(header, main, footer)
     //app.append(main)
-    
-    printHeader()
+
+    Header()
+    Footer()
 }

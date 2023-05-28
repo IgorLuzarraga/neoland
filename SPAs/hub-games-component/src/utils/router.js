@@ -1,6 +1,6 @@
 import { FAKE_USER } from '../utils/constants'
-import { printTemplate as Dashboard} from '../pages/Dashboard/Dashboard'
-import { Pokemon } from '../pages/Pokemon/Pokemon' 
+import { printTemplate as Dashboard } from '../pages/Dashboard/Dashboard'
+import { Pokemon } from '../pages/Pokemon/Pokemon'
 import { printTemplate as Login } from '../pages/Login/Login'
 import { MemoryGame } from '../pages/MemoryGame/MemoryGame'
 import { MemoryGame2 } from '../pages/MemoryGame2/MemoryGame2'
@@ -43,12 +43,6 @@ export const goToPage = (route) => {
         case Routes.HangMan:
             HangMan()
             break
-        // case Routes.Manga:
-        //     Manga()
-        //     break;
-        // case Routes.Anime:
-        //     Anime()
-        //     break;
         case Routes.Login:
             Login()
             break
