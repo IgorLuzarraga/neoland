@@ -1,0 +1,19 @@
+.characterListContainer {
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0px solid black;
+}
+
+.charactersContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    background-color: #d1f5d3;
+    padding-top: 1.5rem;
+    list-style-type: none;
+}
