@@ -1,0 +1,12 @@
+figure {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+figure>img {
+    width: 70vw;
+    height: 70vw;
+    object-fit: contain;
+}
