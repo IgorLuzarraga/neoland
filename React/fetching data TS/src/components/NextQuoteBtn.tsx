@@ -1,14 +1,14 @@
-import { StateType } from "../types/loadingDataState"
+import { State } from "../types/loadingDataState"
 
 type props = {
-    state: StateType,
+    state: State,
     increment: () => void;
 }
 
 const NextQuoteBtn = ({ state, increment }: props) =>
     <button
         className="btn btn-primary"
-        disabled={state.type === StateType.LOADING}
+        disabled={state === 'LOADING_ST'}
         onClick={() => increment()}
     >
         NEXT QUOTE

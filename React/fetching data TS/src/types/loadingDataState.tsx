@@ -1,5 +1,5 @@
 // Loading Data States
-type State
+export type State
     = 'NOT_INIT_LOADING_ST'
     | 'LOADING_ST'
     | 'DATA_LOADED_ST'
@@ -9,11 +9,6 @@ export type QuoteType = {
     quote: string;
     author: string;
 }
-
-// export type DataState = {
-//     type: State;
-//     payload: QuoteType[];
-// }
 
 export type DataState
     = StateNotInitLoadingType

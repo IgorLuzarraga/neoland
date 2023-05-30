@@ -1,7 +1,5 @@
 import {
     DataState,
-    QuoteType,
-    StateNotInitLoadingType,
     StateDataLoadedType,
     StateErrorLoadingDataType
 } from "../types/loadingDataState";
@@ -13,15 +11,13 @@ import ErrorMsg from "./ErrorMsg";
 import { NotInitLoading } from "./NotInitLoading";
 import NextQuoteBtn from "./NextQuoteBtn";
 
-// type StateProps = {
-//     state: State
-// }
-
 export const ShowQuotes = () => {
-    // vamos a utlizar el customHook que ya conocemos el useCounter y se trae el incremento y estado y le da de valor incial 1
+    // We use the useCounter custom hook to select the quote from the 
+    // Breaking Bad API
     const { counter, increment } = useCounter(1);
 
-    // utlizamos el customHook del fetch y nos traemos la data, el esta cargando y el si tenemos un error
+    // Using the custom hook useFetch, we bring the API's data 
+    // (Breaking Bad character's quote)
     const dataState = useFetch(
         `https://api.breakingbadquotes.xyz/v1/quotes/${counter}`
     );
@@ -35,8 +31,8 @@ export const ShowQuotes = () => {
 };
 
 const checkState = (dataState: DataState) => {
-    switch (dataState) {
-        case StateNotInitLoadingType:
+    switch (dataState.type) {
+        case 'NOT_INIT_LOADING_ST':
             return <NotInitLoading />
 
         case 'LOADING_ST':
@@ -46,19 +42,21 @@ const checkState = (dataState: DataState) => {
             return showDataLoaded(dataState)
 
         case 'ERROR_LOADING_DATA_ST':
-            return <ErrorMsg error={dataState} />
+            return showDataError(dataState)
     }
 }
 
-const showDataLoaded = (dataState: StateDataLoadedType) => {
-    const { author, quote } = dataState.payload[0]
+const showDataLoaded = (dataState: DataState) => {
+    let stateDataLoaded = dataState as StateDataLoadedType
+    const { author, quote } = stateDataLoaded.payload[0]
 
     return (<Quote author={author} quote={quote} />)
 }
 
-// const showDataLoaded = (payload: QuoteType[]) => {
-//     const { author, quote } = payload[0]
+const showDataError = (dataState: DataState) => {
+    let stateDataError = dataState as StateErrorLoadingDataType
 
-//     return (<Quote author={author} quote={quote} />)
-// }
+    return (<ErrorMsg error={stateDataError.payload} />)
+}
+
 
