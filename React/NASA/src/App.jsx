@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import Figure from './components/Figure/Figure'
 import Footer from './components/Footer/Footer'
 import axios from 'axios';
+import { getApod } from './service/nasa.service';
 
 const App = () => {
   //Recuperamos la fecha actual en un formato ISO -> 2022-01-01
@@ -16,12 +17,6 @@ const App = () => {
   //Creamos una variable de estado llamada date con la fecha del día actual formateada
   const [date, setDate] = useState(today);
 
-  //Almacenamos en una constante la URL de la NASA
-  const NASA_URL = "https://api.nasa.gov/";
-
-  //Almacenamos en una constante nuestra API Key, esto es recomendable almacenarlo en una variable de entorno
-  const NASA_API_KEY = "xg6FXne7MqDTKzCM0ULsGIM7pctQsAUh4ggrKCqT"
-
   //El efecto del renderizado será hacer una petición de tipo get a la URL de la NASA
   //utilizando la query de la fecha con el valor de date y añadiéndole al final 
   //la API Key tal como indica en la documentación.
@@ -30,13 +25,11 @@ const App = () => {
   //array de dependencias que no vuelva a lanzar el efecto hasta que cambie el estado
   //de date
   useEffect(() => {
-    const getApod = async () => {
-      const data = await axios.get(
-        `${NASA_URL}planetary/apod?date=${date}&api_key=${NASA_API_KEY}`
-      );
-      setApod(data.data);
-    };
-    getApod();
+    (async () => {
+      const nasaData = await getApod(date)
+      setApod(nasaData.data);
+    })();
+
   }, [date]);
 
   //Crearemos una función que setee la fecha a través de un input en el formato 
