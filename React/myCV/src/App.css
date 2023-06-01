@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.App {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+p {
+    border: 0px solid red;
+    margin-bottom: 15px;
+}
+
+.education-experience-btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.custom-btn {
+    background-color: whitesmoke;
+    cursor: pointer;
+    padding: 0.6rem;
+}

@@ -1,0 +1,20 @@
+.language {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid red;
+}
+
+.language-card {
+    /* width: auto;
+    height: auto; */
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    padding: 20px;
+    text-align: center;
+    line-height: 20px;
+    border-radius: 12px;
+    background-color: rgba(240, 248, 255, 0.241);
+    border: 1px solid black;
+}
