@@ -1,0 +1,13 @@
+header {
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  background-color: aquamarine;
+  border: 0px solid red;
+}
+
+.user-header-container {
+  color: blueviolet;
+}

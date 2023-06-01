@@ -1,0 +1,14 @@
+#homeContainer {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  background-color: aqua;
+  border: 0px solid red;
+}
+
+.user-home-container {
+  color: blueviolet;
+}
