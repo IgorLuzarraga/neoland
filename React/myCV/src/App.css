@@ -10,6 +10,8 @@
     justify-content: center;
     align-items: center;
     gap: 1rem;
+    background-color: #AEB8C3;
+    ;
 }
 
 p {
@@ -25,7 +27,19 @@ p {
 }
 
 .custom-btn {
-    background-color: whitesmoke;
+    background-color: #C5CED6;
     cursor: pointer;
     padding: 0.6rem;
+}
+
+.horizontal-line-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.horizontal-line {
+    width: 200px;
+    border: 2px solid black;
 }

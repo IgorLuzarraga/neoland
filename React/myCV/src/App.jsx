@@ -10,17 +10,16 @@ import { useState } from 'react'
 
 const { hero, education, experience, languages, habilities, volunteer } = CV;
 
-//const { hero, education } = CV;
-
 const App = () => {
   const [showEducation, setShowEducation] = useState(true);
 
   return (
     <div className="App">
       <Hero hero={hero} />
+
+      {showHorizontalLine('About Me')}
+
       <About hero={hero} />
-      {/* <Education education={education} />
-      <Experience experience={experience} /> */}
 
       <div className='education-experience-btns'>
         <button
@@ -38,13 +37,20 @@ const App = () => {
         </button>
       </div>
 
-      <div>
-        {showEducation ? (
+      {/* <div>
+        { if (showEducation) {
+          showHorizontalLine('Education')
           <Education education={education} />
-        ) : (
+         } else {}
           <Experience experience={experience} />
-        )}
-      </div>
+        }
+      </div> */}
+      {showEducationOrExperience(
+        showEducation,
+        education,
+        experience
+      )
+      }
 
       <More
         languages={languages}
@@ -55,5 +61,26 @@ const App = () => {
     </div>
   );
 }
+
+const showEducationOrExperience = (showEducation) =>
+  (showEducation)
+    ?
+    <>
+      {showHorizontalLine('Education')}
+      <Education education={education} />
+    </>
+    :
+    <>
+      {showHorizontalLine('Experience')}
+      <Experience experience={experience} />
+    </>
+
+const showHorizontalLine = (text) =>
+  <div className='horizontal-line-container'>
+    <hr className='horizontal-line'></hr>
+    {text}
+    <hr className='horizontal-line'></hr>
+  </div>
+
 
 export default App;

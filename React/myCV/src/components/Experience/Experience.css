@@ -8,6 +8,12 @@
     text-align: center;
     line-height: 20px;
     border-radius: 12px;
-    background-color: rgba(240, 248, 255, 0.241);
+    background-color: #BBC6D1;
     border: 1px solid black;
+}
+
+@media only screen and (max-width: 600px) {
+    .experience-card {
+        width: 370px;
+    }
 }
