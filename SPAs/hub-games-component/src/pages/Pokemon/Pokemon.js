@@ -1,6 +1,6 @@
 import './Pokemon.css'
 import { service_getPokemons } from '../../services/pokemon.service'
-import {Loading} from "../../components/Loading/Loading"
+import { Loading } from "../../components/Loading/Loading"
 import { PokemonTypesBtns } from '../../components/Pokemon/PokemonTypesBtns/PokemonTypesBtns'
 import { filterPokemonByName } from '../../utils/Pokemon/pokemonFilters'
 import { AddPokemonsToGallery } from '../../components/Pokemon/PokemonsGallery/PokemonsGallery'
@@ -36,55 +36,49 @@ const removeSpinner = () => {
     spinnerContainer.innerHTML = ""
 }
 
-const addPokemonSearcher = () => 
+const addPokemonSearcher = () =>
     document
         .querySelector("#containerPokemonSearcher")
         .innerHTML = templatePokemonSearcher()
 
 // Version 1 -- uses --> services/pokemon.service
-const getPokemons = async () => {
+export const getPokemons = async () => {
     pokemonDataFromService = await service_getPokemons()
-    AddPokemonsToGallery(pokemonDataFromService.pokemons)
+    //AddPokemonsToGallery(pokemonDataFromService.pokemons)
 }
 
 const addListeners = (pokemonDataFromService) =>
     document
         .querySelector('#inputSearcher')
         .addEventListener('input', () => {
-            const nameToFilter = document.querySelector('#inputSearcher').value 
+            const nameToFilter = document.querySelector('#inputSearcher').value
             filterPokemonByName(nameToFilter, pokemonDataFromService)
-    })
+        })
 
 export const Pokemon = () => {
     // insert the page's Html
     document.querySelector('main').innerHTML = template()
 
     changePageColor()
-    
-    // Render a spinner before fetch
-    //addSpinner()
 
-    // fetch the pokemons
-    getPokemons()
+    // Render a spinner before fetch
+    addSpinner()
 
     // Delay of 1 seconds to let us a litle bit of time to see the spinner shown
     // Remove it to go faster
-   setTimeout(() => {
+    setTimeout(() => {
         addPokemonSearcher()
 
         // fetch the pokemons
-        //getPokemons()
+        AddPokemonsToGallery(pokemonDataFromService.pokemons)
 
         // remove spinner after fetch
-        //removeSpinner()
+        removeSpinner()
 
         PokemonTypesBtns(pokemonDataFromService)
 
         addListeners(pokemonDataFromService)
-    }, 1000)
-    
-
-    
+    }, 0)
 }
 
 
