@@ -19,8 +19,8 @@
 }
 
 #whac-a-mole-display {
-    height: 35vw;
-    width: 35vw;
+    height: 30vw;
+    width: 30vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -32,19 +32,12 @@
     gap: 2rem;
 }
 
-/* .interface {
+/* #whac-a-mole-display {
     display: flex;
     flex-direction: column;
     place-items: center;
     gap: 24px;
 } */
-
-#whac-a-mole-display {
-    display: flex;
-    flex-direction: column;
-    place-items: center;
-    gap: 24px;
-}
 
 .score-start-row {
     display: flex;
@@ -53,8 +46,8 @@
 
 #whac-a-mole-gameboard {
     /* margin: 0 auto; */
-    width: 35vw;
-    height: 35vw;
+    width: 30vw;
+    height: 30vw;
     display: grid;
     grid-template: repeat(2, 1fr) / repeat(3, 1fr);
     grid-gap: 20px;
@@ -107,7 +100,7 @@
     height: 90px;
     position: absolute;
     z-index: 2;
-    bottom: -14px;
+    bottom: -35px;
 }
 
 .whac-a-mole-mole {

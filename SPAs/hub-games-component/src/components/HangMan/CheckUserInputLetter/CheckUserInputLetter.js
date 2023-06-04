@@ -4,7 +4,7 @@ import { Routes, goToPage } from "../../../utils/router";
 
 import JSConfetti from "js-confetti";
 
-const confeti = new JSConfetti();
+const confetti = new JSConfetti();
 
 let userTriesCounter = 0;
 
@@ -15,8 +15,8 @@ export const CheckUserInputLetter = (inputLetter, wordToGuess) => {
     markLettersThatMatchWithUserInputLetter(inputLetter, lettersArr)
 
     const pElementsArr = document.querySelectorAll(".hangman-guessed-letter")
-    
-    if(checkIfUserWin(pElementsArr, lettersArr)) {
+
+    if (checkIfUserWin(pElementsArr, lettersArr)) {
       showMsgIfUserWins()
     }
   } else {
@@ -32,51 +32,51 @@ export const CheckUserInputLetter = (inputLetter, wordToGuess) => {
 }
 
 const markLettersThatMatchWithUserInputLetter = (
-    inputLetter,
-    lettersArr
-    ) => {
-        lettersArr.forEach((letter) => {
-          if (inputLetter === letter) {
-            const p = document.getElementById(`${inputLetter}`)
-  
-            p.innerHTML = inputLetter.toUpperCase()
-            p.setAttribute("class", "hangman-guessed-letter")
-  
-            const input = document.querySelector("#hangman-input-letter")
-            input.value = ""
-          }
-      })
+  inputLetter,
+  lettersArr
+) => {
+  lettersArr.forEach((letter) => {
+    if (inputLetter === letter) {
+      const p = document.getElementById(`${inputLetter}`)
+
+      p.innerHTML = inputLetter.toUpperCase()
+      p.setAttribute("class", "hangman-guessed-letter")
+
+      const input = document.querySelector("#hangman-input-letter")
+      input.value = ""
+    }
+  })
 }
 
-const checkIfUserWin = (pElementsArr, lettersArr) => 
-  pElementsArr.length === lettersArr.length 
-  
+const checkIfUserWin = (pElementsArr, lettersArr) =>
+  pElementsArr.length === lettersArr.length
+
 const showMsgIfUserWins = () => {
-    setTimeout(() => {
-      const divContainer = document.querySelector("#hangman-container")
-      divContainer.innerHTML = ""
+  setTimeout(() => {
+    const divContainer = document.querySelector("#hangman-container")
+    divContainer.innerHTML = ""
 
-      const divMsg = document.createElement("div")
-      divMsg.innerHTML = "Awesome! You Win!"
-      divMsg.setAttribute("id", "hangman-msg-user-win")
-      
-      const newGameBtn = document.createElement("button")
-      newGameBtn.innerHTML = "Another one?"
-      newGameBtn.setAttribute("id", "hangman-reset-game-btn")
+    const divMsg = document.createElement("div")
+    divMsg.innerHTML = "Awesome! You Win!"
+    divMsg.setAttribute("id", "hangman-msg-user-win")
 
-      throwConfettyWin()
+    const newGameBtn = document.createElement("button")
+    newGameBtn.innerHTML = "Another one?"
+    newGameBtn.setAttribute("id", "hangman-reset-game-btn")
 
-      divContainer.append(divMsg, newGameBtn)
+    throwConfettyWin()
 
-      resetGame()
-    }, 300)
-  }
+    divContainer.append(divMsg, newGameBtn)
+
+    resetGame()
+  }, 300)
+}
 
 const showMsgIfUserLose = (counter) => {
-  if(counter === 6) {
+  if (counter === 6) {
     setTimeout(() => {
       const div = document.querySelector("#hangman-container")
-      div.innerHTML = "" 
+      div.innerHTML = ""
 
       const divMsg = document.createElement("div")
       divMsg.innerHTML = "Ohh, You lose!"
@@ -95,14 +95,14 @@ const showMsgIfUserLose = (counter) => {
   }
 }
 
-const throwConfettyWin = () => 
-  confeti.addConfetti({
-    emojis: ["🏆🥈😀🎉"], 
+const throwConfettyWin = () =>
+  confetti.addConfetti({
+    emojis: ["🏆🥈😀🎉"],
   })
 
-const throwConfettyLose = () => 
-  confeti.addConfetti({
-    emojis: ["🤑☹😟😨"], 
+const throwConfettyLose = () =>
+  confetti.addConfetti({
+    emojis: ["🤑☹😟😨"],
   })
 
 const resetGame = () => {
@@ -112,9 +112,9 @@ const resetGame = () => {
     userTriesCounter = 0
 
     const p = document.querySelectorAll(".hangman-word-letter")
-    
+
     p.forEach((pElemen) => pElemen.remove())
-    
+
     goToPage(Routes.HangMan)
   })
 }

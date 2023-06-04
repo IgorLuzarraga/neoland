@@ -2,6 +2,10 @@ import "./WhacAMole.css";
 import { randomTime } from "../../utils/Whac-A-Mole/randomTime";
 import { HitMole } from "../../components/Whac-A-Mole/HitMole";
 import { changePageColor } from '../../utils/Whac-A-Mole/changePageColor'
+import JSConfetti from 'js-confetti'
+import { Routes, goToPage } from "../../utils/router";
+
+const jsConfetti = new JSConfetti() // Create JSConfetty just ones!
 
 const template = () => `
   <div id="whac-a-mole-container">
@@ -32,21 +36,20 @@ const template = () => `
   </div>
 `
 
-let lastHole; // --> Último hoyo
-//let score = 0; // --> Puntuacion
-let timeUp = false; // --> Indica cuando se acaba el tiempo
-
-
+let lastHole;
+let timeUp = false; // When true --> game over 
 
 // Game logic
 const randomHole = () => {
-  //Index aleatorio
+  // Random Index
   const index = Math.floor(
     Math.random() * document.querySelectorAll(".whac-a-mole-hole").length
   );
-  //Hoyo aleatorio
+
+  // Randpm hole
   const hole = document.querySelectorAll(".whac-a-mole-hole")[index];
-  //Evitamos que el topo salga dos veces por el mismo hoyo
+
+  // We avoid that the mole go outside using the same hole
   if (hole === lastHole) {
     return randomHole(document.querySelectorAll(".whac-a-mole-hole"));
   }
@@ -56,19 +59,18 @@ const randomHole = () => {
 };
 
 const showMole = () => {
-  //Definimos el tiempo que el topo se mantiene asomado
+  // We define how much time the mole shows up
   const time = randomTime(500, 5000);
 
-  //Seleccionamos hoyo para añadirle la clase up
+  // We add the hole to add the class up
   const hole = randomHole(document.querySelectorAll(".whac-a-mole-hole"));
   hole.classList.add("up");
 
-  //SetTimeout para elimimar la clase
-
+  //SetTimeout to remove the claas 'up'
   setTimeout(() => {
     hole.classList.remove("up");
 
-    // Siempre que el tiempo de la partida no haya acabado seguiremos asomando topos
+    // meanwhile timeUp is false,  the moles are up and running
     if (!timeUp) {
       showMole();
     }
@@ -77,17 +79,36 @@ const showMole = () => {
 
 const startGame = () => {
   timeUp = false;
-  //score = 0;
   showMole();
 
   setTimeout(() => {
     timeUp = true;
+
+    endOfGame()
+
   }, 15000);
 };
 
+const endOfGame = () => {
+  setTimeout(() => {
+    throwConfetty()
+
+    // Start the game again
+    goToPage(Routes.WhacAMole)
+  }, 600)
+}
+
+const throwConfetty = () => {
+  jsConfetti.addConfetti({
+    confettiRadius: 6,
+    confettiNumber: 1500,
+  })
+}
+
 // Event listeners
 const addListeners = () => {
-  //Añadimos a los topos el escuchador del click para saber cuando han clicado
+  // We add a click event to each mole, to know when 
+  // they have been clicked
   document
     .querySelectorAll(".whac-a-mole-mole")
     .forEach((mole) => mole.addEventListener("click", (e) => HitMole(e)));
