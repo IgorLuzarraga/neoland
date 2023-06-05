@@ -18,15 +18,11 @@ const MovilDevList = () => {
     )
 }
 
-const showMovilDevs = (movilDevList) => {
-    console.log('showMovilDevs -> movilDevList: ', movilDevList)
+const showMovilDevs = (movilDevList) =>
+    <div className='movilDevsContainer'>
+        {movilDevList.map(showMovilDev)}
+    </div>
 
-    return (
-        <div className='movilDevsContainer'>
-            {movilDevList.map(showMovilDev)}
-        </div>
-    )
-}
 
 const showMovilDev = (movilDev) =>
     <CardMovilDev key={movilDev.id} movilDev={movilDev} />
