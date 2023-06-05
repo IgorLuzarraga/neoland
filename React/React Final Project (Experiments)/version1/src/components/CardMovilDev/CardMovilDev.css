@@ -15,9 +15,9 @@ p {
     background-color: #e6e6fa;
 }
 
-.movilDevInfo>img {
-    width: 200px;
-    height: 250px;
+.movilDevData>img {
+    width: 100px;
+    height: 100px;
     object-fit: scale-down;
     margin-top: 0.3rem;
 }

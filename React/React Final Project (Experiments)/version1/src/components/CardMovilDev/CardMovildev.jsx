@@ -3,17 +3,19 @@ import './CardMovilDev.css'
 export const CardMovilDev = ({ movilDev }) =>
     <div className='movilDevInfo'>
         <div className='movilDevData'>
-            <p>id: {movilDev._id}</p>
+            <img
+                src={movilDev.image}
+                alt={`movilDev's ${movilDev.brand} pic`}
+            />
+            {/* <p>id: {movilDev._id}</p> */}
             <p>Brand: {movilDev.brand}</p>
             <p>OS: {movilDev.OS}</p>
             <p>versionOS: {movilDev.versionOS}</p>
             <p>language: {movilDev.language}</p>
-            {showMovilDevApps(movilDev.apps)}
+            <p>description: {movilDev.description}</p>
+            {/* {showMovilDevApps(movilDev.apps)} */}
         </div>
-        {/* <img
-            src={movilDev.image}
-            alt={`movilDev's ${movilDev.name} pic`}
-        /> */}
+
     </div>
 
 const showMovilDevApps = (apps) =>
