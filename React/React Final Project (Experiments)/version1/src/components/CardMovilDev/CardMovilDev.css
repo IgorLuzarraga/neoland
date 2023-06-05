@@ -1,0 +1,30 @@
+p {
+    font-size: 24px;
+}
+
+.movilDevInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 360px;
+    height: 450px;
+    border: 6px solid blueviolet;
+    border-radius: 1rem;
+    padding: 0.5rem;
+    background-color: #e6e6fa;
+}
+
+.movilDevInfo>img {
+    width: 200px;
+    height: 250px;
+    object-fit: scale-down;
+    margin-top: 0.3rem;
+}
+
+.appInfo {
+    border: 1px solid blue;
+    border-radius: 1rem;
+    margin: 1rem;
+    padding: 1rem;
+}
