@@ -1,11 +1,9 @@
 import './App.css'
-//import CharacterList from './components/CharacterList/CharacterList';
-import MovilDevList from './components/MovilDevList/MovilDevList';
+import MobileDevList from './components/MobileDevList/MobileDevList';
 
 const App = () =>
-  // <CharacterList />
   <div className='appContainer'>
-    <MovilDevList />
+    <MobileDevList />
   </div>
 
 export default App;

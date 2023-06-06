@@ -2,7 +2,7 @@ p {
     font-size: 24px;
 }
 
-.movilDevInfo {
+.mobileDev-Info {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -15,16 +15,16 @@ p {
     background-color: #e6e6fa;
 }
 
-.movilDevData>img {
+.mobileDev-Info>img {
     width: 100px;
     height: 100px;
     object-fit: scale-down;
     margin-top: 0.3rem;
 }
 
-.appInfo {
+/* .appInfo {
     border: 1px solid blue;
     border-radius: 1rem;
     margin: 1rem;
     padding: 1rem;
-}
+} */
