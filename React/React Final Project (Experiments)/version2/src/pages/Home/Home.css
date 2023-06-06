@@ -1,0 +1,12 @@
+img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+/* .imgLinkContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+} */
