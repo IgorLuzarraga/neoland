@@ -9,6 +9,7 @@ import About from "./pages/About/About.jsx";
 import CharacterById from "./pages/CharacterById/CharacterById.jsx";
 import CharacterByName from "./pages/CharacterByName/CharacterByName.jsx";
 import NotFound from "./components/NotFound/NotFound.jsx";
+import MobileDevs from "./pages/MobileDevs/MobileDevs.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -22,6 +23,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
           of our application*/}
           <Route index element={<Home />} />
           <Route path="/gallery" element={<Gallery />} />
+          <Route path="/mobileDevs" element={<MobileDevs />} />
           <Route path="/about" element={<About />} />
           <Route
             path="/gallery/character/:id"
