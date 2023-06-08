@@ -8,7 +8,7 @@ export const homePagesData = {
 
     mobileDevs: {
         linkTo: "/mobileDevs",
-        linkText: "MOVILEDEVS",
+        linkText: "MOBILEDEVS",
         imageSrc: "https://play-lh.googleusercontent.com/cubIK4wSiJ0PUZ1J28kGQYxJYGp5mT1QMV-_vIZP_hJXiRcMLV3fXDQUDnGikMxLxw",
         imageAlt: "link to MobileDevs page"
     },

@@ -10,6 +10,8 @@ import CharacterById from "./pages/CharacterById/CharacterById.jsx";
 import CharacterByName from "./pages/CharacterByName/CharacterByName.jsx";
 import NotFound from "./components/NotFound/NotFound.jsx";
 import MobileDevs from "./pages/MobileDevs/MobileDevs.jsx";
+import Apps_inMobileDev from "./pages/Apps_inMobileDev/Apps_inMobileDev.jsx";
+import Apps_inMobileDev2 from "./pages/Apps_inMobileDev2/Apps_inMobileDev2.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -25,6 +27,18 @@ ReactDOM.createRoot(document.getElementById("root")).render(
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/mobileDevs" element={<MobileDevs />} />
           <Route path="/about" element={<About />} />
+          {/* <Route
+            path="/mobileDev/apps/:id"
+            element={<Apps_inMobileDev />}
+          /> */}
+          <Route
+            path="/mobileDev/apps"
+            element={<Apps_inMobileDev />}
+          />
+          {/* <Route
+            path="/mobileDev/apps"
+            element={<Apps_inMobileDev2 />}
+          /> */}
           <Route
             path="/gallery/character/:id"
             element={<CharacterById />}

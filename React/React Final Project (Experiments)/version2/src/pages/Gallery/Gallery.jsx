@@ -1,4 +1,4 @@
-import CardGallery from "../../components/CardGalley/CardGallery";
+import CardGallery from "../../components/CardGallery/CardGallery";
 import { getAll } from "../../service/character.service";
 import "./Gallery.css";
 
@@ -8,7 +8,9 @@ const Gallery = () => {
   return (
     <div className="outletContainer charactersGallery">
       {characterListData.map((character) => (
-        <CardGallery key={character._id} character={character} />
+        <div key={character._id}>
+          <CardGallery character={character} />
+        </div>
       ))}
     </div>
   );

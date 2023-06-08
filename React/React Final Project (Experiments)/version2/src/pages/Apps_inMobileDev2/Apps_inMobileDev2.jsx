@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import { mobileDev_getAll } from "../../service/mobileDev.service";
-import CardMobileDev from "../CardMobileDev/CardMobileDev";
-import './MobileDevList.css'
+import CardMobileDev from "../../components/CardMobileDev/CardMobileDev";
+import './Apps_inMobileDev2.css'
 
-const MobileDevList = () => {
+const Apps_inMobileDev2 = () => {
     const [mobileDevList, setMobileDevList] = useState([])
 
     useEffect(() => {
@@ -34,4 +34,4 @@ const showMobileDev = (mobileDev) =>
         <CardMobileDev mobileDev={mobileDev} />
     </div>
 
-export default MobileDevList
+export default Apps_inMobileDev2
